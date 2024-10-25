@@ -16,3 +16,10 @@ Klikkaamalla yhtä pyyntöä aukesi seuraava, yksityiskohtaisempia tietoja sisä
 
 Aukeavalla Headers-välilehdellä on esim. tietoa pyynnöstä sekä vastauksesta (Response Headers ja Request Headers), HTTP:n versio.
 
+## Lähteet
+
+Karvinen, Tero. Tunkeutumistestaus-kurssi. Kurssisivu: [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/) Luettu 25.10.2024.
+
+Firefox Source Docs. Network monitor. [https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/) Luettu 25.10.2024.
+
+
