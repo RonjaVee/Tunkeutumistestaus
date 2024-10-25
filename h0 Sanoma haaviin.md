@@ -22,4 +22,4 @@ Karvinen, Tero. Tunkeutumistestaus-kurssi. Kurssisivu: [https://terokarvinen.com
 
 Firefox Source Docs. Network monitor. [https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/) Luettu 25.10.2024.
 
-
+Lähteet lisätty arviointien jälkeen, unohtui kiireessä merkata.
