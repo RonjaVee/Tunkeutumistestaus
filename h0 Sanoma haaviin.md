@@ -2,7 +2,7 @@
 
 a. Sieppaa ja analysoi verkkoliikennettä.
 
-Esimerkkityökaluiksi annettiin ngrep, Wireshark, Firefox F12 Network, tcpdump. Näistä valitsin Firefox F12 Networkin, sillä käytän Firefoxia selaimena,
+Tero Karvisen [kurssitehtävässä](https://terokarvinen.com/tunkeutumistestaus/) esimerkkityökaluiksi annettiin ngrep, Wireshark, Firefox F12 Network, tcpdump. Näistä valitsin Firefox F12 Networkin, sillä käytän Firefoxia selaimena,
 ngrep ei auennut minulle ja Wiresharkilta en löytänyt Linuxille versiota. Ohje löytyi sivulta [https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/). Käytännössä Firefoxissa saa paneelin auki näppäimillä ``ctrl + shift + E``. Näkymä Network-välilehdellä oli sivun päivityksen 
 jälkeen seuraava:
 
