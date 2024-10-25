@@ -8,7 +8,7 @@ jälkeen seuraava:
 
 ![image](https://github.com/user-attachments/assets/cddc199d-70d1-4abe-a6b7-59e180a2d94e)
 
-Vasemmassa sarakkeessa näkyy pyyntöjen statukset: esim. vihreällä taustalla 200 tarkoittaa onnistunutta vastausta. Method-sarakkeella näkyy pyynnön tyyppi, GET-pyyntöjä näkyy enimmäkseen eli informaatiota noudetaan API:sta. Domain-sarakkeessa näkyy pyydetyn polun domain, Filessä noudettu tiedostotyyppi.
+Vasemmassa sarakkeessa näkyy pyyntöjen statukset: esim. vihreällä taustalla 200 tarkoittaa onnistunutta vastausta. Method-sarakkeella näkyy pyynnön tyyppi, GET-pyyntöjä näkyy enimmäkseen eli informaatiota noudetaan API:sta. Domain-sarakkeessa näkyy pyydetyn polun domain, Filestä eteenpäin tietoja tiedostotyypistä.
 
 Klikkaamalla yhtä pyyntöä aukesi seuraava, yksityiskohtaisempia tietoja sisältävä näkymä välilehtineen (Headers, Cookies, Request, Response, Timings, Security).
 
