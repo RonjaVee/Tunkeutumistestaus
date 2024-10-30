@@ -139,7 +139,7 @@ Pingasin sitten Kalilla Metasploitablea ``ping 192.168.56.102``. Paketteja liikk
 
 ### g) Etsi Metasploitable porttiskannaamalla (nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable.
 
-Porttiskannauksen ajaksi otin Kalin irti Internetistä (eli Adapter1 Not Attatched). Skannasin aliverkon komennolla `nmap -sn 192.168.56.0/24``.
+Porttiskannauksen ajaksi otin Kalin irti Internetistä (eli Adapter1 Not Attatched). Skannasin aliverkon komennolla ``nmap -sn 192.168.56.0/24``.
 
 ![image](https://github.com/user-attachments/assets/eb4dd802-da02-4844-8bf1-cdc370eb4fb7)
 
