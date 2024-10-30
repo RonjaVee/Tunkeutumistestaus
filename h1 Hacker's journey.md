@@ -39,11 +39,9 @@ Odotellessani latausta loin Virtual Boxilla uuden koneen johon tulisin asentamaa
 
 Tutkimani asennusohjeen perusteella valisin boottausjärjestyksen, kovalevy 1. ja optinen levy 2. Muita asetuksia koneeseen en tehnyt.
 
-![image](https://github.com/user-attachments/assets/72c2fd0f-5b4d-4296-aaf7-ce469b5b5be7)
-
 ![image](https://github.com/user-attachments/assets/495d1436-5f7a-4dd8-8ca0-d95d4c0cf9bd)
 
-Ylhäällä virtuaalikoneen raudasta tietoja. Lataus tuli valmiiksi, ja iskin levyn sisään ja lähdin asentamaan Kalia.
+Lataus tuli valmiiksi, ja iskin levyn sisään ja lähdin asentamaan Kalia.
 
 Olen aiemminkin asennellut Linuxeja, joten tein asennusta koskevat valinnat sen perusteella, mitä olen oppinut aiemmilta kerroilta. Olen raportoinut yhden asennuksen johon olen joitakin valintoja perustellut, ja se löytyy [täältä](https://github.com/RonjaVee/Installing-Linux/blob/main/Installing%20process.md). 
 
