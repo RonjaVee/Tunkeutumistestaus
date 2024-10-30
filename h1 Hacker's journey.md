@@ -108,14 +108,54 @@ Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksi
 
 
 
-
-
-
-
 ### f) Tee koneiden välille virtuaaliverkko.
+
+Tehtävän ohjeen mukaan loin host only networkin Virtualboxissa (File -> Host Network Manager -> Create). Verkon IP-osoite on 192.168.56.1/24.
+
+![image](https://github.com/user-attachments/assets/9582c702-0d53-48af-900a-7ba981fbe174)
+
+Sitten loin Kalille toisen verkkosovittimen. Attached to -kohdassa valitsin Host-Only Adapter.
+Name-kentässä oli oletuksena vboxnet0 eli juuri luomani verkko. 
+
+![image](https://github.com/user-attachments/assets/9f1ab2a7-5770-42b6-b80f-fb266e3aa972)
+
+Metasploitable-koneella muokkasin Adapter1 suoraan, sillä sen ei tarvitse olla yhteydessä Internetiin. Kalin voi erikseen irrottaa Internetistä kun porttiskannailee.
+
+![image](https://github.com/user-attachments/assets/50b4bf87-5ee1-40ef-ade0-d2995183273e)
+
+Sitten tarkastin komennolla ``ifconfig``, että Kalilla löytyy yhteys luotuun verkkoon. Eth1-sovittimessa IP-osoite 192.168.56.101 täsmää luotuun verkkoon, eli Kali on tässä verkossa.
+
+![image](https://github.com/user-attachments/assets/ce937b63-dffb-41f6-bd47-307873b029f7)
+
+Saman tarkastuksen tein Metasploitable-koneella. Verkko löytyi eth0-verkkosovittimesta: IP-osoite täsmää (192.168.56.102).
+
+![image](https://github.com/user-attachments/assets/faa5862d-118f-48d4-8540-97b8a1a81088)
+
+Pingasin sitten Kalilla Metasploitablea ``ping 192.168.56.102``. Paketteja liikkui.
+
+![image](https://github.com/user-attachments/assets/f426b5fb-d02d-4194-b606-5ab30ca4bd0c)
+
 
 
 ### g) Etsi Metasploitable porttiskannaamalla (nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable.
+
+Porttiskannauksen ajaksi otin Kalin irti Internetistä (eli Adapter1 Not Attatched). Skannasin aliverkon komennolla `nmap -sn 192.168.56.0/24``.
+
+![image](https://github.com/user-attachments/assets/eb4dd802-da02-4844-8bf1-cdc370eb4fb7)
+
+Metasploitable näkyi IP-osoitteessa 192.168.56.102.
+
+![image](https://github.com/user-attachments/assets/400e551f-e001-4fc5-b14f-c9719ba5e59b)
+
+Komennolla ``curl http://192.168.56.102`` näkyi seuraavaa:
+
+![image](https://github.com/user-attachments/assets/83dfdde2-5838-4971-8503-bd895d3686a2)
+
+Ja selaimessa Metasploitable näkyi myös:
+
+![image](https://github.com/user-attachments/assets/98e6e1be-1a24-48e2-8732-d1450380923b)
+
+
 
 
 ### h) Porttiskannaa Metasploitable huolellisesti ja kaikki portit (nmap -A -p-). Poimi 2-3 hyökkääjälle kiinnostavinta porttia. Analysoi ja selitä tulokset näiden porttien osalta.
