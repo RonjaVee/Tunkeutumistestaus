@@ -132,8 +132,13 @@ Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksi
 
 - Korkeimman oikeuden ratkaisu 2003:36. [https://finlex.fi/fi/oikeus/kko/kko/2003/20030036](https://finlex.fi/fi/oikeus/kko/kko/2003/20030036)
 
--  [https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/)
+- Kali Linux. Install VirtualBox guest VM. [https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/)
 
-- [https://docs.rapid7.com/metasploit/metasploitable-2/](https://docs.rapid7.com/metasploit/metasploitable-2/)
+- Rapid7. Metasploitable 2. [https://docs.rapid7.com/metasploit/metasploitable-2/](https://docs.rapid7.com/metasploit/metasploitable-2/)
+
+- SourceForge. Metasploitable2 latauslinkki.[https://sourceforge.net/projects/metasploitable/](https://sourceforge.net/projects/metasploitable/) Ladattu 30.10.2024.
+
+- Sunny Dimalu The Cyborg. install Kali Linux 2024.1 & Metasploitable2 on VirtualBox 7 Step By Step : Cyber Security Lab 2024. Julkaistu 14.3.2023. [https://www.youtube.com/watch?v=yf3jetn4tN8](https://www.youtube.com/watch?v=yf3jetn4tN8)
+
 
 
