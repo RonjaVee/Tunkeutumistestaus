@@ -196,5 +196,5 @@ Portti 445 ei ollut minulle tuttu, joten tutustuin siihen käyttäen lähteenä 
 
 - SecuritScorecard. Navigating the Risks of TCP 445: Strategies for Secure Network Communication. [https://securityscorecard.com/blog/navigating-the-risks-of-tcp-445-strategies-for-secure-network-communication/](https://securityscorecard.com/blog/navigating-the-risks-of-tcp-445-strategies-for-secure-network-communication/).
 
-
+- OpenAI. ChatGPT. 30.10.2024. [https://www.openai.com/](https://www.openai.com/)
 
