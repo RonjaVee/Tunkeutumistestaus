@@ -23,8 +23,6 @@
 Latasin Kalin ISO-imagen sivulta [https://www.kali.org/get-kali/#kali-installer-images](https://www.kali.org/get-kali/#kali-installer-images).
 
 
-![image](https://github.com/user-attachments/assets/0c23e440-328f-4f9e-944d-67dab80fefd8)
-
 ![image](https://github.com/user-attachments/assets/d9c5c679-5161-46b7-b1ff-4bc4221c77b2)
 
 
