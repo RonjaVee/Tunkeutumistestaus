@@ -5,10 +5,10 @@
 1. Hyppönen, Mikko & Tuominen, Tomi. Herrasmieshakkerit. Rikos, jonka voi tilata netistä | Yhteistyössä Kyberrosvot. Julkaistu 21.3.2024. [https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103](https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103)
 
    - Verkkorikollisten toiminta on nykypäivänä varsin organisoitunutta: rikollisyrityksillä saattaa olla jopa HR-osastot yms.
-   - Esim. palvelunestohyökkäykset ovat halpoja ostaa, eikä tarvitse hakea Tor-verkosta asti vaan niitä on yleisesti saatavilla.
+   - Esim. palvelunestohyökkäykset ovat halpoja ostaa, eikä tarvitse hakea Tor-verkosta asti vaan niitä on yleisesti saatavilla
    - CaaS (Crime as a Service): esim. palvelut, joilla myydään varastettua dataa, DdoS-hyökkäykset ym.
-   - RaaS (Ransomware as a Service): Ransomwaren (esim. kiristystroijalainen) myynti tai vuokraaminen. Haittaohjelmaa ei tarvitse itse koodata, kun sen ostaa. RaaS kuuluu CaaS-katon alle.
-   - Motivaationa rahan lisäksi poliittinen vaikuttaminen, kybersodankäynti.
+   - RaaS (Ransomware as a Service): Ransomwaren (esim. kiristystroijalainen) myynti tai vuokraaminen. Haittaohjelmaa ei tarvitse itse koodata, kun sen ostaa. RaaS kuuluu CaaS-katon alle
+   - Motivaationa rahan lisäksi poliittinen vaikuttaminen, kybersodankäynti
    
 
 2. Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains, chapters Abstract, 3.2 Intrusion Kill Chain. [https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf](https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf)
