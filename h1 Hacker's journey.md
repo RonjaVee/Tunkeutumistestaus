@@ -47,8 +47,7 @@ Ylhäällä virtuaalikoneen raudasta tietoja. Lataus tuli valmiiksi, ja iskin le
 
 ![image](https://github.com/user-attachments/assets/accab2f7-e9db-4cde-9a21-30e675660366)
 
-Olen aiemminkin asennellut Linuxeja, joten tein valinnat sen perusteella, mitä olen oppinut aiemmilta kerroilta.
-
+Olen aiemminkin asennellut Linuxeja, joten tein valinnat sen perusteella, mitä olen oppinut aiemmilta kerroilta. Desktopin valitsin sen mukaan, mitä oli valittuna defaulttina. 
 
 
 
