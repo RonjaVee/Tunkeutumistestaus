@@ -26,7 +26,7 @@ Latasin Kalin ISO-imagen sivulta [https://www.kali.org/get-kali/#kali-installer-
 ![image](https://github.com/user-attachments/assets/d9c5c679-5161-46b7-b1ff-4bc4221c77b2)
 
 
-Odotellessani latausta loin Virtual Boxilla uuden koneen johon tulisin asentamaan Kalin. Etsin tueksi vielä oppaan, jos asennuksessa olisi ongelmia: [https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/)
+Odotellessani latausta loin Virtual Boxilla uuden koneen johon tulisin asentamaan Kalin. Pyrin luomaan riittävän tehokkaan koneen, jossa olisi riittävästi muistia. Aina voi luoda uuden koneen jos tämä ei riitä, mutta toivotaan, että näillä statseilla Kali pyörii hyvin.
 
 
 ![image](https://github.com/user-attachments/assets/5b3b3670-ea17-4592-b597-d3998c73dd9f)
@@ -35,7 +35,8 @@ Odotellessani latausta loin Virtual Boxilla uuden koneen johon tulisin asentamaa
 
 ![image](https://github.com/user-attachments/assets/91c404da-4708-40f1-a436-3d79d663d169)
 
-Tutkimani asennusohjeen perusteella valisin boottausjärjestyksen, kovalevy 1. ja optinen levy 2. Muita asetuksia koneeseen en tehnyt.
+
+Etsin tueksi vielä oppaan, jos asennuksessa olisi ongelmia: [https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/) Tutkimani asennusohjeen perusteella valisin boottausjärjestyksen, kovalevy 1. ja optinen levy 2. Muita asetuksia koneeseen en tehnyt.
 
 ![image](https://github.com/user-attachments/assets/495d1436-5f7a-4dd8-8ca0-d95d4c0cf9bd)
 
