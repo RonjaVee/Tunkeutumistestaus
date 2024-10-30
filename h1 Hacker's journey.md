@@ -122,7 +122,7 @@ Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksi
 
 ### Lähteet
 
-- Karvinen, Tero. Tunkeutumistestaus. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/)
+- Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/)
 
 - Hyppönen, Mikko & Tuominen, Tomi. Herrasmieshakkerit. Rikos, jonka voi tilata netistä | Yhteistyössä Kyberrosvot. Julkaistu 21.3.2024. [https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103](https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103)
 
@@ -139,6 +139,8 @@ Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksi
 - SourceForge. Metasploitable2 latauslinkki.[https://sourceforge.net/projects/metasploitable/](https://sourceforge.net/projects/metasploitable/) Ladattu 30.10.2024.
 
 - Sunny Dimalu The Cyborg. install Kali Linux 2024.1 & Metasploitable2 on VirtualBox 7 Step By Step : Cyber Security Lab 2024. Julkaistu 14.3.2023. [https://www.youtube.com/watch?v=yf3jetn4tN8](https://www.youtube.com/watch?v=yf3jetn4tN8)
+
+- Valkamo, Tuomas. Penetration Testing Course: Week 2. Julkaistu 4.11.2024.[https://tuomasvalkamo.com/PenTestCourse/week-2/](https://tuomasvalkamo.com/PenTestCourse/week-2/)
 
 
 
