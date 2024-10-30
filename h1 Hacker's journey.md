@@ -160,7 +160,13 @@ Ja selaimessa Metasploitable näkyi myös:
 
 ### h) Porttiskannaa Metasploitable huolellisesti ja kaikki portit (nmap -A -p-). Poimi 2-3 hyökkääjälle kiinnostavinta porttia. Analysoi ja selitä tulokset näiden porttien osalta.
 
-Skannasin Metasploitablen komennolla ``nmap -A -p- 192.168.56.102``.
+Skannasin Metasploitablen komennolla ``nmap -A -p- 192.168.56.102``. Portit 21, 22, 23, 25, 53, 80, 111, 139, 445, 512, 513, 514, 1099, 1524, 2049, 2121, 3306, 3632, 5432, 5900, 6000, 6667, 6697, 8009, 8180, 8787, 45552, 50229, 55445 ja 56092 olivat auki. Kaikkia en saanut kuvaan, mutta tässä kuva siitä, että skannaus tehty. 
+
+![image](https://github.com/user-attachments/assets/45612f62-c05e-4e12-ba39-151357f15b27)
+
+Kysyin ChatGPT:ltä, mitkä näistä porteista olisi sen mukaan mielenkiintoisimpia hyökkääjän näkökulmasta. Se ehdotti portteja 22, 80 ja 445. Kaksi ensimmäistä ovatkin jo tuttuja: Portin 22 kautta saa etäyhteyden koneeseen, ja hyökkääjälle SSH-yhteys onkin tapa hallita murrettua konetta etäältä. Portin 80 läpi kulkee HTTP-pyyntöjä, ja huonosti suunniteltujen web-sovellusten heikkouksia hyödyntämällä (esim. SQL-injektiolla päästään käsiksi tietokantaan) tai esimerkiksi DDoS-hyökkäyksellä (HTTP-pyynnöt tukkivat palvelimen) voi aiheuttaa uhrille haittaa.
+
+Portti 445 ei ollut minulle tuttu, joten tutustuin siihen käyttäen lähteenä [SecurityScoreboardin](https://securityscorecard.com/blog/navigating-the-risks-of-tcp-445-strategies-for-secure-network-communication/) blogia. Portti 445 on siis SMB (Server Message Block) -protokollaa hyödyntävä verkkoportti ja sitä käytetään tiedostojen jakamiseen laitteiden välillä samassa verkossa, esim. printtereille tulostamista varten. Portin heikkouksia voidaan hyödyntää esimerkiksi ransomware-hyökkäysten toteuttamiseen. Porttia ei tulisi avata ulkoiseen verkkoon, vaan sen käyttö tulisi rajoittaa ainoastaan sisäiseen verkkoon. Sisäiseen verkkoon päästessään hyökkääjä voi hyödyntää tätä porttia siirtyessään laitteelta toiselle.
 
 ### Lähteet
 
@@ -182,7 +188,7 @@ Skannasin Metasploitablen komennolla ``nmap -A -p- 192.168.56.102``.
 
 - Sunny Dimalu The Cyborg. install Kali Linux 2024.1 & Metasploitable2 on VirtualBox 7 Step By Step : Cyber Security Lab 2024. Julkaistu 14.3.2023. [https://www.youtube.com/watch?v=yf3jetn4tN8](https://www.youtube.com/watch?v=yf3jetn4tN8)
 
-- Valkamo, Tuomas. Penetration Testing Course: Week 2. Julkaistu 4.11.2024.[https://tuomasvalkamo.com/PenTestCourse/week-2/](https://tuomasvalkamo.com/PenTestCourse/week-2/)
+- SecuritScorecard. Navigating the Risks of TCP 445: Strategies for Secure Network Communication. [https://securityscorecard.com/blog/navigating-the-risks-of-tcp-445-strategies-for-secure-network-communication/](https://securityscorecard.com/blog/navigating-the-risks-of-tcp-445-strategies-for-secure-network-communication/).
 
 
 
