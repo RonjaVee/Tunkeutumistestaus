@@ -6,15 +6,23 @@
 ### x) Lue/katso/kuuntele ja tiivistä.
 
 1. Hyppönen, Mikko & Tuominen, Tomi. Herrasmieshakkerit. Rikos, jonka voi tilata netistä | Yhteistyössä Kyberrosvot. Julkaistu 21.3.2024. [https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103](https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103)
+
+- Verkkorikollisten toiminta on nykypäivänä varsin organisoitunutta: rikollisyrityksillä saattaa olla jopa HR-osastot yms.
+- Esim. palvelunestohyökkäykset ovat halpoja ostaa, eikä tarvitse hakea Tor-verkosta asti vaan niitä on yleisesti saatavilla.
+- CaaS (Crime as a Service): esim. palvelut, joilla myydään varastettua dataa, DdoS-hyökkäykset ym.
+- RaaS (Ransomware as a Service): Ransomwaren (esim. kiristystroijalainen) myynti tai vuokraaminen. Haittaohjelmaa ei tarvitse itse koodata, kun sen ostaa. RaaS kuuluu CaaS-katon alle.
+- Motivaationa rahan lisäksi poliittinen vaikuttaminen, kybersodankäynti.
    
 
 2. Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains, chapters Abstract, 3.2 Intrusion Kill Chain. [https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf](https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf)
+
+
    
 
-3. Santos et al: The Art of Hacking (Video Collection): 4.3 Surveying Essential Tools for Active Reconnaissance. [https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/](https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/)
+5. Santos et al: The Art of Hacking (Video Collection): 4.3 Surveying Essential Tools for Active Reconnaissance. [https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/](https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/)
    
 
-4. Korkeimman oikeuden ratkaisu 2003:36. [https://finlex.fi/fi/oikeus/kko/kko/2003/20030036](https://finlex.fi/fi/oikeus/kko/kko/2003/20030036)
+6. Korkeimman oikeuden ratkaisu 2003:36. [https://finlex.fi/fi/oikeus/kko/kko/2003/20030036](https://finlex.fi/fi/oikeus/kko/kko/2003/20030036)
 
 
 ### a) Asenna Kali virtuaalikoneeseen.
@@ -66,7 +74,7 @@ Irrotin sitten koneen verkosta VirtualBoxissa.
 ### c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (nmap -A localhost). Analysoi tulokset.
 
 
-Päivitin ensin Kalilla paketit ``sudo apt-get update``. Sitten asensin nmapin ``sudo apt-get install nmap``. Asennuksen jälkeen irrotin koneen netistä ja kokeilin skanneria ``nmap -A localhost``. Oletetusti kaikki portit olivat inaktiivisia. Network distance 0 hops kertoo, että yhteys on paikallinen, eli pyyntö ei kulje muiden laitteiden kautta (esim. reititin).
+Päivitin ensin Kalilla paketit ``sudo apt-get update``. Sitten asensin nmapin ``sudo apt-get install nmap``. Asennuksen jälkeen irrotin koneen netistä ja kokeilin skanneria ``nmap -A localhost``. Porttien tila oli ignored state = demoneita ei ole asennettu, jotka kuuntelisivat tiettyjä portteja ja kaikki skannatut portit olivat kiinni. Network distance 0 hops kertoo, että yhteys on paikallinen, eli pyyntö ei kulje muiden laitteiden kautta (esim. reititin).
 
 ![image](https://github.com/user-attachments/assets/c50bc715-60e9-400f-913a-bf4fd9ae1ad7)
 
@@ -81,6 +89,10 @@ Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get in
 
 
 ### e) Asenna Metasploitable 2 virtuaalikoneeseen
+
+Käytin [https://docs.rapid7.com/metasploit/metasploitable-2/](https://docs.rapid7.com/metasploit/metasploitable-2/) sivustolta löytyvää ohjetta. Sivustolta löytyvää [Sourceforge](https://docs.rapid7.com/metasploit/metasploitable-2/)-linkkiä käytin Metaspoitable 2:n lataamiseen.
+
+
 
 
 ### f) Tee koneiden välille virtuaaliverkko.
@@ -105,5 +117,6 @@ Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get in
 
 -  [https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/)
 
+- [https://docs.rapid7.com/metasploit/metasploitable-2/](https://docs.rapid7.com/metasploit/metasploitable-2/)
 
 
