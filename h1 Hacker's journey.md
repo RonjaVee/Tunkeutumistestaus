@@ -1,7 +1,7 @@
-## h1 Hacker's journey
+# h1 Hacker's journey
 
 
-### x) Lue/katso/kuuntele ja tiivistä.
+## x) Lue/katso/kuuntele ja tiivistä.
 
 1. Hyppönen, Mikko & Tuominen, Tomi. Herrasmieshakkerit. Rikos, jonka voi tilata netistä | Yhteistyössä Kyberrosvot. Julkaistu 21.3.2024. [https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103](https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103)
 
@@ -24,7 +24,7 @@
 
 
 
-### a) Asenna Kali virtuaalikoneeseen.
+## a) Asenna Kali virtuaalikoneeseen.
 
 
 Latasin Kalin ISO-imagen sivulta [https://www.kali.org/get-kali/#kali-installer-images](https://www.kali.org/get-kali/#kali-installer-images).
@@ -58,7 +58,7 @@ Ja näin, asennus onnistui ja Kali Linux on valmiina käyttöön.
 
 
 
-### b) Irrota Kali-virtuaalikone verkosta. Todista testein, että kone ei saa yhteyttä Internetiin (esim. 'ping 8.8.8.8')
+## b) Irrota Kali-virtuaalikone verkosta. Todista testein, että kone ei saa yhteyttä Internetiin (esim. 'ping 8.8.8.8')
 
 Testasin ensin pingata vielä, kun kone oli verkossa. ``ping 8.8.8.8``
 
@@ -73,7 +73,7 @@ Irrotin sitten koneen verkosta VirtualBoxissa.
 
 
 
-### c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (nmap -A localhost). Analysoi tulokset.
+## c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (nmap -A localhost). Analysoi tulokset.
 
 
 Päivitin ensin Kalilla paketit ``sudo apt-get update``. Sitten asensin nmapin ``sudo apt-get install nmap``. Asennuksen jälkeen irrotin koneen netistä ja kokeilin skanneria ``nmap -A localhost``. Porttien tila oli ignored state = demoneita ei ole asennettu, jotka kuuntelisivat tiettyjä portteja ja kaikki skannatut portit olivat kiinni. Network distance 0 hops kertoo, että yhteys on paikallinen, eli pyyntö ei kulje muiden laitteiden kautta (esim. reititin).
@@ -83,7 +83,7 @@ Päivitin ensin Kalilla paketit ``sudo apt-get update``. Sitten asensin nmapin `
 
 
 
-### d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
+## d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
 
 Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get install openssh-server``. Otin koneen taas pois verkosta ja potkaisin demonit käyntiin ``sudo service apache2 start``, ``sudo systemctl start ssh.service``. Skannasin portit uudestaan, ja siellä oli kuin olikin auenneet seuraavat: portti 22 on varattu SSH-yhteyksille. SSH-yhteyden avulla voidaan ottaa salattu etäyhteys koneeseen. Portti 80 aukesi Apachen myötä, sillä Apache kuuntelee tätä porttia: sen kautta HTTP-pyynnöt kulkevat selaimelta palvelimelle.
 
@@ -92,7 +92,7 @@ Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get in
 
 
 
-### e) Asenna Metasploitable 2 virtuaalikoneeseen
+## e) Asenna Metasploitable 2 virtuaalikoneeseen
 
 Käytin [https://docs.rapid7.com/metasploit/metasploitable-2/](https://docs.rapid7.com/metasploit/metasploitable-2/) sivustolta löytyvää ohjetta. Sivustolta löytyvää [Sourceforge](https://docs.rapid7.com/metasploit/metasploitable-2/)-linkkiä käytin Metaspoitable 2:n lataamiseen.
 
@@ -113,7 +113,7 @@ Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksi
 
 
 
-### f) Tee koneiden välille virtuaaliverkko.
+## f) Tee koneiden välille virtuaaliverkko.
 
 Tehtävän ohjeen mukaan loin host only networkin Virtualboxissa (File -> Host Network Manager -> Create). Verkon IP-osoite on 192.168.56.1/24.
 
@@ -143,7 +143,7 @@ Pingasin sitten Kalilla Metasploitablea ``ping 192.168.56.102``. Paketteja liikk
 
 
 
-### g) Etsi Metasploitable porttiskannaamalla (nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable.
+## g) Etsi Metasploitable porttiskannaamalla (nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable.
 
 Porttiskannauksen ajaksi otin Kalin irti Internetistä (eli Adapter1 Not Attatched). Skannasin luodun Host only -verkon komennolla ``nmap -sn 192.168.56.0/24``.
 
@@ -164,7 +164,7 @@ Ja selaimessa Metasploitable näkyi myös:
 
 
 
-### h) Porttiskannaa Metasploitable huolellisesti ja kaikki portit (nmap -A -p-). Poimi 2-3 hyökkääjälle kiinnostavinta porttia. Analysoi ja selitä tulokset näiden porttien osalta.
+## h) Porttiskannaa Metasploitable huolellisesti ja kaikki portit (nmap -A -p-). Poimi 2-3 hyökkääjälle kiinnostavinta porttia. Analysoi ja selitä tulokset näiden porttien osalta.
 
 Skannasin Metasploitablen komennolla ``nmap -A -p- 192.168.56.102``. Portit 21, 22, 23, 25, 53, 80, 111, 139, 445, 512, 513, 514, 1099, 1524, 2049, 2121, 3306, 3632, 5432, 5900, 6000, 6667, 6697, 8009, 8180, 8787, 45552, 50229, 55445 ja 56092 olivat auki. Kaikkia en saanut kuvaan, mutta tässä kuva siitä, että skannaus tehty. 
 
@@ -176,7 +176,7 @@ Portti 445 ei ollut minulle tuttu, joten tutustuin siihen käyttäen lähteenä 
 
 
 
-### Lähteet
+## Lähteet
 
 - Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/)
 
