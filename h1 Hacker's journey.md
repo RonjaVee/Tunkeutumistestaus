@@ -151,8 +151,6 @@ Porttiskannauksen ajaksi otin Kalin irti Internetistä (eli Adapter1 Not Attatch
 
 Metasploitable näkyi IP-osoitteessa 192.168.56.102.
 
-![image](https://github.com/user-attachments/assets/400e551f-e001-4fc5-b14f-c9719ba5e59b)
-
 Komennolla ``curl http://192.168.56.102`` näkyi seuraavaa:
 
 ![image](https://github.com/user-attachments/assets/83dfdde2-5838-4971-8503-bd895d3686a2)
