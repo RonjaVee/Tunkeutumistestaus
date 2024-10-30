@@ -5,22 +5,37 @@
 
 1. Hyppönen, Mikko & Tuominen, Tomi. Herrasmieshakkerit. Rikos, jonka voi tilata netistä | Yhteistyössä Kyberrosvot. Julkaistu 21.3.2024. [https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103](https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103)
 
-- Verkkorikollisten toiminta on nykypäivänä varsin organisoitunutta: rikollisyrityksillä saattaa olla jopa HR-osastot yms.
-- Esim. palvelunestohyökkäykset ovat halpoja ostaa, eikä tarvitse hakea Tor-verkosta asti vaan niitä on yleisesti saatavilla.
-- CaaS (Crime as a Service): esim. palvelut, joilla myydään varastettua dataa, DdoS-hyökkäykset ym.
-- RaaS (Ransomware as a Service): Ransomwaren (esim. kiristystroijalainen) myynti tai vuokraaminen. Haittaohjelmaa ei tarvitse itse koodata, kun sen ostaa. RaaS kuuluu CaaS-katon alle.
-- Motivaationa rahan lisäksi poliittinen vaikuttaminen, kybersodankäynti.
+   - Verkkorikollisten toiminta on nykypäivänä varsin organisoitunutta: rikollisyrityksillä saattaa olla jopa HR-osastot yms.
+   - Esim. palvelunestohyökkäykset ovat halpoja ostaa, eikä tarvitse hakea Tor-verkosta asti vaan niitä on yleisesti saatavilla.
+   - CaaS (Crime as a Service): esim. palvelut, joilla myydään varastettua dataa, DdoS-hyökkäykset ym.
+   - RaaS (Ransomware as a Service): Ransomwaren (esim. kiristystroijalainen) myynti tai vuokraaminen. Haittaohjelmaa ei tarvitse itse koodata, kun sen ostaa. RaaS kuuluu CaaS-katon alle.
+   - Motivaationa rahan lisäksi poliittinen vaikuttaminen, kybersodankäynti.
    
 
 2. Hutchins et al 2011: Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains, chapters Abstract, 3.2 Intrusion Kill Chain. [https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf](https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf)
 
-
+   - APT (Advanced Persistent Threat)
+   - Esimerkiksi APT-hyökkäyksistä sosiaalinen manipulointi ja troijalaiset todistavat suojausmenetelmien heikkoudet
+   - Perinteiset verkkopuolustusvälineet, esim. IDS (Intrusion Detection System) ja antivirusohjelmat eivät riitä APT-uhkien torjumiseen
+   - Kill chain -malli kuvaa hyökkäyksen eri vaiheita
+   - Tuntemalla hyökkäyksen vaiheet ja motiivit voidaan kehittää vaikuttavia vastatoimia
+   - Jos hyökkäykset toistavat samanlaista kaavaa, voi puolustautuva osapuoli löytää heikkouksiaan hyökkäyksiä tutkimalla ja kehittää suojautumistaan
    
 
-5. Santos et al: The Art of Hacking (Video Collection): 4.3 Surveying Essential Tools for Active Reconnaissance. [https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/](https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/)
+3. Santos et al: The Art of Hacking (Video Collection): 4.3 Surveying Essential Tools for Active Reconnaissance. [https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/](https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/)
+
+   - Reconnaissance = tiedustelu
+   - Aktiivinen tiedustelu tarkoittaa aktiivista vuorovaikutusta kohteeseen tiedon keräämiseksi, esim. porttiskannaus
+   - Aktiivisen tiedustelun etuja ovat kerätyn tiedon tarkkuus, nopeus; heikkouksia ovat laittomuus, kiinni jäämisen riski, tekninen haastavuus hyvin suojatuissa kohteissa
+   - Passiivinen tiedustelu tarkoittaa tiedon etsimistä vapaasti käytettävissä olevista lähteistä, esim. kohteen some-profiilien tutkiminen, verkkohaut
+   - Passiivisen tiedustelun etuja ovat minimaalinen kiinnijäämisen riski, laillisuus; heikkouksia ovat hitaus, epätarkkuus
    
 
-6. Korkeimman oikeuden ratkaisu 2003:36. [https://finlex.fi/fi/oikeus/kko/kko/2003/20030036](https://finlex.fi/fi/oikeus/kko/kko/2003/20030036)
+4. Korkeimman oikeuden ratkaisu 2003:36. [https://finlex.fi/fi/oikeus/kko/kko/2003/20030036](https://finlex.fi/fi/oikeus/kko/kko/2003/20030036)
+
+   - Rikoslain 38 luvun 8 § mukaan tietojärjestelmään tunkeutuminen ilman lupaa on rangaistavaa
+   - Yritys on myös rangaistava, vaikka pääsy järjestelmään ei toteutuisikaan
+
 
 
 
