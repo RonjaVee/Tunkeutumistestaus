@@ -1,8 +1,6 @@
 ## h1 Hacker's journey
 
 
-
-
 ### x) Lue/katso/kuuntele ja tiivistä.
 
 1. Hyppönen, Mikko & Tuominen, Tomi. Herrasmieshakkerit. Rikos, jonka voi tilata netistä | Yhteistyössä Kyberrosvot. Julkaistu 21.3.2024. [https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103](https://podcasts.apple.com/fi/podcast/rikos-jonka-voi-tilata-netist%C3%A4-yhteisty%C3%B6ss%C3%A4-kyberrosvot/id1479000931?i=1000650652103)
@@ -23,6 +21,7 @@
    
 
 6. Korkeimman oikeuden ratkaisu 2003:36. [https://finlex.fi/fi/oikeus/kko/kko/2003/20030036](https://finlex.fi/fi/oikeus/kko/kko/2003/20030036)
+
 
 
 ### a) Asenna Kali virtuaalikoneeseen.
@@ -58,6 +57,7 @@ Ja näin, asennus onnistui ja Kali Linux on valmiina käyttöön.
 
 
 
+
 ### b) Irrota Kali-virtuaalikone verkosta. Todista testein, että kone ei saa yhteyttä Internetiin (esim. 'ping 8.8.8.8')
 
 Testasin ensin pingata vielä, kun kone oli verkossa. ``ping 8.8.8.8``
@@ -71,6 +71,8 @@ Irrotin sitten koneen verkosta VirtualBoxissa.
 ![image](https://github.com/user-attachments/assets/bb2a167e-4e42-4223-9779-31e22061bf6f)
 
 
+
+
 ### c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (nmap -A localhost). Analysoi tulokset.
 
 
@@ -80,11 +82,13 @@ Päivitin ensin Kalilla paketit ``sudo apt-get update``. Sitten asensin nmapin `
 
 
 
+
 ### d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
 
 Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get install openssh-server``. Otin koneen taas pois verkosta ja potkaisin demonit käyntiin ``sudo service apache2 start``, ``sudo systemctl start ssh.service``. Skannasin portit uudestaan, ja siellä oli kuin olikin auenneet seuraavat: portti 22 on varattu SSH-yhteyksille. SSH-yhteyden avulla voidaan ottaa salattu etäyhteys koneeseen. Portti 80 aukesi Apachen myötä, sillä Apache kuuntelee tätä porttia: sen kautta HTTP-pyynnöt kulkevat selaimelta palvelimelle.
 
 ![image](https://github.com/user-attachments/assets/f411c6b9-f525-4a9a-8db5-472719dd8c29)
+
 
 
 
@@ -105,6 +109,7 @@ Loin VirtualBoxissa koneen, jossa käytin tätä kovalevyä.
 Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksilla ``msfadmin:msfadmin``. Näyttää toimivan kuten pitää.
 
 ![image](https://github.com/user-attachments/assets/914424e2-b38a-4cf5-894f-6013a1ec3dd6)
+
 
 
 
@@ -134,6 +139,7 @@ Saman tarkastuksen tein Metasploitable-koneella. Verkko löytyi eth0-verkkosovit
 Pingasin sitten Kalilla Metasploitablea ``ping 192.168.56.102``. Paketteja liikkui.
 
 ![image](https://github.com/user-attachments/assets/f426b5fb-d02d-4194-b606-5ab30ca4bd0c)
+
 
 
 
@@ -167,6 +173,8 @@ Skannasin Metasploitablen komennolla ``nmap -A -p- 192.168.56.102``. Portit 21, 
 Kysyin ChatGPT:ltä, mitkä näistä porteista olisi sen mukaan mielenkiintoisimpia hyökkääjän näkökulmasta. Se ehdotti portteja 22, 80 ja 445. Kaksi ensimmäistä ovatkin jo tuttuja: Portin 22 kautta saa etäyhteyden koneeseen, ja hyökkääjälle SSH-yhteys onkin tapa hallita murrettua konetta etäältä. Portin 80 läpi kulkee HTTP-pyyntöjä, ja huonosti suunniteltujen web-sovellusten heikkouksia hyödyntämällä (esim. SQL-injektiolla päästään käsiksi tietokantaan) tai esimerkiksi DDoS-hyökkäyksellä (HTTP-pyynnöt tukkivat palvelimen) voi aiheuttaa uhrille haittaa.
 
 Portti 445 ei ollut minulle tuttu, joten tutustuin siihen käyttäen lähteenä [SecurityScoreboardin](https://securityscorecard.com/blog/navigating-the-risks-of-tcp-445-strategies-for-secure-network-communication/) blogia. Portti 445 on siis SMB (Server Message Block) -protokollaa hyödyntävä verkkoportti ja sitä käytetään tiedostojen jakamiseen laitteiden välillä samassa verkossa, esim. printtereille tulostamista varten. Portin heikkouksia voidaan hyödyntää esimerkiksi ransomware-hyökkäysten toteuttamiseen. Porttia ei tulisi avata ulkoiseen verkkoon, vaan sen käyttö tulisi rajoittaa ainoastaan sisäiseen verkkoon. Sisäiseen verkkoon päästessään hyökkääjä voi hyödyntää tätä porttia siirtyessään laitteelta toiselle.
+
+
 
 ### Lähteet
 
