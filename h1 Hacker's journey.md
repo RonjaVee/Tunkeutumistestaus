@@ -26,7 +26,7 @@ Latasin Kalin ISO-imagen sivulta [https://www.kali.org/get-kali/#kali-installer-
 ![image](https://github.com/user-attachments/assets/d9c5c679-5161-46b7-b1ff-4bc4221c77b2)
 
 
-Odotellessani latausta loin Virtual Boxilla uuden koneen johon tulisin asentamaan Kalin. Pyrin luomaan riittävän tehokkaan koneen, jossa olisi riittävästi muistia. Aina voi luoda uuden koneen jos tämä ei riitä, mutta toivotaan, että näillä statseilla Kali pyörii hyvin.
+Odotellessani latausta loin Virtual Boxilla uuden koneen johon tulisin asentamaan Kalin. Hyödynsin koneen luomisessa aiemmilta kursseilta oppimaani. Aina voi luoda uudenkin jos tämä ei riitä, mutta toivotaan, että näillä statseilla Kali pyörii hyvin. 
 
 
 ![image](https://github.com/user-attachments/assets/5b3b3670-ea17-4592-b597-d3998c73dd9f)
