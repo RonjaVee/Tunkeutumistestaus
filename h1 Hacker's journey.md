@@ -52,11 +52,32 @@ Ja näin, asennus onnistui ja Kali Linux on valmiina käyttöön.
 
 ### b) Irrota Kali-virtuaalikone verkosta. Todista testein, että kone ei saa yhteyttä Internetiin (esim. 'ping 8.8.8.8')
 
+Testasin ensin pingata vielä, kun kone oli verkossa. ``ping 8.8.8.8``
+
+![image](https://github.com/user-attachments/assets/7aa07fcc-f0d5-410e-9057-58370768de63)
+
+Irrotin sitten koneen verkosta VirtualBoxissa.
+
+![image](https://github.com/user-attachments/assets/eed98eba-7fee-4947-8342-83d4200b5b74)
+
+![image](https://github.com/user-attachments/assets/bb2a167e-4e42-4223-9779-31e22061bf6f)
+
 
 ### c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi (nmap -A localhost). Analysoi tulokset.
 
 
+Päivitin ensin Kalilla paketit ``sudo apt-get update``. Sitten asensin nmapin ``sudo apt-get install nmap``. Asennuksen jälkeen irrotin koneen netistä ja kokeilin skanneria ``nmap -A localhost``. Oletetusti kaikki portit olivat inaktiivisia. Network distance 0 hops kertoo, että yhteys on paikallinen, eli pyyntö ei kulje muiden laitteiden kautta (esim. reititin).
+
+![image](https://github.com/user-attachments/assets/c50bc715-60e9-400f-913a-bf4fd9ae1ad7)
+
+
+
 ### d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
+
+Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get install openssh-server``. Otin koneen taas pois verkosta ja potkaisin demonit käyntiin ``sudo service apache2 start``, ``sudo systemctl start ssh.service``. Skannasin portit uudestaan, ja siellä oli kuin olikin auenneet seuraavat: portti 22 on varattu SSH-yhteyksille. SSH-yhteyden avulla voidaan ottaa salattu etäyhteys koneeseen. Portti 80 aukesi, sillä Apache kuuntelee tätä porttia, jonka kautta HTTP-pyynnöt kulkevat selaimelta palvelimelle.
+
+![image](https://github.com/user-attachments/assets/f411c6b9-f525-4a9a-8db5-472719dd8c29)
+
 
 
 ### e) Asenna Metasploitable 2 virtuaalikoneeseen
