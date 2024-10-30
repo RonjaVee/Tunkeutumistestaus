@@ -92,6 +92,23 @@ Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get in
 
 Käytin [https://docs.rapid7.com/metasploit/metasploitable-2/](https://docs.rapid7.com/metasploit/metasploitable-2/) sivustolta löytyvää ohjetta. Sivustolta löytyvää [Sourceforge](https://docs.rapid7.com/metasploit/metasploitable-2/)-linkkiä käytin Metaspoitable 2:n lataamiseen.
 
+En tiennyt, kuinka jatkaa tästä eteenpäin, joten etsin ohjevideon Youtubesta: [install Kali Linux 2024.1 & Metasploitable2 on VirtualBox 7 Step By Step : Cyber Security Lab 2024](https://www.youtube.com/watch?v=yf3jetn4tN8).
+
+Siirsin lataamani kansion Virtual Boxin kansioon josta muutkin kovalevyt löytyvät, ja valitsin Extract here.
+
+![image](https://github.com/user-attachments/assets/e7b814eb-a7ff-44eb-9a83-173a7db62ec2)
+
+Loin VirtualBoxissa koneen, jossa käytin tätä kovalevyä.
+
+![image](https://github.com/user-attachments/assets/6245ccdf-cb51-444f-a048-2f533b79db96)
+
+Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksilla ``msfadmin:msfadmin``.
+
+![image](https://github.com/user-attachments/assets/914424e2-b38a-4cf5-894f-6013a1ec3dd6)
+
+
+
+
 
 
 
