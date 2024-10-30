@@ -102,7 +102,7 @@ Loin VirtualBoxissa koneen, jossa käytin tätä kovalevyä.
 
 ![image](https://github.com/user-attachments/assets/6245ccdf-cb51-444f-a048-2f533b79db96)
 
-Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksilla ``msfadmin:msfadmin``.
+Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksilla ``msfadmin:msfadmin``. Näyttää toimivan kuten pitää.
 
 ![image](https://github.com/user-attachments/assets/914424e2-b38a-4cf5-894f-6013a1ec3dd6)
 
