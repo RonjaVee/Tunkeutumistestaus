@@ -57,7 +57,7 @@ Odotellessani latausta loin Virtual Boxilla uuden koneen johon tulisin asentamaa
 ![image](https://github.com/user-attachments/assets/91c404da-4708-40f1-a436-3d79d663d169)
 
 
-Etsin tueksi vielä oppaan, jos asennuksessa olisi ongelmia: [https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/) Tutkimani asennusohjeen perusteella valisin boottausjärjestyksen, kovalevy 1. ja optinen levy 2. Muita asetuksia koneeseen en tehnyt.
+Etsin tueksi vielä oppaan, jos asennuksessa olisi ongelmia: [https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/) Tutkimani asennusohjeen perusteella valisin boottausjärjestyksen, kovalevy 1. ja optinen levy 2. Muita asetuksia koneeseen en tehnyt. Nämä asetuksetkin tein kokeilumielessä, kun tutustuin samalla VirtualBoxin ominaisuuksiin.
 
 ![image](https://github.com/user-attachments/assets/495d1436-5f7a-4dd8-8ca0-d95d4c0cf9bd)
 
