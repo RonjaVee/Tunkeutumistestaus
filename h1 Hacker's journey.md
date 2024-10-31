@@ -129,7 +129,7 @@ Avasin koneen ja kirjauduin sisään Metasploitablen sivulla annetuilla tunnuksi
 
 ## f) Tee koneiden välille virtuaaliverkko.
 
-Tehtävän ohjeen mukaan loin host only networkin Virtualboxissa (File -> Tools -> Host Network Manager -> Create). Verkon IP-osoite on 192.168.56.1/24.
+Loin host only networkin Virtualboxissa (File -> Tools -> Host Network Manager -> Create). Verkon IP-osoite on 192.168.56.1/24.
 
 ![image](https://github.com/user-attachments/assets/9582c702-0d53-48af-900a-7ba981fbe174)
 
