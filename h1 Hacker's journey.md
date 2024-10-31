@@ -99,7 +99,7 @@ Päivitin ensin Kalilla paketit ``sudo apt-get update``. Sitten asensin nmapin `
 
 ## d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen. Analysoi ja selitä erot.
 
-Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get install openssh-server``. Otin koneen taas pois verkosta ja potkaisin demonit käyntiin ``sudo service apache2 start``, ``sudo systemctl start ssh.service``. Skannasin portit uudestaan, ja siellä oli kuin olikin auenneet seuraavat: portti 22 on varattu SSH-yhteyksille. SSH-yhteyden avulla voidaan ottaa salattu etäyhteys koneeseen. Portti 80 aukesi Apachen myötä, sillä Apache kuuntelee tätä porttia: sen kautta HTTP-pyynnöt kulkevat selaimelta palvelimelle.
+Asensin seuraavat demonit: ``sudo apt-get install apache2`` ja ``sudo apt-get install openssh-server``. Otin koneen taas pois verkosta ja potkaisin demonit käyntiin ``sudo service apache2 start``, ``sudo systemctl start ssh.service`` (nämä olisi voinut molemmat käynnistää tuolla systemctl-komennolla, tuli jostain muistista tuo service start niin kokeilin sitä). Skannasin portit uudestaan, ja siellä oli kuin olikin auenneet seuraavat: portti 22 on varattu SSH-yhteyksille. SSH-yhteyden avulla voidaan ottaa salattu etäyhteys koneeseen. Portti 80 aukesi Apachen myötä, sillä Apache kuuntelee tätä porttia: sen kautta HTTP-pyynnöt kulkevat selaimelta palvelimelle.
 
 ![image](https://github.com/user-attachments/assets/f411c6b9-f525-4a9a-8db5-472719dd8c29)
 
