@@ -112,7 +112,7 @@ Käytin [https://docs.rapid7.com/metasploit/metasploitable-2/](https://docs.rapi
 
 En tiennyt, kuinka jatkaa tästä eteenpäin, joten etsin ohjevideon Youtubesta: [install Kali Linux 2024.1 & Metasploitable2 on VirtualBox 7 Step By Step : Cyber Security Lab 2024](https://www.youtube.com/watch?v=yf3jetn4tN8).
 
-Siirsin lataamani kansion Virtual Boxin kansioon josta muutkin kovalevyt löytyvät, ja valitsin Extract here.
+Siirsin lataamani kansion Virtual Boxin kansioon josta muutkin kovalevyt löytyvät, ja purin zip-tiedoston sinne. Ovat nyt samassa kansiossa kaikki kivasti.
 
 ![image](https://github.com/user-attachments/assets/e7b814eb-a7ff-44eb-9a83-173a7db62ec2)
 
