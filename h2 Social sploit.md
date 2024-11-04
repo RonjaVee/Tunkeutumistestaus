@@ -2,6 +2,11 @@
 
 ## x) Lue/katso/kuuntele ja tiivistä
 
+Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
+
+-
+-
+-
 
 
 
@@ -43,4 +48,4 @@
 
 ## Lähteet
 
-
+Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
