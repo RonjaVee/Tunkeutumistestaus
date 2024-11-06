@@ -12,6 +12,14 @@ Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Te
 
 ## a) Harjoittelemme omassa virtuaaliverkossa, jossa on Kali ja Metaspoitable. Osoita testein, että 1) koneet eivät saa yhteyttä Internetiin 2) Koneet saavat yhteyden toisiinsa
 
+Testasin, ettei Kali tai Metasploitable saa yhteyttä Internettiin ``ping 8.8.8.8`` ja että koneet saavat yhteyden toisiinsa ``ping 192.168.56.101`` ``ping 192.168.56.102``. Kumpikaan ei saanut yhteyttä Internettiin, mutta pingaus koneiden välillä onnistui.
+
+![image](https://github.com/user-attachments/assets/53abff32-c356-4c79-91bb-aafff51e49fd)
+
+![image](https://github.com/user-attachments/assets/7592da8f-5efa-48a0-97fb-5810ba4cba45)
+
+
+
 
 ## b) Ota Metasploit msfconsole käyttöön
 
