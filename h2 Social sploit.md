@@ -144,8 +144,31 @@ Kotihakemistoja selaamalla löytyi msfadmin-käyttäjän ssh-avaimia. ``/etc/ssh
 
 ## j) Murtaudu Metasploitableen jollain toisella tavalla
 
+Etsin erilaisia tapoja murtautua ja löysin Youtubesta videon [How to Hack VNC Port 5900 | Metasploitable 2](https://www.youtube.com/watch?v=YDMxHU-PXSo&list=PLZEN0mW2CQl38fx0wtv53VEmn5CKJIrLA&index=5). Lähdin toteuttamaan siis tätä tapaa.
+
+Ensin skannasin VNC-portin Metasploitablesta. ``nmap 192.168.56.102 -sV -p 5900`` Portti oli auki.
+
+![image](https://github.com/user-attachments/assets/d4fb666b-be0c-41db-ab5c-78ed9df30842)
+
+Tarkoitus oli käyttää VNC-skanneria, ja mfsconsolesta pystyi niitä hakemaan tarkennetulla haulla ``grep scanner search vnc``
+
+![image](https://github.com/user-attachments/assets/d0ee165b-2737-444c-8ef8-66bed9ad348b)
+
+Vaihtoehdoista tuli valita login scanner. ``use 109``. ``show options``-komento näyttää määriteltäviä asetuksia.
+
+![image](https://github.com/user-attachments/assets/d73d5377-b76e-4f0e-9ae4-0e4f59a47b5a)
+
+Määritin RHOSTS ``set RHOSTS 192.168.56.102`` eli kohteeksi Metasploitable. Options-listassa näkyy defaultina tiedosto PASS_FILE, joka sisältää listan yleisimpiä salasanoja: skanneri koettaa näitä salasanoja murtaakseen VNC-palvelimen. Tähän kohtaan voi kokeilla muitakin listoja, mutta pidin tämän oletuslistan. 
+
+Womp womp. Salasana oli password. Tässä hyökkäyksessä käytetään brute forcea.
+
+![image](https://github.com/user-attachments/assets/b4e5f608-2cee-43f3-8347-c1d088d4f7f0)
+
+
 
 ## k) Demonstroi Meterpretrin ominaisuuksia
+
+Toistin aiemman tehtävän vsftpd-session ja päivitin sen Meterpreter-sessioksi.
 
 
 ## l) Tallenna shell-sessio tekstitiedostoon script-työkalulla (script -fa log001.txt)
