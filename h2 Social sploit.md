@@ -61,7 +61,11 @@ Sitten toistin komennon niin, että tulokset tallentuvat tiedostoihin: ``nmap -p
 
 ## e) Tarkastele Metasploitin tietokantoihin tallennettuja tietoja komennoilla "hosts" ja "services". Kokeile suodattaa näitä listoja tai hakea niistä
 
+Komennolla ``hosts`` näkyi tietokantaan tallennetun porttiskannauksen tallentamat IP-osoitteet.
+
 ![image](https://github.com/user-attachments/assets/123ca494-23a6-4a19-9475-ebfb5e601e51)
+
+Komennolla ``services``näkyi tietokantaan tallennetun porttiskannauksen havaitsemat portit ja niitä kuuntelevat palvelut.
 
 ![image](https://github.com/user-attachments/assets/b21b9866-b050-46e5-a7fb-5fc06574dda5)
 
