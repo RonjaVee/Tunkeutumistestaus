@@ -4,8 +4,6 @@
 
 Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
 
-##
-
 - Metasploit Framework on avoimen lähdekoodin tunkeutumistestaustyökalu
 - Sen käyttö on ketterää ja helppoa
 - Automaattinen tallennus tietokantaan nopeuttaa testausta
