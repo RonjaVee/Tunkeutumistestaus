@@ -1,5 +1,7 @@
 # h2 Social sploit
 
+Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/)
+
 ## x) Lue/katso/kuuntele ja tiivistä
 
 Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
@@ -16,7 +18,6 @@ Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Te
 - Encoders = Käytetään moduulien hämärtämiseen, jotta ne välttäisivät suojamekanismit
 - Meterpreter = Erääblainen payload, joka käyttää DLL-injektiota ja tarjoaa laajan valikoiman toimintoja kohteen hallintaan
 
-##
 
 #### Joitakin tärkeitä komentoja:
 
