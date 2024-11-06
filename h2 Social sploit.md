@@ -65,9 +65,20 @@ Komennolla ``hosts`` näkyi tietokantaan tallennetun porttiskannauksen tallentam
 
 ![image](https://github.com/user-attachments/assets/123ca494-23a6-4a19-9475-ebfb5e601e51)
 
+
 Komennolla ``services``näkyi tietokantaan tallennetun porttiskannauksen havaitsemat portit ja niitä kuuntelevat palvelut.
 
 ![image](https://github.com/user-attachments/assets/b21b9866-b050-46e5-a7fb-5fc06574dda5)
+
+
+Komennoilla ``hosts -h`` ja ``services -h`` löysin erilaisia suodatusvaihtoehtoja. 
+
+Esimerkiksi komento ``services -S http`` hakee kaikki palvelut, jotka sisältävät sanan http. Komento ``hosts --up`` näyttää päällä olevat laitteet.
+
+![image](https://github.com/user-attachments/assets/c6d5033b-ba33-474a-9205-2c4c23bfc496)
+
+![image](https://github.com/user-attachments/assets/98ba4136-ad6d-41e9-b2f8-7a2143e4b14f)
+
 
 
 
