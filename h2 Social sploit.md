@@ -9,6 +9,8 @@ Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Te
 - Sen käyttö on ketterää ja helppoa
 - Automaattinen tallennus tietokantaan nopeuttaa testausta
 
+##
+
 - Exploits = Koodi, joka hyödyntää kohteessa olevaa haavoittuvuutta
 - Payload = Koodi, joka suoritetaan kohteessa haavoittuvuuden hyödyntämisen jälkeen
 - Auxiliary = Lisämoduulit, jotka mahdollistavat skannauksen, fuzzauksen, sieppaamisen ja muita toimintoja ilman varsinaista hyökkäystä
