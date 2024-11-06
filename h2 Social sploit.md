@@ -56,7 +56,7 @@ Komennolla ``msfconsole`` sain konsolin käyttöön.
 
 ## c) Etsi Metasploitable porttiskannaamalla (db_nmap -sn). Tarkista selaimella, että löysit oikean IP:n - Metasploitablen weppipalvelimen etusivulla lukee Metasploitable
 
-Annoin tehtävänannon mukaisen komennon, mutta sain virheilmoituksen, jonka mukaan en ole yhteydessä tietokantaan. Löysin ohjeet tähän [https://miteshshah.github.io/linux/kali/how-to-fix-metasploit-database-not-connected-or-cache-not-built/](https://miteshshah.github.io/linux/kali/how-to-fix-metasploit-database-not-connected-or-cache-not-built/), ja lähdin kokeilemaan. Olin kuitenkin jo tunnilla alustanut tietokannan, joten en tiennyt missä kiikasti. 
+Annoin tehtävänannon mukaisen komennon, mutta sain virheilmoituksen, jonka mukaan en ole yhteydessä tietokantaan. Löysin ohjeet tähän [https://miteshshah.github.io/linux/kali/how-to-fix-metasploit-database-not-connected-or-cache-not-built/](https://miteshshah.github.io/linux/kali/how-to-fix-metasploit-database-not-connected-or-cache-not-built/), ja lähdin kokeilemaan. Olin kuitenkin jo tunnilla alustanut tietokannan, joten en tiennyt missä kiikasti, not connected. 
 
 ![image](https://github.com/user-attachments/assets/4d8df782-c380-42cd-90d4-3fb669ebde98)
 
