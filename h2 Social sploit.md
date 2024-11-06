@@ -84,6 +84,10 @@ Esimerkiksi komento ``services -S http`` hakee kaikki palvelut, jotka sisältäv
 
 ## f) Vertaile nmap:n omaa tiedostoon tallennusta ja db_nmap:n tallennusta tietokantoihin. Mitkä ovat eri tiedostomuotojen ja Metasploitin tietokannan hyvät puolet?
 
+Tiedostoon tallentamisen etuna on, että tiedostoja on helppo jakaa eteenpäin. XML-tiedostoa voi myös lukea useissa eri ohjelmissa, kuten tekstieditorit, ja tieto on rakenteista. Grepable-tiedosto on kätevä, kun tekstitiedostoa käsitellään komentorivillä. Tiedostoksi tallentaminen ei vaadi tietokannan luomista.
+
+Tietokantaan tallentaminen mahdollistaa tiedon käsittelyn Metasploitin sisällä, ja tietokannasta voi helposti hakea ja suodattaa tietoa. Tietoja on helppo hyödyntää Metasploitilla erilaisiin hyökkäyksiin. Tietokannan hallinta voi olla raskasta jos dataa on paljon ja vaatii osaamista enemmän, kuin tiedostojen käsittely.
+
 
 ## g) Murtaudu Metasploitablen vsftpd-palveluun
 
@@ -110,3 +114,7 @@ Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Te
 https://miteshshah.github.io/linux/kali/how-to-fix-metasploit-database-not-connected-or-cache-not-built/
 
 https://www.tutorialspoint.com/nmap-cheat-sheet
+
+https://tiedosto.info/extension/xml.html
+
+https://nmap.org/book/output-formats-grepable-output.html
