@@ -4,18 +4,21 @@
 
 Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
 
+##
 
 - Metasploit Framework on avoimen lähdekoodin tunkeutumistestaustyökalu
 - Sen käyttö on ketterää ja helppoa
 - Automaattinen tallennus tietokantaan nopeuttaa testausta
 
-##
+#
 
 - Exploits = Koodi, joka hyödyntää kohteessa olevaa haavoittuvuutta
 - Payload = Koodi, joka suoritetaan kohteessa haavoittuvuuden hyödyntämisen jälkeen
 - Auxiliary = Lisämoduulit, jotka mahdollistavat skannauksen, fuzzauksen, sieppaamisen ja muita toimintoja ilman varsinaista hyökkäystä
 - Encoders = Käytetään moduulien hämärtämiseen, jotta ne välttäisivät suojamekanismit
 - Meterpreter = Erääblainen payload, joka käyttää DLL-injektiota ja tarjoaa laajan valikoiman toimintoja kohteen hallintaan
+
+##
 
 #### Joitakin tärkeitä komentoja:
 
