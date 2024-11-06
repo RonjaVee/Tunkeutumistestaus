@@ -119,12 +119,25 @@ Komennolla ``sessions -u 1`` päivitin session Meterpreter-sessioksi. Nyt listaa
 ![image](https://github.com/user-attachments/assets/0ea91170-3d59-451e-922c-9ae2ddee1b90)
 
 
-``sessions -i 2`` komennolla avasin Meterpreter-session. ``?`` komennolla näkyi lista Meterpreterillä käytettävistä komennoista.
+``sessions -i 2`` komennolla avasin Meterpreter-session. ``?`` komennolla näkyi lista Meterpreterillä käytettävistä komennoista. 
 
 
 
 
 ## i) Kerää levittäytymisessä (lateral movement) tarvittavaa tietoa metasploitablesta. Analysoi tiedot. Selitä, miten niitä voisi hyödyntää
+
+Jatkoin Meterpreter-sessiolla. ``sysinfo``-komennolla saatavia tietoja voi hyödyntää esimerkiksi silloin, jos käyttöjärjestelmää ei ole päivitetty, ja vanhassa versiossa on tunnettuja haavoittuvuuksia. Järjestelmäarkkitehtuuri vaikuttaa myös siihen, millaisia työkaluja voi käyttää.
+
+![image](https://github.com/user-attachments/assets/74223f12-6af0-488f-bf25-67b37222eee0)
+
+
+Hakemistoissa liikkumalla etsin tietoa käyttäjistä. Salasanojen tiivisteet löytyivät tiedostosta /etc/shadow. Salasanoja voi koettaa murtaa: jos salasanat ovat heikkoja, voi ne murtaa nopeasti hyödyntämällä jotakin työkalua, joka vertailee yleisimpien salasanojen tiivisteitä murrettaviin tiivisteisiin.
+
+![image](https://github.com/user-attachments/assets/549d996d-c37a-4128-a6f8-33674b36a31e)
+
+Kotihakemistoja selaamalla löytyi msfadmin-käyttäjän ssh-avaimia. ``/etc/ssh/ssh`` -kansiosta löytyi järjestelmäkohtaisia ssh-avaimia ja konfiguraatiotiedostoja, jolla hallinnoidaan ssh-yhteyksiä. Muokkaamalla ``sshd_config``-tiedostoa sallimaan yhteydet ulkopuolelta.
+
+![image](https://github.com/user-attachments/assets/ad5e154b-c1e6-4a68-94ca-4fb292669e00)
 
 
 
