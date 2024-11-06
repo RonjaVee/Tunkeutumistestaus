@@ -4,9 +4,30 @@
 
 Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
 
--
--
--
+
+- Metasploit Framework on avoimen lähdekoodin tunkeutumistestaustyökalu
+- Sen käyttö on ketterää ja helppoa
+- Automaattinen tallennus tietokantaan nopeuttaa testausta
+
+- Exploits = Koodi, joka hyödyntää kohteessa olevaa haavoittuvuutta
+- Payload = Koodi, joka suoritetaan kohteessa haavoittuvuuden hyödyntämisen jälkeen
+- Auxiliary = Lisämoduulit, jotka mahdollistavat skannauksen, fuzzauksen, sieppaamisen ja muita toimintoja ilman varsinaista hyökkäystä
+- Encoders = Käytetään moduulien hämärtämiseen, jotta ne välttäisivät suojamekanismit
+- Meterpreter = Erääblainen payload, joka käyttää DLL-injektiota ja tarjoaa laajan valikoiman toimintoja kohteen hallintaan
+
+#### Joitakin tärkeitä komentoja:
+
+- help tai ?: Näyttää kaikki käytettävissä olevat komennot ja niiden kuvaukset
+- search: Etsii moduuleja, kuten exploiteja ja payloadeja, hakusanalla
+- use: Valitsee käytettävän moduulin
+- show options: Näyttää valitun moduulin asetusvaihtoehdot
+- set: Määrittää moduulille parametrit, esim. RHOSTS
+- run tai exploit: Suorittaa valitun hyökkäyksen
+- sessions: sessioiden hallintaa, esim. sessions -u [nro]: päivittää valitun session Meterpreter-sessioksi
+- db_status: Tarkistaa tietokannan tilan ja yhteyden
+- exit: Poistuu Metasploit-konsolista
+
+
 
 
 
@@ -168,22 +189,40 @@ Womp womp. Salasana oli password. Tässä hyökkäyksessä käytetään brute fo
 
 ## k) Demonstroi Meterpretrin ominaisuuksia
 
-Toistin aiemman tehtävän vsftpd-session ja päivitin sen Meterpreter-sessioksi.
+Toistin aiemman tehtävän vsftpd-session ja päivitin sen Meterpreter-sessioksi. ``help`` -komennolla näkee listan komennoista. Kokeilin ladata tiedoston Metasploitablen msfadmin-käyttäjän kotihakemistosta. Latasin tiedoston id_rsa. 
+
+![image](https://github.com/user-attachments/assets/bf404be9-0c3d-4327-8398-c097bb380829)
+
+Tiedosto tallentui Kali-koneelle.
+
+![image](https://github.com/user-attachments/assets/ad43835c-e13d-42e1-80d5-50255190aae5)
 
 
 ## l) Tallenna shell-sessio tekstitiedostoon script-työkalulla (script -fa log001.txt)
 
+Aloitin session tallentamisen komennolla ``script -fa log001.txt``. Tein välissä samoja asioita kuin ylemmissä tehtävissä, ja lopetin tallennuksen sitten exit-komennolla.
+
+![image](https://github.com/user-attachments/assets/f2bb9502-1d1d-40ff-8dc0-4c9b2228b100)
+
+
+
+
 
 ## Lähteet
 
-Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit
+Lähteet luettu 6.11.2024.
 
-https://miteshshah.github.io/linux/kali/how-to-fix-metasploit-database-not-connected-or-cache-not-built/
 
-https://www.tutorialspoint.com/nmap-cheat-sheet
+Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/)
 
-https://tiedosto.info/extension/xml.html
+Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit [https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31](https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31)
 
-https://nmap.org/book/output-formats-grepable-output.html
+Shah, M., How to fix Metasploit database not connected or cache not built. [https://miteshshah.github.io/linux/kali/how-to-fix-metasploit-database-not-connected-or-cache-not-built/](https://miteshshah.github.io/linux/kali/how-to-fix-metasploit-database-not-connected-or-cache-not-built/)
 
-https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173
+Tutorialspoint, Nmap Cheat Sheet. [https://www.tutorialspoint.com/nmap-cheat-sheet](https://www.tutorialspoint.com/nmap-cheat-sheet)
+
+Tiedosto.info, XML tiedostopääte – mitä XML-tiedostot ovat ja miten niitä käytetään? [https://tiedosto.info/extension/xml.html](https://tiedosto.info/extension/xml.html)
+
+Lyon, G. F., Grepable output, Nmap. [https://nmap.org/book/output-formats-grepable-output.html](https://nmap.org/book/output-formats-grepable-output.html)
+
+Jacobs, J. J., Exploiting vsftpd in Metasploitable 2, Medium. Julkaistu 10.11.2019. [https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173](https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173)
