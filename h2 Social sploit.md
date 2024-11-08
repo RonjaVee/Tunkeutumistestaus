@@ -209,6 +209,18 @@ Aloitin session tallentamisen komennolla ``script -fa log001.txt``. Tein väliss
 ![image](https://github.com/user-attachments/assets/f2bb9502-1d1d-40ff-8dc0-4c9b2228b100)
 
 
+### Lisäys kohtaan j. tunkeutuminen Metasploitableen hankitulla salasanalla. Jatkettu 8.11.2024.
+
+Etsin erillisen oppaan, jossa oli ohjeet skannerilla saadun salasanan käyttöön VNC-viewerillä: [Cybertech Maven. Penetration Testing Series: Hacking Metasploitable 2 By Exploiting VNC Port 5900. 19.7.2023.](https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8)
+
+Salasana VNC-palveluun oli ``password``.
+
+VNC-viewerillä etäyhteyden Metasploitableen sai auki komennolla ``vncviewer 192.168.56.102``. Salasanan syöttämisen jälkeen oltiin sisällä.
+
+
+![image](https://github.com/user-attachments/assets/03c81531-2159-4135-8a23-e1cdd604ce50)
+
+
 
 
 
@@ -230,3 +242,5 @@ Tiedosto.info, XML tiedostopääte – mitä XML-tiedostot ovat ja miten niitä 
 Lyon, G. F., Grepable output, Nmap. [https://nmap.org/book/output-formats-grepable-output.html](https://nmap.org/book/output-formats-grepable-output.html)
 
 Jacobs, J. J., Exploiting vsftpd in Metasploitable 2, Medium. Julkaistu 10.11.2019. [https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173](https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173)
+
+Cybertech Maven. Penetration Testing Series: Hacking Metasploitable 2 By Exploiting VNC Port 5900. 19.7.2023.[https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8](https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8)
