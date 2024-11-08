@@ -243,4 +243,5 @@ Lyon, G. F., Grepable output, Nmap. [https://nmap.org/book/output-formats-grepab
 
 Jacobs, J. J., Exploiting vsftpd in Metasploitable 2, Medium. Julkaistu 10.11.2019. [https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173](https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173)
 
-Cybertech Maven. Penetration Testing Series: Hacking Metasploitable 2 By Exploiting VNC Port 5900. 19.7.2023.[https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8](https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8)
+
+Cybertech Maven. Penetration Testing Series: Hacking Metasploitable 2 By Exploiting VNC Port 5900. 19.7.2023.[https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8](https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8) Lähde luettu 8.11.2024.
