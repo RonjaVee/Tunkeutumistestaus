@@ -211,7 +211,7 @@ Aloitin session tallentamisen komennolla ``script -fa log001.txt``. Tein väliss
 
 ### Lisäys kohtaan j. tunkeutuminen Metasploitableen hankitulla salasanalla. Jatkettu 8.11.2024.
 
-Etsin erillisen oppaan, jossa oli ohjeet skannerilla saadun salasanan käyttöön VNC-viewerillä: [Cybertech Maven. Penetration Testing Series: Hacking Metasploitable 2 By Exploiting VNC Port 5900. 19.7.2023.](https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8)
+Etsin erillisen oppaan, jossa oli ohjeet salasanan hankkimiseen sekä sen hyödyntämiseen VNC-viewerillä: [Cybertech Maven. Penetration Testing Series: Hacking Metasploitable 2 By Exploiting VNC Port 5900. 19.7.2023.](https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8)
 
 Salasana VNC-palveluun oli ``password``.
 
