@@ -245,7 +245,9 @@ SYN SYN ACK -kohdissa tapahtui kolmivaiheinen kättely, TCP-yhteyksien muodostum
 
 ## d) Fuzzzz. Ratkaise dirfuz-1 artikkelista Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf.
 
-Latasin sivulta [https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/](https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/) targetin ja säädin käyttöoikeuksia ohjeen mukaan.
+Tein annetun ohjeen mukaan: Karvinen, Tero. Find Hidden Web Directories - Fuzz URLs with ffuf. 10.5.2023. [https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/](https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)
+
+Latasin sivulta targetin ja säädin käyttöoikeuksia ohjeen mukaan. ``wget https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/dirfuzt-0``
 
 ![image](https://github.com/user-attachments/assets/f59b9b07-0536-4de0-9aa4-554c023b73da)
 
@@ -253,15 +255,11 @@ Selaimessa näytti tältä, eli targetti oli nyt kunnossa.
 
 ![image](https://github.com/user-attachments/assets/1f04bd5b-1c22-48c7-8ac7-af2aab0ff938)
 
-Seuraavaksi asensin ffufin.
+Seuraavaksi asensin ffufin.``wget https://github.com/ffuf/ffuf/releases/download/v2.0.0/ffuf_2.0.0_linux_amd64.tar.gz``
 
 ![image](https://github.com/user-attachments/assets/5286f0ed-e464-462b-9b83-512515df6e44)
 
-Sitten latasin sanakirjatiedoston common.txt.
-
-![image](https://github.com/user-attachments/assets/5fa17a29-6c4f-4802-aa7b-79433ada9473)
-
-Kokeilin ffufia, tuloksia oli piiiitkä lista.
+Sitten latasin sanakirjatiedoston common.txt ``wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt``. Kokeilin ffufia, tuloksia oli piiiitkä lista.
 
 ![image](https://github.com/user-attachments/assets/a29ba838-5f0c-44d4-8788-bfd0dae30b37)
 
