@@ -36,7 +36,7 @@ Miten pääsisin rootiin? Etsin Youtubesta ohjevideon [How To - Metasploitable 2
 
 Pääsin exploitilla daemon-käyttäjälle, ja silläkin pystyi antamaan tiettyjä komentoja. Seuraavaksi oli aika kaapata sudo-oikeudet.
 
-Tarkastin päällä olevat prosessit komennolla ``ps aux``. Näistä tiedoista greppasin ``dpkg -l |grep "udev"```. Tässä on heikko kohta, jota hyödyntää sudo-oikeuksien saamiseksi.
+Tarkastin päällä olevat prosessit komennolla ``ps aux``. Näistä tiedoista greppasin ``dpkg -l |grep "udev"``. Tässä on heikko kohta, jota hyödyntää sudo-oikeuksien saamiseksi.
 
 Kalilla:
 - komennolla ``searchsploit udev`` etsin udev-exploiteja exploitdb-tietokannasta. Näistä valitsin ohjeen mukaan 8572.c:n.
