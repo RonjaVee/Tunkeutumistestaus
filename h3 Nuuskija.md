@@ -62,7 +62,7 @@ Metasploitablessa daemonina:
 - muokkasin tiedoston käyttöoikeuksia ``chmod +x msp2``
 - suoritin tiedoston ``./msp2 2406``
 
-  Nyt Kali on root Metasploitablessa, yhteys on luotu netcatilla.
+  Nyt Kali oli root Metasploitablessa, yhteys on luotu netcatilla.
 
 ![image](https://github.com/user-attachments/assets/aef6919d-3b21-462e-84f5-3cf9b7b0145e)
 
@@ -232,7 +232,7 @@ Avasin Wiresharkin komennolla ``wireshark``. Toisella välilehdellä laitoin exp
 
 Suoritin exploitin run-komennolla, ja Wireshark nappasi verkkoliikennettä näiden koneiden välillä.
 
-SYN SYN ACK -kohdissa tapahtui kolmivaiheinen kättely, TCP-yhteyksien muodostuminen. 3632 on distcc:n oletusportti.
+SYN SYN ACK -kohdissa tapahtui kolmivaiheinen kättely, TCP-yhteyksien muodostuminen. 3632 on distcc:n oletusportti. Hyökkäys alkaa yhteyden muodostamisella tähän porttiin, ja verkkosnifferi näyttää yhteyden muodostumisen. 
 
 ![image](https://github.com/user-attachments/assets/2ce65247-fd8e-41b6-a49e-8b85ad0af29f)
 
