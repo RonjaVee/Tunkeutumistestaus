@@ -232,7 +232,7 @@ Avasin Wiresharkin komennolla ``wireshark``. Toisella välilehdellä laitoin exp
 
 Suoritin exploitin run-komennolla, ja Wireshark nappasi verkkoliikennettä näiden koneiden välillä.
 
-SYN SYN ACK -kohdissa tapahtui kolmivaiheinen kättely, TCP-yhteyksien muodostuminen. 3632 on distcc:n oletusportti. Hyökkäys alkaa yhteyden muodostamisella tähän porttiin, ja verkkosnifferi näyttää yhteyden muodostumisen. 
+SYN SYN ACK -kohdissa tapahtui kolmivaiheinen kättely, TCP-yhteyksien muodostuminen. 3632 on distcc:n oletusportti. Hyökkäys alkoi yhteyden muodostamisella tähän porttiin, ja verkkosnifferi näytti yhteyden muodostumisen. Wireshark tunnisti epätavallisen distcc-paketin "Malformed packet"
 
 ![image](https://github.com/user-attachments/assets/2ce65247-fd8e-41b6-a49e-8b85ad0af29f)
 
