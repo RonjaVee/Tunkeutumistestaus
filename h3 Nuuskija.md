@@ -66,6 +66,7 @@ Metasploitablessa daemonina:
 
 ![image](https://github.com/user-attachments/assets/aef6919d-3b21-462e-84f5-3cf9b7b0145e)
 
+En ottanut tässä kohtaa paljoa screenshotteja, koska epäilin etten onnistuisi. Kaikki meni kuitenkin ykkösellä läpi. Komennot kirjasin tehdessä kyllä.
 
 
 ## b) Sorsa. Selitä ja arvioi valitsemasi hyökkäyksen toimintaa lähdekoodista.
