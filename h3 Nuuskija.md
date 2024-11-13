@@ -32,7 +32,7 @@ Ilmoituksena tuli, että exploit suoritettu, sessiota ei luotu. Katsoin ``show o
 
 ![image](https://github.com/user-attachments/assets/552fe8f1-b26f-4f6b-afc1-3bd457a3b2ca)
 
-Miten pääsisin rootiin? Etsin Youtubesta ohjevideon [https://www.youtube.com/watch?v=DoUZFHwZntY](https://www.youtube.com/watch?v=DoUZFHwZntY).
+Miten pääsisin rootiin? Etsin Youtubesta ohjevideon [How To - Metasploitable 2 - DISTCC + Privilege Escalation](https://www.youtube.com/watch?v=DoUZFHwZntY).
 
 Pääsin exploitilla daemon-käyttäjälle, ja silläkin pystyi antamaan tiettyjä komentoja. Seuraavaksi oli aika kaapata sudo-oikeudet.
 
@@ -286,31 +286,49 @@ Selaimessa:
 
 ![image](https://github.com/user-attachments/assets/338b5bc2-c9a0-4194-925c-def31ebbf92d)
 
-Läppärini jumahti pari kertaa tässä kohtaa ja kävi kuumana. Kerkesin säännöt tallentamaan Kalille. Siirryin pöytäkoneelle ja ajattelin testata suosituksen vastaisesti Pwnboxilla. 
+Läppärini jumahti pari kertaa tässä kohtaa ja kävi kuumana. Siirryin pöytäkoneelle ja ajattelin testata suosituksen vastaisesti Pwnboxilla. 
 Valitsin lokaatioksi pienimmän latenssin vaihtoehdon.
 
 ![image](https://github.com/user-attachments/assets/885e9fe1-e854-4c9e-b5b7-06a8a17f0834)
 
-Työpöydältä tallensin koneelleni readme-tiedoston.
+Sain IP-osoitteen ja pingasin sitä työpöydältä, paketit liikuivat.
 
-![image](https://github.com/user-attachments/assets/0081aed1-4cc8-4cd1-9a7c-325a4d8b3779)
-
-
+![image](https://github.com/user-attachments/assets/848bb5da-9ea3-45f2-b0f8-e25d7a5535c4)
 
 
+![image](https://github.com/user-attachments/assets/93e57ee3-7f6d-4587-890e-d2b465c1ee5a)
+
+Porttiskannasin koneen seuraavaksi komennolla ``sudo nmap -sV 10.129.66.103``. Telnetin portti 23 oli auki.
+
+![image](https://github.com/user-attachments/assets/3060e9c7-18a2-4705-b28a-ac131fb4dbeb)
+
+Otin telnet-yhteyden koneeseen ``telnet 10.129.66.103``. En kuluttanut tähän kauemmin aikaa, sillä ratkaisu oli walkthrough-tiedostossa. Rootilla pääsi sisään. Lippu napattu.
+
+![image](https://github.com/user-attachments/assets/51f54425-f1e1-4961-95c4-365e35fc9d97)
+
+![image](https://github.com/user-attachments/assets/254201e7-31fb-468d-a3b9-f7709d6291b4)
+
+Sitten kokeilin seuraavaa konetta, myöskin ihan aloittelijalle. Pääsee näin tutustumaan ainakin itse HTB-palveluun. Eli instanssi pystyyn, työpöytä auki ja spawn machine. Sen IP 10.129.1.14. Pingasin konetta, yhteys muodostunut. ``nmap -sV 10.129.1.14`` näkyi, että FTP:n portti 21 oli auki. ``ftp 10.129.1.14`` annoin käyttäjätunnukseksi anonymous (tämän opin tekemällä samanaikaisesti tehtäviä), salasana password arvasin). ``ls`` löytyi flag.txt, sen sai ladattua ``get flag.txt``. Lippu napattu.
+
+
+![image](https://github.com/user-attachments/assets/7c99d62f-d351-4b8d-ac6e-f6b4d9c644f3)
+
+
+Täytyy jatkaa myöhemmin näitä, homma sujui varsin kivuttomasti kyllä tällä työpöytäversiolla, latenssia tuskin huomasi. Aloituskoneet oli tosi helppoja kyllä. Läppärilläkin varmasti onnistuu, kunhan ei ole samaan aikaan päällä esim. kaksi virtuaalikonetta. :D
 
 
 
 
 ## Lähteet
 
-https://terokarvinen.com/tunkeutumistestaus/
+Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/) luettu 13.11.2024.
 
-https://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html
+ComputerSecurityStudent.com. Lesson 2: Metasploitable Exploit. [fromhttps://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html](fromhttps://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html) luettu 13.11.2024
 
-https://dev.to/atenadadkhah/hack-metasploitable-machine-in-5-ways-using-kali-linux-2h9e
+Dadkhah, Atena. "Hack Metasploitable Machine in 5 Ways Using Kali Linux." Dev.to, 3.11.2020. [https://dev.to/atenadadkhah/hack-metasploitable-machine-in-5-ways-using-kali-linux-2h9e](https://dev.to/atenadadkhah/hack-metasploitable-machine-in-5-ways-using-kali-linux-2h9e) luettu 13.11.2024.
 
-https://www.youtube.com/watch?v=DoUZFHwZntY
+rwbnetsec. How To - Metasploitable 2 - DISTCC + Privilege Escalation. Youtube. 5.11.2015. [https://www.youtube.com/watch?v=DoUZFHwZntY](https://www.youtube.com/watch?v=DoUZFHwZntY) katsottu 13.11.2024.
 
+Karvinen, Tero. Find Hidden Web Directories - Fuzz URLs with ffuf. 10.5.2023. [https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/](https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/) luettu 13.11.2024.
 
-https://dev.to/atenadadkhah/hack-metasploitable-machine-in-5-ways-using-kali-linux-2h9e
+Hack The Box. [https://app.hackthebox.com/home](https://app.hackthebox.com/home) luettu 13.11.2024.
