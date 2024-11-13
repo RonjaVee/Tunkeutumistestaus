@@ -9,7 +9,7 @@ Popov 2024: Hacktricks: Wireshark tricks [https://book.hacktricks.xyz/generic-me
 - CTRL+F hakee sisältöä
 
 Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf [https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/](https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)
-- FFUF (Fuzz Faster U Fool): nopea web-fuzzer, tunnistaa piilotettuja hakemistoja testaamalla automaattisesti useita URL-osoitteita -> vähemmän manuaalista työtä
+- FFUF (Fuzz Faster U Fool): nopea web-fuzzer, tunnistaa piilotettuja URL-osoitteita testaamalla automaattisesti useita URL-osoitteita -> vähemmän manuaalista työtä, enemmän tuloksia
 -  FUFF käyttää sanakirjatiedostoja etsiäkseen piilotettuja URL-osoitteita tai hakemistoja
 - Ohjeesta löytyy testattava kohde sekä suositus sanakirjatiedostolähteestä
 - web-palvelin palauttaa HTTP-statuskoodin 200 OK kaikille URL-osoitteille, yhteisiä piirteitä ei-toivotuista vasteista voi etsiä ja suodattaa tuloksia niiden perusteella
