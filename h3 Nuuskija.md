@@ -30,7 +30,8 @@ Ilmoituksena tuli, että exploit suoritettu, sessiota ei luotu. Katsoin ``show o
 
 ![image](https://github.com/user-attachments/assets/552fe8f1-b26f-4f6b-afc1-3bd457a3b2ca)
 
-
+ps aux
+dpkg -l |grep "udev"
 
 
 
