@@ -286,11 +286,19 @@ Selaimessa:
 
 ![image](https://github.com/user-attachments/assets/338b5bc2-c9a0-4194-925c-def31ebbf92d)
 
+Läppärini jumahti pari kertaa tässä kohtaa ja kävi kuumana. Kerkesin säännöt tallentamaan Kalille. Siirryin pöytäkoneelle ja ajattelin testata suosituksen vastaisesti Pwnboxilla. 
+Valitsin lokaatioksi pienimmän latenssin vaihtoehdon.
+
+![image](https://github.com/user-attachments/assets/885e9fe1-e854-4c9e-b5b7-06a8a17f0834)
+
+Työpöydältä tallensin koneelleni readme-tiedoston.
+
+![Uploading image.png…]()
 
 
 
 
-## e) Vapaaehtoinen, helppo: Vaihda 'micro' Metasploitin oletuseditoriksi. Sille on oma 'setg' asetus.
+
 
 
 ## Lähteet
