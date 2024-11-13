@@ -3,14 +3,18 @@
 ## x) Lue ja tiivistä
 
 Popov 2024: Hacktricks: Wireshark tricks [https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/wireshark-tricks#improve-your-wireshark-skills](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/wireshark-tricks#improve-your-wireshark-skills)
--
--
--
+
+- Analyysityökaluja: Expert Information näyttää analyysin pääkohdat; Protocol Hierarchy listaa kaikki protokollat
+- Suodattimet: esim. http.request, näyttää HTTP-liikenteen
+- CTRL+F hakee sisältöä
 
 Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf [https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/](https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/)
--
--
--
+- FFUF (Fuzz Faster U Fool): nopea web-fuzzer, tunnistaa piilotettuja hakemistoja testaamalla automaattisesti useita URL-osoitteita -> vähemmän manuaalista työtä
+-  FUFF käyttää sanakirjatiedostoja etsiäkseen piilotettuja URL-osoitteita tai hakemistoja
+- Ohjeesta löytyy testattava kohde sekä suositus sanakirjatiedostolähteestä
+- web-palvelin palauttaa HTTP-statuskoodin 200 OK kaikille URL-osoitteille, yhteisiä piirteitä ei-toivotuista vasteista voi etsiä ja suodattaa tuloksia niiden perusteella
+- Suodattimia: vasteen koko (-fs), sanamäärä (-fw), rivit (-fl)
+- Esim. curlilla voi tarkastaa tulokset
 
 ## a) Valitse valmis hyökkäys. Ota sellainen hyökkäys, jonka saat toimimaan omaan paikalliseen harjoitusmaaliin, kuten Metasploitableen. Demonstroi hyökkäyksen toiminta.
 
