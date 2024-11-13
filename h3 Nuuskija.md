@@ -42,12 +42,13 @@ Lähdekoodin löysin ``/usr/share/metasploit-famework/modules/exploits/unix/misc
 
 Exploitin kriittinen osa on dist_cmd-kohta, joka huijaa DistCC luulemaan, että komento on käännöskomento. Tässä vaiheessa payload suoritetaan etäkoneella.
 
-##
-# This module requires Metasploit: https://metasploit.com/download
-# Current source: https://github.com/rapid7/metasploit-framework
-##
 
-class MetasploitModule < Msf::Exploit::Remote
+ This module requires Metasploit: https://metasploit.com/download
+ Current source: https://github.com/rapid7/metasploit-framework
+
+
+
+lass MetasploitModule < Msf::Exploit::Remote
   Rank = ExcellentRanking
 
   include Msf::Exploit::Remote::Tcp
@@ -167,7 +168,7 @@ class MetasploitModule < Msf::Exploit::Remote
   end
 
 
-  # Generate a distccd command
+   Generate a distccd command
   def dist_cmd(*args)
 
     # Convince distccd that this is a compile
@@ -184,6 +185,7 @@ class MetasploitModule < Msf::Exploit::Remote
     return res
   end
 end
+
 
 
 
