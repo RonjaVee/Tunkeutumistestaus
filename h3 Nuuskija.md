@@ -293,7 +293,8 @@ Valitsin lokaatioksi pienimmän latenssin vaihtoehdon.
 
 Työpöydältä tallensin koneelleni readme-tiedoston.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/0081aed1-4cc8-4cd1-9a7c-325a4d8b3779)
+
 
 
 
