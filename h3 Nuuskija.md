@@ -1,5 +1,7 @@
 # h3 Nuuskija
 
+Tehtävänanto: [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/)
+
 ## x) Lue ja tiivistä
 
 Popov 2024: Hacktricks: Wireshark tricks [https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/wireshark-tricks#improve-your-wireshark-skills](https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/wireshark-tricks#improve-your-wireshark-skills)
@@ -273,10 +275,22 @@ Selaimessa:
 ## d) HTB. Ratkaise 1-2 konetta HackTheBoxisssa. Voit valita omaan taitotasoon sopivat koneet.
 
 
+
+
+![image](https://github.com/user-attachments/assets/2cb4027a-5af1-4c1d-9010-9a841ec1fa89)
+
+![image](https://github.com/user-attachments/assets/338b5bc2-c9a0-4194-925c-def31ebbf92d)
+
+
+
+
+
 ## e) Vapaaehtoinen, helppo: Vaihda 'micro' Metasploitin oletuseditoriksi. Sille on oma 'setg' asetus.
 
 
 ## Lähteet
+
+https://terokarvinen.com/tunkeutumistestaus/
 
 https://www.computersecuritystudent.com/SECURITY_TOOLS/METASPLOITABLE/EXPLOIT/lesson2/index.html
 
