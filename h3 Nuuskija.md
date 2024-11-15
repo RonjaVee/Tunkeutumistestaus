@@ -41,7 +41,7 @@ Tarkastin päällä olevat prosessit komennolla ``ps aux``. Näistä tiedoista g
 Kalilla:
 - komennolla ``searchsploit udev`` etsin udev-exploiteja exploitdb-tietokannasta. Näistä valitsin ohjeen mukaan 8572.c:n.
 - Käynnistin apache2-palvelimen komennolla ``sudo systemctl start apache2``.
-- Kopioin udev-exploitin toiseen kansioon ``sudo cp /usr/share/exploitdb/exploits/linux/local/8572.c /var/www/html``
+- Kopioin udev-exploitin apachen palvelimen kansioon ``sudo cp /usr/share/exploitdb/exploits/linux/local/8572.c /var/www/html``
 - Siirryin kansioon ``cd /var/www/html/``.
 - Tarkastin, että tiedosto löytyi kansiosta ``ls``.
 
