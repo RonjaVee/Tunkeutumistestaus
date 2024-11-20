@@ -38,6 +38,28 @@ Polop et al 2024: HackTricks: MSFVenom - CheatSheet [https://book.hacktricks.xyz
 
 ## a) Asenna Hashcat ja testaa sen toiminta murtamalla esimerkkisalasana
 
+Ekana ``sudo apt-get update``. Sitten asensin [ohjeen](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/) mukaiset paketit komennolla ``sudo apt-get -y install hashid hashcat wget``. Loin kansion hashed ja siirryin kansioon ``mkdir hashed`` ``cd hashed``. Latasin sanakirjatiedoston ``wget https://github.com/danielmiessler/SecLists/raw/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz``ja purin tiedoston kansioon. ``tar xf rockyou.txt.tar.gz`` ``rm rockyou.txt.tar.gz``.
+
+![image](https://github.com/user-attachments/assets/90307991-b219-4901-8b1d-f72eb0554695)
+
+Sitten loin hashin keksitystä salasanasta, jonka murran.
+
+![image](https://github.com/user-attachments/assets/08e3e558-fa8e-4f02-82d1-8d21b0ba7f53)
+
+Tutkin hashid:llä tunnistaako se hashtyypin ``hashid -m``. MD5 oli oikea, Hashcat mode 0.
+
+![image](https://github.com/user-attachments/assets/bbe25f37-6694-4f4d-a8dc-7ccedf9841e5)
+
+Sitten komennolla ``hashcat -m 0 'tähän hash' rockyou.txt -o solved`` mursin testisalasanan. Solved-tiedostosta löytyi vastaus.
+
+![image](https://github.com/user-attachments/assets/093a1259-9f88-4a43-a0e0-29a519170dc4)
+
+
+![image](https://github.com/user-attachments/assets/18734ecc-ed1f-4936-9414-841744483045)
+
+
+
+
 
 ## c) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana
 
