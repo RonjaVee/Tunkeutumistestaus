@@ -101,21 +101,21 @@ Testaamalla ``ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/basic/FUZZ
 ![image](https://github.com/user-attachments/assets/da786df0-1454-4b5e-b3b2-49385ea6a532)
 
 
-1. Sitten lähdin tekemään ffufin tehtäviä. Basic Content Discovery -tehtävän komento oli sama kuin ylläoleva.
+1. Sitten lähdin tekemään ffufin tehtäviä. **Basic Content Discovery** -tehtävän komento oli sama kuin ylläoleva.
 
-2. Content Discovery With Recursion -tehtävän komento oli ``ffuf -w ~/wordlists/common.txt -recursion -u http://localhost/cd/recursion/FUZZ``, eli aikaisempaan lisätään -recursion. Tällä löytyi /admin, /admin/users ja /admin/users/96. Eli jos ffuf löytää hakemiston, se skannaa hakemiston sisällön ja toistaa tätä samaa kunnes ei löydy enempää skannattavaa.
+2. **Content Discovery With Recursion** -tehtävän komento oli ``ffuf -w ~/wordlists/common.txt -recursion -u http://localhost/cd/recursion/FUZZ``, eli aikaisempaan lisätään -recursion. Tällä löytyi /admin, /admin/users ja /admin/users/96. Eli jos ffuf löytää hakemiston, se skannaa hakemiston sisällön ja toistaa tätä samaa kunnes ei löydy enempää skannattavaa.
 
 ![image](https://github.com/user-attachments/assets/2ec67391-2b3b-419e-9cef-980b088cdd22)
 ![image](https://github.com/user-attachments/assets/6084ab29-2a36-4334-b04a-d27e633587e0)
 
 
-3. Tehtävässä Content Discovery With File Extensions komento oli ``ffuf -w ~/wordlists/common.txt -e .log -u http://localhost/cd/ext/logs/FUZZ``. -e .log tarkoittaa, että ffuf liittää common.txt-tiedostossa oleviin sanoihin .log-päätteen. Tehtävässä sanottiin, että ollaan löydetty /logs -hakemisto, jonka sisältöä ei voi katsoa, mutta voidaan olettaa, että se sisältää tiedostoja .log -päätteellä. Näin löytyi users.log.
+3. Tehtävässä **Content Discovery With File Extensions** komento oli ``ffuf -w ~/wordlists/common.txt -e .log -u http://localhost/cd/ext/logs/FUZZ``. -e .log tarkoittaa, että ffuf liittää common.txt-tiedostossa oleviin sanoihin .log-päätteen. Tehtävässä sanottiin, että ollaan löydetty /logs -hakemisto, jonka sisältöä ei voi katsoa, mutta voidaan olettaa, että se sisältää tiedostoja .log -päätteellä. Näin löytyi users.log.
 
 ![image](https://github.com/user-attachments/assets/f7881455-9e63-47df-b5af-eb2425992f97)
 ![image](https://github.com/user-attachments/assets/1ddaa8d3-d4b8-4be1-9c44-bc7b543e66f4)
 
 
-4. No 404 Status -tehtävässä annettiin ensin peruskomento ``ffuf -w ~/wordlists/common.txt -u http://localhost/cd/no404/FUZZ``, joka tuotti pitkän listan tuloksia. Page Cannot be Found -sivujen koko oli kaikilla sama, joten tämän kokoiset tiedostot filtteröitiin ffufauksesta: ``ffuf -w ~/wordlists/common.txt -u http://localhost/cd/no404/FUZZ -fs 669``. Löytyi secret.
+4. **No 404 Status** -tehtävässä annettiin ensin peruskomento ``ffuf -w ~/wordlists/common.txt -u http://localhost/cd/no404/FUZZ``, joka tuotti pitkän listan tuloksia. Page Cannot be Found -sivujen koko oli kaikilla sama, joten tämän kokoiset tiedostot filtteröitiin ffufauksesta: ``ffuf -w ~/wordlists/common.txt -u http://localhost/cd/no404/FUZZ -fs 669``. Löytyi secret.
 
 ![image](https://github.com/user-attachments/assets/8ea2dc93-0245-4d11-8143-00d400b755f3)
 ![image](https://github.com/user-attachments/assets/beb356d1-7acd-46f7-8b73-95b0a5a47503)
@@ -123,7 +123,7 @@ Testaamalla ``ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/basic/FUZZ
 ![image](https://github.com/user-attachments/assets/43323438-0bba-4292-9b34-adadb066fc5a)
 ![image](https://github.com/user-attachments/assets/51438b00-f7bf-4228-b62d-74ed9da76d64)
 
-5. Param Mining -tehtävässä haettiin ensin sivu localhost/cd/param/data. HTTP-statuskoodi oli 400 eli Bad Request.
+5. **Param Mining** -tehtävässä haettiin ensin sivu localhost/cd/param/data. HTTP-statuskoodi oli 400 eli Bad Request.
 
 ![image](https://github.com/user-attachments/assets/706d7640-e7b5-45d3-b1df-1e4b096735a2)
 ![image](https://github.com/user-attachments/assets/f0451b92-aac6-43ed-8bf9-4c803a5422df)
@@ -133,9 +133,9 @@ Komennolla ``fuf -w ~/wordlists/parameters.txt -u http://localhost/cd/param/data
 ![image](https://github.com/user-attachments/assets/b54c3b55-cff5-438f-a64b-61df0d38e884)
 ![image](https://github.com/user-attachments/assets/28ef2cda-e5e2-47cc-9737-0239d64931af)
 
-6. Rate Limited -tehtävän komennot antoivat pelkkää erroria?
+6. **Rate Limited** -tehtävän komennot antoivat pelkkää erroria?
 
-7. Virtual Host Discovery -tehtävässä ``ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://localhost`` komennolla etsitään piilotettuja domaineja. Kaikki löydökset olivat samankokoisia, joten komennolla ``ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://localhost -fs 1495`` filtteröitiin 1495 tavun tulokset. Löytyi redhat.
+7. **Virtual Host Discovery** -tehtävässä ``ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://localhost`` komennolla etsitään piilotettuja domaineja. Kaikki löydökset olivat samankokoisia, joten komennolla ``ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://localhost -fs 1495`` filtteröitiin 1495 tavun tulokset. Löytyi redhat.
 
 ![image](https://github.com/user-attachments/assets/d1dccc6b-2190-49f8-b4e3-a17e5349392d)
 
