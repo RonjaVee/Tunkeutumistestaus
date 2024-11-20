@@ -3,6 +3,11 @@
 Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
 
 ## x) Lue/katso ja tiivistä
+# h4 Marraskuu2024!
+
+Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
+
+## x) Lue/katso ja tiivistä
 
 Karvinen, Tero. Cracking Passwords with Hashcat. 6.4.2022. [https://terokarvinen.com/2022/cracking-passwords-with-hashcat/](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/)
 
@@ -15,7 +20,7 @@ Karvinen, Tero. Cracking Passwords with Hashcat. 6.4.2022. [https://terokarvinen
 Karvinen, Tero. Crack File Password With John. 9.2.2023. [https://terokarvinen.com/2023/crack-file-password-with-john/](https://terokarvinen.com/2023/crack-file-password-with-john/)
 
 - Asennetaan tarvittavat paketit ``sudo apt-get -y install micro bash-completion git build-essential libssl-dev zlib1g zlib1g-dev libbz2-1.0 libbz2-dev atool zip wget ``
-- Ladataan ja kootaan John the Ripperin jumbo-versio ``git clone --depth=1 https://github.com/openwall/john.git`` ``cd john/src/`` ``./configure`` -> configure-komennon outputista saa kokoamiskomennon,  ``cd ../run/`` näkyy kaikki suoritettavat tiedostot ja scriptit
+- Ladataan ja kootaan John the Ripperin jumbo-versio ``git clone --depth=1 https://github.com/openwall/john.git`` ``cd john/src/`` ``./configure`` -> configure-komennon outputista saa kokoamiskomennon,  ``cd ../run/`` näkyy kaikki suoritettavat tiedostot ja scriptit: valitaan sen mukaan, millainen tiedostomuoto
 - Testitiedosto ladataan ``wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip ``
 - Otetaan tiedostosta hash ja siirretään se tiedostoon tero.zip.hash ``$HOME/john/run/zip2john tero.zip >tero.zip.hash``
 - Hashia vastaan tehdään sanakirjahyökkäys ``$HOME/john/run/john tero.zip.hash``
@@ -27,7 +32,7 @@ Santos et al 2017: Security Penetration Testing - The Art of Hacking Series Live
 [https://www.oreilly.com/videos/security-penetration-testing/9780134833989/9780134833989-sptt_00_06_00_00/](https://www.oreilly.com/videos/security-penetration-testing/9780134833989/9780134833989-sptt_00_06_00_00/)
 
 - Salasanat tallennetaan palvelimille hash-funktioina tiedostoihin tai tietokantoihin
--
+- Heikot salasanat ja oletussalasanat on helpointa murtaa 
 -
 
 Polop et al 2024: HackTricks: MSFVenom - CheatSheet [https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom)
