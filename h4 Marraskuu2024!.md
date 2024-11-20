@@ -193,6 +193,8 @@ Onnistui ekalla. Salasana oli abc123.
 
 ## g) Tee msfvenom-työkalulla haittaohjelma, joka soittaa kotiin (reverse shell). Ota yhteys vastaan metasploitin multi/handler -työkalulla
 
+Aloitin tehtävän, mutta koneeni jumittui kesken kaiken ja raportoimani kohdatkin hävisivät sitten kuin tuhka tuuleen. Jatkan tätä huomenna, sillä kello on kohta jo 1 yöllä.
+
 
 ## Lähteet 
 
