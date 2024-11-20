@@ -26,7 +26,7 @@ Karvinen, Tero. Crack File Password With John. 9.2.2023. [https://terokarvinen.c
 Santos et al 2017: Security Penetration Testing - The Art of Hacking Series LiveLessons: Lesson 6: Hacking User Credentials (8 videos, about 30 min)
 [https://www.oreilly.com/videos/security-penetration-testing/9780134833989/9780134833989-sptt_00_06_00_00/](https://www.oreilly.com/videos/security-penetration-testing/9780134833989/9780134833989-sptt_00_06_00_00/)
 
--
+- Salasanat tallennetaan palvelimille hash-funktioina tiedostoihin tai tietokantoihin
 -
 -
 
@@ -103,19 +103,19 @@ Testaamalla ``ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/basic/FUZZ
 
 Sitten lähdin tekemään ffufin tehtäviä. Basic Content Discovery -tehtävän komento oli sama kuin ylläoleva.
 
-Content Discovery With Recursion -tehtävän komento oli ``ffuf -w $HOME/wordlists/common.txt -recursion -u http://ffuf.me/cd/recursion/FUZZ``, eli aikaisempaan lisätään -recursion. Tällä löytyi /admin, /admin/users ja /admin/users/96. Eli jos ffuf löytää hakemiston, se skannaa hakemiston sisällön ja toistaa tätä samaa kunnes ei löydy enempää skannattavaa.
+Content Discovery With Recursion -tehtävän komento oli ``ffuf -w ~/wordlists/common.txt -recursion -u http://localhost/cd/recursion/FUZZ``, eli aikaisempaan lisätään -recursion. Tällä löytyi /admin, /admin/users ja /admin/users/96. Eli jos ffuf löytää hakemiston, se skannaa hakemiston sisällön ja toistaa tätä samaa kunnes ei löydy enempää skannattavaa.
 
 ![image](https://github.com/user-attachments/assets/2ec67391-2b3b-419e-9cef-980b088cdd22)
 ![image](https://github.com/user-attachments/assets/6084ab29-2a36-4334-b04a-d27e633587e0)
 
 
-Tehtävässä Content Discovery With File Extensions komento oli ``ffuf -w $HOME/wordlists/common.txt -e .log -u http://ffuf.me/cd/ext/logs/FUZZ``. -e .log tarkoittaa, että ffuf liittää common.txt-tiedostossa oleviin sanoihin .log-päätteen. Tehtävässä sanottiin, että ollaan löydetty /logs -hakemisto, jonka sisältöä ei voi katsoa, mutta voidaan olettaa, että se sisältää tiedostoja .log -päätteellä. Näin löytyi users.log.
+Tehtävässä Content Discovery With File Extensions komento oli ``ffuf -w ~/wordlists/common.txt -e .log -u http://localhost/cd/ext/logs/FUZZ``. -e .log tarkoittaa, että ffuf liittää common.txt-tiedostossa oleviin sanoihin .log-päätteen. Tehtävässä sanottiin, että ollaan löydetty /logs -hakemisto, jonka sisältöä ei voi katsoa, mutta voidaan olettaa, että se sisältää tiedostoja .log -päätteellä. Näin löytyi users.log.
 
 ![image](https://github.com/user-attachments/assets/f7881455-9e63-47df-b5af-eb2425992f97)
 ![image](https://github.com/user-attachments/assets/1ddaa8d3-d4b8-4be1-9c44-bc7b543e66f4)
 
 
-No 404 Status -tehtävässä annettiin ensin peruskomento ``ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/no404/FUZZ``, joka tuotti pitkän listan tuloksia. Page Cannot be Found -sivujen koko oli kaikilla sama, joten tämän kokoiset tiedostot filtteröitiin ffufauksesta: ``ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/no404/FUZZ -fs 669``. Löytyi secret.
+No 404 Status -tehtävässä annettiin ensin peruskomento ``ffuf -w ~/wordlists/common.txt -u http://localhost/cd/no404/FUZZ``, joka tuotti pitkän listan tuloksia. Page Cannot be Found -sivujen koko oli kaikilla sama, joten tämän kokoiset tiedostot filtteröitiin ffufauksesta: ``ffuf -w ~/wordlists/common.txt -u http://localhost/cd/no404/FUZZ -fs 669``. Löytyi secret.
 
 ![image](https://github.com/user-attachments/assets/8ea2dc93-0245-4d11-8143-00d400b755f3)
 ![image](https://github.com/user-attachments/assets/beb356d1-7acd-46f7-8b73-95b0a5a47503)
@@ -123,14 +123,53 @@ No 404 Status -tehtävässä annettiin ensin peruskomento ``ffuf -w $HOME/wordli
 ![image](https://github.com/user-attachments/assets/43323438-0bba-4292-9b34-adadb066fc5a)
 ![image](https://github.com/user-attachments/assets/51438b00-f7bf-4228-b62d-74ed9da76d64)
 
+Param Mining -tehtävässä haettiin ensin sivu localhost/cd/param/data. HTTP-statuskoodi oli 400 eli Bad Request.
 
+![image](https://github.com/user-attachments/assets/706d7640-e7b5-45d3-b1df-1e4b096735a2)
+![image](https://github.com/user-attachments/assets/f0451b92-aac6-43ed-8bf9-4c803a5422df)
+
+Komennolla ``fuf -w ~/wordlists/parameters.txt -u http://localhost/cd/param/data?FUZZ=1`` sain puuttuvan parametrin: debug.
+
+![image](https://github.com/user-attachments/assets/b54c3b55-cff5-438f-a64b-61df0d38e884)
+![image](https://github.com/user-attachments/assets/28ef2cda-e5e2-47cc-9737-0239d64931af)
+
+Rate Limited -tehtävän komennot antoivat pelkkää erroria?
+
+Virtual Host Discovery -tehtävässä ``ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://localhost`` komennolla etsitään piilotettuja domaineja. Kaikki löydökset olivat samankokoisia, joten komennolla ``ffuf -w ~/wordlists/subdomains.txt -H "Host: FUZZ.ffuf.me" -u http://localhost -fs 1495`` filtteröitiin 1495 tavun tulokset. Löytyi redhat.
+
+![image](https://github.com/user-attachments/assets/d1dccc6b-2190-49f8-b4e3-a17e5349392d)
+
+En tiedä löysinkö oikeaa sivua, mutta redhat.localhost oli sama kuin etusivu: 
+![image](https://github.com/user-attachments/assets/8ffdaa77-6bb5-4f67-aa79-2e23ec5abb68)
 
 
 
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus.
 
+Tämän tehtävän tein Johnilla. Kysyin ChatGPT:ltä tapoja salakirjoittaa tiedosto (muu kuin zip) ja päätin kokeilla ehdotuksista 7zipiä. Asensin sen ensin komennolla sudo apt-get install p7zip-full, ja loin sitten tiedoston salaisuus.txt, jonne laitoin salaisen tekstin. Sitten ``7z a -p lukko.7z salaisuus.txt`` laitoin tiedostolle salasanan. Salattu tiedosto oli nyt nimeltään lukko.7z. Kysyin vielä ChatGPT:ltä, kuinka tälläinen tiedosto avataan, ja kokeilin komentoa ``7z x lukko.7z``, ja tiedosto oli toden totta salasanan takana.
+
+![image](https://github.com/user-attachments/assets/6018dc6c-1a92-4785-a913-e873d85f94aa)
+![image](https://github.com/user-attachments/assets/d63d0bb4-7be6-4555-8d59-95be78db5518)
+
+Minun täytyi ensin selvittää, miten saan Johnilla käsiteltyä 7Zip-tiedostoja, joten etsin "7p" ../john/run/ -hakemistosta, ja kokeilin ensimmäistä tulosta. Loin Johnilla tiedostosta hashin komennolla ``$HOME/john/run/7z2john.pl lukko.7z > lukko.7z.hash``.
+
+![image](https://github.com/user-attachments/assets/71d3039d-f25e-408e-a868-8b4cc4ecf869)
+![image](https://github.com/user-attachments/assets/953aeaba-5240-4c07-8c30-d594e84a325f)
+
+Sitten mursin salasanan hashin kautta komennolla ``$HOME/john/run/john lukko.7z.hash``. Tässä kohtaa koneen tuulettimet tekivät kovasti töitä ja aikaa kului. Lopulta salasana selvisi: 123456.
+
+![image](https://github.com/user-attachments/assets/5691faaa-95fa-4b77-ae94-0c87d78147a0)
+
+Kokeilin salasanaa. Olin unohtanut poistaa salaisuus.txt omasta kotihakemistosta, joten annoin tämän puretun tiedoston korvata nyt sen. ``cat salaisuus.txt`` nähtiin sitten sen sisältö.
+
+![image](https://github.com/user-attachments/assets/736eb244-cb68-44b9-8af2-562053242be8)
+![image](https://github.com/user-attachments/assets/d063a566-2495-4382-b4aa-8851faca9ebf)
+
+
 
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus
+
+
 
 
 ## g) Tee msfvenom-työkalulla haittaohjelma, joka soittaa kotiin (reverse shell). Ota yhteys vastaan metasploitin multi/handler -työkalulla
