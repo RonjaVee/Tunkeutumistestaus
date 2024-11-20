@@ -174,13 +174,32 @@ Kokeilin salasanaa. Olin unohtanut poistaa salaisuus.txt omasta kotihakemistosta
 
 ## f) Tiiviste. Tee itse tai etsi verkosta salasanan tiiviste, jonka saat auki. Murra sen salaus
 
+Hyödynsinpä tässäkin tekoälyä: kysyin ChatGPT:ltä murrettavaa hashia. Nyt on jokin yllätysmomentti tässä tehtävässä.
+
+![image](https://github.com/user-attachments/assets/7952eb91-f678-4412-8f74-2a66a9829dd1)
+
+Siirryin hashed-kansioon, jonka loin aiemmassa tehtävässä ja joka sisältää rockyou.txt -tiedoston. Tutkin sitten tiivisteen tyyppiä ``hashid -m``. SHA-1 oli ensimmäinen vaihtoehto, joten valitsin sen (Hashcat Mode 100).
+
+![image](https://github.com/user-attachments/assets/dee70c29-2a8e-42f5-a9e7-e3f95d481c66)
+
+``hashcat -m 100 'tiiviste' rockyou.txt -o solved2`` lähdin murtamaan salasanaa, tulokset tiedostoon solved2. Statukseksi tuli exhausted, eli salasana ei selvinnyt. Päätin vaihtaa funktiota, eli hashid seuraava vaihtoehto (4500). Taas tuli exhausted. Kokeilin seuraavaa (6000). Taas sama. Aloin epäillä, käyttikö ChatGPT jotain suomalaista salasanaa, jota ei löydy rockyousta. Pyysin siis englanniksi uuden hashin.
+
+![image](https://github.com/user-attachments/assets/a60e4a05-604b-42be-ad81-f6a133caf1c2)
+
+Hashid antoi tutumpia tuloksia. Valitsin MD5 eli 0, koska se on yleinen.
+
+![image](https://github.com/user-attachments/assets/45d6db9d-2ec6-4f00-8e57-edf8628e7f92)
+
+Onnistui ekalla. Salasana oli abc123.
+
+![image](https://github.com/user-attachments/assets/a12d1620-f919-421a-a73e-b5ab60ac8fac)
 
 
 
 ## g) Tee msfvenom-työkalulla haittaohjelma, joka soittaa kotiin (reverse shell). Ota yhteys vastaan metasploitin multi/handler -työkalulla
 
 
-## Lähteet
+## Lähteet 
 
 - Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
 
