@@ -32,7 +32,7 @@ Santos et al 2017: Security Penetration Testing - The Art of Hacking Series Live
 
 Polop et al 2024: HackTricks: MSFVenom - CheatSheet [https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom)
 
--
+- 
 -
 -
 
