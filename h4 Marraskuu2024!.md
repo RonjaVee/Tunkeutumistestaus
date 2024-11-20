@@ -85,9 +85,46 @@ Purin zip-tiedoston ja sain sisällön haltuuni.
 
 
 
-## d) Fuffme. Asenna Ffufme harjoitusmaali paikallisesti omalle koneellesi
+## d) Fuffme. Asenna Ffufme harjoitusmaali paikallisesti omalle koneellesi ja ratkaise tehtävät
 
-Harjoitusmateriaali: [https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/](https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/)
+Harjoitusmateriaali ja ohjeet: [https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/](https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/)
+
+Asensin ensin ohjeen mukaisesti paketit ``sudo apt-get install docker.io git ffuf``; näistä tosin docker.io oli ainoa, joka puuttui. Komennoilla `` git clone https://github.com/adamtlangley/ffufme`` ``cd ffufme/`` ``sudo docker build -t ffufme`` rakensin harjoitusmaalin. Komennolla ``sudo docker run -d -p 80:80 ffufme`` maali laitettiin päälle. Testasin, että se näkyy curlilla ja localhostissa selaimella.
+
+![image](https://github.com/user-attachments/assets/b5bd79e4-667c-4fb8-8396-4678095d092d)
+
+Seuraavaksi tein kansion sanalistoille ``mkdir $HOME/wordlists`` ja siirryin kansioon ``cd $HOME wordlists``. Latasin sinne ohjeessa annetut sanalistatiedostot ``wget http://ffuf.me/wordlist/common.txt`` ``wget http://ffuf.me/wordlist/parameters.txt`` ``wget http://ffuf.me/wordlist/subdomains.txt``. Palasin sen jälkeen kotihakemistoon.
+
+Testaamalla ``ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/basic/FUZZ`` löytyi class ja development.log.
+
+![image](https://github.com/user-attachments/assets/29ae57b8-0f8e-46ef-b12c-cd32ae6921c7)
+![image](https://github.com/user-attachments/assets/da786df0-1454-4b5e-b3b2-49385ea6a532)
+
+
+Sitten lähdin tekemään ffufin tehtäviä. Basic Content Discovery -tehtävän komento oli sama kuin ylläoleva.
+
+Content Discovery With Recursion -tehtävän komento oli ``ffuf -w $HOME/wordlists/common.txt -recursion -u http://ffuf.me/cd/recursion/FUZZ``, eli aikaisempaan lisätään -recursion. Tällä löytyi /admin, /admin/users ja /admin/users/96. Eli jos ffuf löytää hakemiston, se skannaa hakemiston sisällön ja toistaa tätä samaa kunnes ei löydy enempää skannattavaa.
+
+![image](https://github.com/user-attachments/assets/2ec67391-2b3b-419e-9cef-980b088cdd22)
+![image](https://github.com/user-attachments/assets/6084ab29-2a36-4334-b04a-d27e633587e0)
+
+
+Tehtävässä Content Discovery With File Extensions komento oli ``ffuf -w $HOME/wordlists/common.txt -e .log -u http://ffuf.me/cd/ext/logs/FUZZ``. -e .log tarkoittaa, että ffuf liittää common.txt-tiedostossa oleviin sanoihin .log-päätteen. Tehtävässä sanottiin, että ollaan löydetty /logs -hakemisto, jonka sisältöä ei voi katsoa, mutta voidaan olettaa, että se sisältää tiedostoja .log -päätteellä. Näin löytyi users.log.
+
+![image](https://github.com/user-attachments/assets/f7881455-9e63-47df-b5af-eb2425992f97)
+![image](https://github.com/user-attachments/assets/1ddaa8d3-d4b8-4be1-9c44-bc7b543e66f4)
+
+
+No 404 Status -tehtävässä annettiin ensin peruskomento ``ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/no404/FUZZ``, joka tuotti pitkän listan tuloksia. Page Cannot be Found -sivujen koko oli kaikilla sama, joten tämän kokoiset tiedostot filtteröitiin ffufauksesta: ``ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/no404/FUZZ -fs 669``. Löytyi secret.
+
+![image](https://github.com/user-attachments/assets/8ea2dc93-0245-4d11-8143-00d400b755f3)
+![image](https://github.com/user-attachments/assets/beb356d1-7acd-46f7-8b73-95b0a5a47503)
+
+![image](https://github.com/user-attachments/assets/43323438-0bba-4292-9b34-adadb066fc5a)
+![image](https://github.com/user-attachments/assets/51438b00-f7bf-4228-b62d-74ed9da76d64)
+
+
+
 
 
 ## e) Tiedosto. Tee itse tai etsi verkosta jokin salakirjoitettu tiedosto, jonka saat auki. Murra sen salaus.
