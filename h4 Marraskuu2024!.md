@@ -15,7 +15,7 @@ Karvinen, Tero. Cracking Passwords with Hashcat. 6.4.2022. [https://terokarvinen
 Karvinen, Tero. Crack File Password With John. 9.2.2023. [https://terokarvinen.com/2023/crack-file-password-with-john/](https://terokarvinen.com/2023/crack-file-password-with-john/)
 
 - Asennetaan tarvittavat paketit ``sudo apt-get -y install micro bash-completion git build-essential libssl-dev zlib1g zlib1g-dev libbz2-1.0 libbz2-dev atool zip wget ``
-- Ladataan ja kootaan John the Ripperin jumbo-versio ``git clone --depth=1 https://github.com/openwall/john.git`` ``cd john/src/`` ``./configure`` ``make -s clean && make -sj4`` ``cd ../run/``
+- Ladataan ja kootaan John the Ripperin jumbo-versio ``git clone --depth=1 https://github.com/openwall/john.git`` ``cd john/src/`` ``./configure`` -> configure-komennon outputista saa kokoamiskomennon,  ``cd ../run/`` näkyy kaikki suoritettavat tiedostot ja scriptit
 - Testitiedosto ladataan ``wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip ``
 - Otetaan tiedostosta hash ja siirretään se tiedostoon tero.zip.hash ``$HOME/john/run/zip2john tero.zip >tero.zip.hash``
 - Hashia vastaan tehdään sanakirjahyökkäys ``$HOME/john/run/john tero.zip.hash``
@@ -42,7 +42,7 @@ Ekana ``sudo apt-get update``. Sitten asensin [ohjeen](https://terokarvinen.com/
 
 ![image](https://github.com/user-attachments/assets/90307991-b219-4901-8b1d-f72eb0554695)
 
-Sitten loin hashin keksitystä salasanasta, jonka murran.
+Sitten loin hashin keksitystä salasanasta, jonka murran. Naisten nimiä löytyy rockyou:sta, joten kokeilin sellaista.
 
 ![image](https://github.com/user-attachments/assets/08e3e558-fa8e-4f02-82d1-8d21b0ba7f53)
 
@@ -62,6 +62,27 @@ Sitten komennolla ``hashcat -m 0 'tähän hash' rockyou.txt -o solved`` mursin t
 
 
 ## c) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana
+
+Päivitin taas paketit ja lähdin asentamaan paketteja, osa löytynee jo mutta kopioin komennon kuitenkin [ohjeen](https://terokarvinen.com/2023/crack-file-password-with-john/) mukaan: ``sudo apt-get -y install micro bash-completion git build-essential libssl-dev zlib1g zlib1g-dev zlib-gst libbz2-1.0 libbz2-dev atool zip wget``. Tuli virheilmoitus E: unable to locate package zlib-gst. Otin sen pois pakettilistalta, ja asensin muut samalla kun aloin tutkimaan, mistä on kyse. En löytänyt vastausta, joten jatkoin tehtävää.
+
+Latasin John the Ripperin ja annoin ohjeen mukaiset komennot. ``git clone --depth=1 https://github.com/openwall/john.git`` ``cd john/src/`` ``./configure``. Configure-komennon outputista sain kokoamiskomennon: ``make -s clean && make -sj4``. -> "Make process complete". ``cd ../run/`` tästä kansiosta löytyi scriptejä ym.
+
+![image](https://github.com/user-attachments/assets/41c28c5b-a940-4aa5-938e-a3d7c793a20b)
+
+Annoin komennon ``$HOME/john/run/john`` ja tajusin tässä vaiheessa, että olin vielä hashed-kansiossa. Siirsin johnin kotihakemistooni ja homma toimi.
+
+![image](https://github.com/user-attachments/assets/4d7bd963-9d49-4de3-a3e2-0ced9a8377a0)
+
+Sitten latasin testitiedoston komennolla ``wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip``. Zip-tiedosto oli lukittu salasanalla.
+
+Murtamiseksi, ensin otin tiedostosta hash ja sitten siirsin sen erilliseen tiedostoon tero.zip.hash: ``$HOME/john/run/zip2john tero.zip >tero.zip.hash``. Itse murtaminen tapahtui komennolla ``$HOME/john/run/john tero.zip.hash``. Salasana oli butterfly.
+
+![image](https://github.com/user-attachments/assets/5b973bf0-001e-4fa5-be3e-0d3a09700ff3)
+
+Purin zip-tiedoston ja sain sisällön haltuuni.
+
+![image](https://github.com/user-attachments/assets/fb54e855-efcb-4312-bdda-37b49ce752f1)
+
 
 
 ## d) Fuffme. Asenna Ffufme harjoitusmaali paikallisesti omalle koneellesi
