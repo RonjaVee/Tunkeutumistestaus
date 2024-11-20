@@ -4,10 +4,6 @@ Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https:
 
 ## x) Lue/katso ja tiivistä
 
-Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
-
-## x) Lue/katso ja tiivistä
-
 Karvinen, Tero. Cracking Passwords with Hashcat. 6.4.2022. [https://terokarvinen.com/2022/cracking-passwords-with-hashcat/](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/)
 
 - Asennetaan tarvittavat paketit ``sudo apt-get -y install hashid hashcat wget``
