@@ -214,7 +214,7 @@ Käynnistin Kalilla Apache-palvelimen ``sudo systemctl start apache2`` ja latasi
 
 ![image](https://github.com/user-attachments/assets/a2483c66-3843-45b0-b8c3-6f6ed22f97fd)
 
-Meterpreter-sessio aukesi toisessa ikkunassa. Sain siis yhteyden. Poistin vielä haittaohjelman palvelimelta, niin ei jää kummittelemaan mitenkään.
+Meterpreter-sessio aukesi toisessa ikkunassa. Sain siis yhteyden. Poistin vielä haittaohjelman (ja muut sälät) palvelimelta, niin ei jää kummittelemaan mitenkään.
 
 ![image](https://github.com/user-attachments/assets/91b626f8-6b62-4ff0-ba04-b5047ce1d76d)
 
