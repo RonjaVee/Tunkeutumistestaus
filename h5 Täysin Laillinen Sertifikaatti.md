@@ -35,17 +35,22 @@ Tutkin ensin, miten käyttää FoxyProxyn Patternsia FoxyProxyn ohjesivulta [URL
 ![image](https://github.com/user-attachments/assets/45e448e2-9d37-421b-8d22-d7886cafb939)
 
 
-
-Testasin sitten, toimiiko. Valitsin FoxyProxysta Proxy By Patterns ja 
-
-
-
-
 ## c) PortSwigger Labs. Ratkaise tehtävät. Selitä ratkaisusi: mitä palvelimella tapahtuu, mitä eri osat tekevät, miten hyökkäys löytyi, mistä vika johtuu
 
 
 
 ## k) Asenna pencode ja muunna sillä jokin merkkijono (encode a string)
+
+Luin sivulta [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode) mitä pencoden asennus vaatii. Tarkastinko, onko minulla go:ta ``go version``-> ei ollut, ehdotus oli asentaa se ``sudo apt-get install golang-go``. Sitten ``go install github.com/ffuf/pencode/cmd/pencode@latest``. Tämä ei kuitenkaan asentunut, kun kokeilin ``pencode version``. Ehdotuksena oli asentaa se ``sudo apt install golang-github-ffuf-pencode-dev``, valitsin yes ja kokeilin uudelleen, asentuiko. Asentuihan se. 
+
+![image](https://github.com/user-attachments/assets/0ff11f6a-776d-425c-929e-939a0e4ae2c3)
+
+
+Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon moimoi. Käytin komentoa ``echo 'olen omena'|pencode [muoto]``. Muodot: urlencode b64encode hexencode. Urlencode: Koodaa merkkijonon URL-muotoon, b64encode: Koodaa merkkijonon Base64-muotoon, hexencode: Koodaa merkkijonon heksadesimaalimuotoon.
+
+
+![image](https://github.com/user-attachments/assets/c21fe116-370a-4495-ae34-091a17d43896)
+
 
 
 
