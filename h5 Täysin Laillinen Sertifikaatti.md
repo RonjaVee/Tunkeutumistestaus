@@ -1,6 +1,6 @@
 # h5 Täysin Laillinen Sertifikaatti
 
-
+Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
 
 ## x) Lue/katso ja tiivistä
 
@@ -10,7 +10,7 @@
 
 Löysin ohjeeksi TheDutchHackerin [Configure OWASP Zap with Firefox -oppaan](https://thedutchhacker.com/configure-owasp-zap-with-firefox/).
 
-OWASP ZAP:in asensin ``sudo apt-get install zaproxy`` ja käynnistin sen komennolla ``zaproxy``. Sitten etsinkin jonkin aikaa, mistä pääsen luomaan sertifikaatin. Tools -> Options -> Network -> Server Certificates. Tuli ilmoitus, että Root CA Sertificate on jo olemassa. Loin uuden tilalle ja tallensin sen kotihakemistooni.
+OWASP ZAP:in asensin ``sudo apt-get install zaproxy`` ja käynnistin sen komennolla ``zaproxy``. Sitten etsinkin jonkin aikaa, mistä pääsen luomaan sertifikaatin (luki tehtävänannon ohjeissa): Tools -> Options -> Network -> Server Certificates. Tuli ilmoitus, että Root CA Sertificate on jo olemassa. Loin uuden tilalle ja tallensin sen kotihakemistooni.
 
 Firefoxissa menin kohtaan Settings -> Privacy and Security -> Certificates. View Certificates -kohdassa Authorities-välilehdellä valitsin luomani sertifikaatin kotihakemistostani ja hyväksyin kohdan "Trust this CA to identify websites". Sitten loin tunnilla asentamaani FoxyProxyyn Zap-nimisen proxyn (Hostname 127.0.0.1, portti 8080).
 
@@ -20,14 +20,19 @@ Kokeilin sitten katsoa localhostilla, näkyykö Zapissa mitään. Tuli virheilmo
 
 ![image](https://github.com/user-attachments/assets/b934bb70-1003-475a-88f8-6d0caefbd3d0)
 
-
-Kysyin sitten ChatGPT:ltä, "miten saan kuvat näkymään history-välilehdellä zapissa" ja ohjeeksi tuli katsoa asetukset Tools -> Options -> Display. Sieltä löytyikin täppä "Process images in HTTP requests/responses. CTRL + F5 latasin sivun uudelleen, ja nyt kuvakin näkyi Zapissa.
-
+Jotta kuvatkin näkyisivät, tehtävänannossa vinkattiin valitsemaan asetuksista Tools -> Options -> Display. Sieltä löytyikin täppä "Process images in HTTP requests/responses. CTRL + F5 latasin sivun uudelleen, ja nyt kuvakin näkyi Zapissa.
 
 ![image](https://github.com/user-attachments/assets/7855659a-717c-4f79-92ae-a43eac070ddd)
 
 
 ## b) Kettumaista. Asenna "FoxyProxy Standard" Firefox Addon, ja lisää ZAP proxyksi siihen. Käytä FoxyProxyn "Patterns" -toimintoa, niin että vain valitsemasi weppisivut ohjataan Proxyyn
+
+Tutkin ensin, miten käyttää FoxyProxyn Patternsia FoxyProxyn ohjesivulta [URL Patterns](https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/). Ohjeessa kerrottiin, kuinka URL pitäisi muotoilla. Localhost: ``*://localhost/*``, PortSwigger: ``*.portswiggerlabs.com/*``. 
+
+![image](https://github.com/user-attachments/assets/121a550a-6f81-4c8a-8f7a-95b311ac367d)
+
+Testasin sitten, toimiiko. Valitsin FoxyProxysta Proxy By Patterns ja koitin avata HackTheBox-sivun ja se aukesi normaalisti. ZAPissa ei näkynyt mitään.
+
 
 
 
@@ -40,3 +45,9 @@ Kysyin sitten ChatGPT:ltä, "miten saan kuvat näkymään history-välilehdellä
 
 
 ## Lähteet
+
+Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
+
+https://thedutchhacker.com/configure-owasp-zap-with-firefox/
+
+https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/
