@@ -21,9 +21,10 @@ Kokeilin sitten katsoa localhostilla, näkyykö Zapissa mitään. Tuli virheilmo
 ![image](https://github.com/user-attachments/assets/b934bb70-1003-475a-88f8-6d0caefbd3d0)
 
 
-Kysyin sitten ChatGPT:ltä, "miten saan kuvat näkymään history-välilehdellä zapissa" ja ohjeeksi tuli katsoa asetukset Tools -> Options -> Display. Sieltä löytyikin täppä "Process images in HTTP requests/responses. CTRL + F
+Kysyin sitten ChatGPT:ltä, "miten saan kuvat näkymään history-välilehdellä zapissa" ja ohjeeksi tuli katsoa asetukset Tools -> Options -> Display. Sieltä löytyikin täppä "Process images in HTTP requests/responses. CTRL + F5 latasin sivun uudelleen, ja nyt kuvakin näkyi Zapissa.
 
 
+![image](https://github.com/user-attachments/assets/7855659a-717c-4f79-92ae-a43eac070ddd)
 
 
 ## b) Kettumaista. Asenna "FoxyProxy Standard" Firefox Addon, ja lisää ZAP proxyksi siihen. Käytä FoxyProxyn "Patterns" -toimintoa, niin että vain valitsemasi weppisivut ohjataan Proxyyn
