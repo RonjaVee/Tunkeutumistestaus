@@ -46,7 +46,7 @@ Luin sivulta [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode) 
 ![image](https://github.com/user-attachments/assets/0ff11f6a-776d-425c-929e-939a0e4ae2c3)
 
 
-Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon moimoi. Käytin komentoa ``echo 'olen omena'|pencode [muoto]``. Muodot: urlencode b64encode hexencode. Urlencode: Koodaa merkkijonon URL-muotoon, b64encode: Koodaa merkkijonon Base64-muotoon, hexencode: Koodaa merkkijonon heksadesimaalimuotoon.
+Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon "olen omena". Käytin komentoa ``echo 'olen omena'|pencode [muoto]``. Muodot: urlencode b64encode hexencode. Urlencode: Koodaa merkkijonon URL-muotoon, b64encode: Koodaa merkkijonon Base64-muotoon, hexencode: Koodaa merkkijonon heksadesimaalimuotoon.
 
 
 ![image](https://github.com/user-attachments/assets/c21fe116-370a-4495-ae34-091a17d43896)
@@ -58,6 +58,8 @@ Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon moimoi. Käytin ko
 
 Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
 
-https://thedutchhacker.com/configure-owasp-zap-with-firefox/
+Dutch Hacker. Configure OWASP ZAP with Firefox. The Dutch Hacker. Luettu 27.11.2024. [https://thedutchhacker.com/configure-owasp-zap-with-firefox/](https://thedutchhacker.com/configure-owasp-zap-with-firefox/)
 
-https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/
+FoxyProxy. URL patterns. FoxyProxy Knowledge Base. Luettu 27.11.2024. [https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/](https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/)
+
+Hoikkala, Joona. Pencode. GitHub. Luettu 27.11.2024. [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode)
