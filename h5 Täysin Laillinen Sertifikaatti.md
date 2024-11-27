@@ -14,6 +14,9 @@ OWASP ZAP:in asensin ``sudo apt-get install zaproxy`` ja käynnistin sen komenno
 
 Firefoxissa menin kohtaan Settings -> Privacy and Security -> Certificates. View Certificates -kohdassa Authorities-välilehdellä valitsin luomani sertifikaatin kotihakemistostani ja hyväksyin kohdan "Trust this CA to identify websites". Sitten loin tunnilla asentamaani FoxyProxyyn Zap-nimisen proxyn (Hostname 127.0.0.1, portti 8080).
 
+![image](https://github.com/user-attachments/assets/1226b538-1ad0-4341-be13-1bcf1febd3f9)
+
+
 ![image](https://github.com/user-attachments/assets/097945e7-e9d0-4ca7-90c2-c6a9b245b91c)
 
 Kokeilin sitten katsoa localhostilla, näkyykö Zapissa mitään. Tuli virheilmoitus 502, ja tajusin sitten, että Apache täytyy varmaankin käynnistää ensin. ``sudo systemctl start apache2`` ja nyt localhostissa näkyi oletussivu. 
@@ -27,11 +30,13 @@ Jotta kuvatkin näkyisivät, tehtävänannossa vinkattiin valitsemaan asetuksist
 
 ## b) Kettumaista. Asenna "FoxyProxy Standard" Firefox Addon, ja lisää ZAP proxyksi siihen. Käytä FoxyProxyn "Patterns" -toimintoa, niin että vain valitsemasi weppisivut ohjataan Proxyyn
 
-Tutkin ensin, miten käyttää FoxyProxyn Patternsia FoxyProxyn ohjesivulta [URL Patterns](https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/). Ohjeessa kerrottiin, kuinka URL pitäisi muotoilla. Localhost: ``*://localhost/*``, PortSwigger: ``*.portswiggerlabs.com/*``. 
+Tutkin ensin, miten käyttää FoxyProxyn Patternsia FoxyProxyn ohjesivulta [URL Patterns](https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/). Ohjeessa kerrottiin, kuinka URL pitäisi muotoilla. Localhost: ``*://localhost/*``, PortSwigger: ``*.portswigger.net/*``. 
 
-![image](https://github.com/user-attachments/assets/121a550a-6f81-4c8a-8f7a-95b311ac367d)
+![image](https://github.com/user-attachments/assets/45e448e2-9d37-421b-8d22-d7886cafb939)
 
-Testasin sitten, toimiiko. Valitsin FoxyProxysta Proxy By Patterns ja koitin avata HackTheBox-sivun ja se aukesi normaalisti. ZAPissa ei näkynyt mitään.
+
+
+Testasin sitten, toimiiko. Valitsin FoxyProxysta Proxy By Patterns ja 
 
 
 
