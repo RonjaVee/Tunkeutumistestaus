@@ -136,3 +136,5 @@ Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon "olen omena". Käy
 - FoxyProxy. URL patterns. FoxyProxy Knowledge Base. Luettu 27.11.2024. [https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/](https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/)
 
 - Hoikkala, Joona. Pencode. GitHub. Luettu 27.11.2024. [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode)
+
+- OpenAI. ChatGPT. 2024.  [https://chat.openai.com](https://chat.openai.com) Kysytty URL:n muotoilu FoxyProxyyn ja muita asetuksia FoxyProxyyn, Firefoxiin ja ZAPiin
