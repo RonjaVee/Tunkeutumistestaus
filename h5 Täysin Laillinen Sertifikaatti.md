@@ -4,6 +4,24 @@ Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarv
 
 ## x) Lue/katso ja tiivistä
 
+### OWASP. A01:2021-Broken Access Control. 2021.
+
+- Broken Access Control yleisin haavoittuvuus
+- Johtaa tietovuotoon, tietojen muokkaamiseen luvatta tai oikeuksien laajentamiseen
+- Tyypillisiä ongelmia: parametrimanipulaatio, API-pyyntöjen väärinkäyttö ja pakotettu selaaminen
+- Yleisiä virheitä ovat CORS-konfiguraatiovirheet ja liian laajat käyttöoikeudet
+- Ennaltaehkäisy: "deny by default", pääsynvalvonnan keskittäminen ja lokit
+- Tapahtuu esim. niin, että hyökkääjä muuttaa URL-parametria ja pääsee sitä kautta toisen käyttäjän tietoihin
+
+### OWASP. A10:2021-Server-Side Request Forgery (SSRF). 2021.
+
+- SSRF (Server-Side Request Forgery): sovellus ohjataan tekemään pyyntöjä odottamattomiin kohteisiin
+- Aina käyttäjän syöttämiä URL-osoitteita ei validoida; modernit web-sovellukset alttiimpia
+- Ehkäisy: Verkon tasolla estetään liikenne oletuksena "deny by default" ja eristetään resurssipyyntöjä eri verkkoihin
+- Sovellustasolla validoidaan ja sallitaan vain turvalliset URL-mallit, estetään HTTP-uudelleenohjaukset ja käsitellään tietoturvapalvelut erillisillä järjestelmillä
+- Johtaa esim. arkaluontoisiin tietoihin pääsyyn tai sisäisten palveluiden hyväksikäyttöön, esim. etäkoodin suoritus (RCE) tai palvelunestohyökkäys (DoS)
+
+
 
 
 ## a) Totally Legit Sertificate. Asenna OWASP ZAP, generoi CA-sertifikaatti ja asenna se selaimeesi. Laita ZAP proxyksi selaimeesi. Laita ZAP sieppaamaan myös kuvat, niitä tarvitaan tämän kerran kotitehtävissä. Osoita, että hakupyynnöt ilmestyvät ZAP:n käyttöliittymään
@@ -56,10 +74,14 @@ Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon "olen omena". Käy
 
 ## Lähteet
 
-Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
+- Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
 
-Dutch Hacker. Configure OWASP ZAP with Firefox. The Dutch Hacker. Luettu 27.11.2024. [https://thedutchhacker.com/configure-owasp-zap-with-firefox/](https://thedutchhacker.com/configure-owasp-zap-with-firefox/)
+- OWASP. A10:2021-Server-Side Request Forgery (SSRF). 2021. [https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/](https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/)
 
-FoxyProxy. URL patterns. FoxyProxy Knowledge Base. Luettu 27.11.2024. [https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/](https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/)
+- OWASP. A01:2021-Broken Access Control.2021. [https://owasp.org/Top10/A01_2021-Broken_Access_Control/](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 
-Hoikkala, Joona. Pencode. GitHub. Luettu 27.11.2024. [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode)
+- Dutch Hacker. Configure OWASP ZAP with Firefox. The Dutch Hacker. Luettu 27.11.2024. [https://thedutchhacker.com/configure-owasp-zap-with-firefox/](https://thedutchhacker.com/configure-owasp-zap-with-firefox/)
+
+- FoxyProxy. URL patterns. FoxyProxy Knowledge Base. Luettu 27.11.2024. [https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/](https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/)
+
+- Hoikkala, Joona. Pencode. GitHub. Luettu 27.11.2024. [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode)
