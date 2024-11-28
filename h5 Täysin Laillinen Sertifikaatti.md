@@ -67,9 +67,33 @@ Jotta kuvatkin näkyisivät, tehtävänannossa vinkattiin valitsemaan asetuksist
 
 ## b) Kettumaista. Asenna "FoxyProxy Standard" Firefox Addon, ja lisää ZAP proxyksi siihen. Käytä FoxyProxyn "Patterns" -toimintoa, niin että vain valitsemasi weppisivut ohjataan Proxyyn
 
+Koetin tehdä tätä jo 28.11., mutta en saanut Patternsia toimimaan, ja sitten koneeni ylikuumeni ja kaatui jälleen, jolloin myös tallentematon raportti hävisi... Siispä uudestaan.
+
 Tutkin ensin, miten käyttää FoxyProxyn Patternsia FoxyProxyn ohjesivulta [URL Patterns](https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/). Ohjeessa kerrottiin, kuinka URL pitäisi muotoilla. Localhost: ``*://localhost/*``, PortSwigger: ``*.portswigger.net/*``. 
 
 ![image](https://github.com/user-attachments/assets/45e448e2-9d37-421b-8d22-d7886cafb939)
+
+Tuli ongelmia. Mitään ei näkynyt ZAPissa.
+
+![image](https://github.com/user-attachments/assets/97820f35-8c88-44e4-bbad-1ffd63b9c5a6)
+
+Kysyin ChatGPT:ltä miksei toimi, ja se ehdotti toisenlaista tapaa muotoilla URL.
+
+![image](https://github.com/user-attachments/assets/cea49cdf-dfe1-411f-9134-7ad7bcf01a31)
+
+Sivu aukesi nyt normaalisti, mutta ZAPissa ei näy vieläkään mitään. Pidin kokoajan huolta, että FoxyProxylla on valittuna proxy by patterns.
+
+![image](https://github.com/user-attachments/assets/d7873fe6-89be-469a-ba1b-4a6641a59e3c)
+
+Käynnistin ZAPin uudelleen, nyt eri tavalla. Laitoin Firefoxiin uuden sertifikaatin jonka tallensin ZAPista.
+
+![image](https://github.com/user-attachments/assets/97bb8206-a5b2-4a86-929c-09d255b0c60b)
+
+Kokeilin selaimella valita FoxyProxysta ensin Proxy by patterns ja sitten pelkkä ZAP. Ahaa, nyt onnistuikin. Ei hajuakaan mistä kiikasti, mutta tämän ongelman takia en päässyt suorittamaan noita c-kohdan tehtäviä ajallaan. Siispä teen ne myöhemmin.
+
+![image](https://github.com/user-attachments/assets/34eb6fc4-a404-41a9-b07f-e0658f8ec767)
+
+![image](https://github.com/user-attachments/assets/54cb641c-af8b-4c54-9ef9-036950a60a53)
 
 
 ## c) PortSwigger Labs. Ratkaise tehtävät. Selitä ratkaisusi: mitä palvelimella tapahtuu, mitä eri osat tekevät, miten hyökkäys löytyi, mistä vika johtuu
