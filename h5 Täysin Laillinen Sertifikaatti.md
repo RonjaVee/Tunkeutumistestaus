@@ -25,21 +25,21 @@ Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarv
 
 Kohdat: Insecure direct object references (IDOR), Path traversal, Server-side template injection, Server-side request forgery (SSRF), Cross-site scripting
 
-- Insecure Direct Object References (IDOR): Haavoittuvuus, jossa sovellus käyttää käyttäjän syöttämää tietoa suoraan resurssien tai toimintojen käyttöön ilman riittävää pääsynhallintaa
-- Esimerkkejä: IDOR voi ilmetä esimerkiksi muuttamalla URL-parametria (esim. asiakasnumero) tai staattisen tiedoston nimeä (esim. chat-lokitiedosto) ja saada luvattoman pääsyn muiden käyttäjien tietoihin
+- **Insecure Direct Object References (IDOR)**: Haavoittuvuus, jossa sovellus käyttää käyttäjän syöttämää tietoa suoraan resurssien tai toimintojen käyttöön ilman riittävää pääsynhallintaa
+    - Esimerkkejä: IDOR voi ilmetä esimerkiksi muuttamalla URL-parametria (esim. asiakasnumero) tai staattisen tiedoston nimeä (esim. chat-lokitiedosto) ja saada luvattoman pääsyn muiden käyttäjien tietoihin
 
-- Path traversal: hyökkäyksillä hyökkääjä voi lukea palvelimen tiedostoja, esim. sovelluskoodia, järjestelmätietoja, arkaluonteisia käyttöjärjestelmän tiedostoja
-- Hyödynnetään hakemistorakenteen "../" tai ".." -sekvenssejä ohittamalla suojaukset, kuten tiedostopolun rajoitukset
-- Esimerkkejä: URL-pyynnöllä, kuten ?filename=../../../etc/passwd, voidaan lukea tiedostoja palvelimen juurihakemistosta
+- **Path traversal**: hyökkäyksillä hyökkääjä voi lukea palvelimen tiedostoja, esim. sovelluskoodia, järjestelmätietoja, arkaluonteisia käyttöjärjestelmän tiedostoja
+    - Hyödynnetään hakemistorakenteen "../" tai ".." -sekvenssejä ohittamalla suojaukset, kuten tiedostopolun rajoitukset
+    - Esimerkkejä: URL-pyynnöllä, kuten ?filename=../../../etc/passwd, voidaan lukea tiedostoja palvelimen juurihakemistosta
 
-- Server-side template injection (SSTI): hyökkäyksessä hyökkääjä injektoi haitallisen koodin palvelinpuolen templaattiin, joka suoritetaan palvelimella ja voi johtaa koodin suoritukseen
-- Hyökkäykset syntyvät, kun käyttäjien syötteet liitetään suoraan templaattiin ilman riittäviä suojauksia
+- **Server-side template injection (SSTI)**: hyökkäyksessä hyökkääjä injektoi haitallisen koodin palvelinpuolen templaattiin, joka suoritetaan palvelimella ja voi johtaa koodin suoritukseen
+    - Hyökkäykset syntyvät, kun käyttäjien syötteet liitetään suoraan templaattiin ilman riittäviä suojauksia
 
-- Server-side request forgery (SSRF): haavoittuvuus, jossa hyökkääjä pakottaa palvelimen tekemään pyynnön ei-toivottuun sijaintiin, mikä voi paljastaa arkaluontoista tietoa tai suorittaa toimintoja
-- Hyökkäyksessä hyödynnetään luottamusvälejä, esim. sisäisten järjestelmien pääsyä
-- Esimerkki: hyökkääjä muuttaa palvelimelle lähetetyn pyynnön osoitteen paikalliseksi (localhost tai 127.0.0.1) -> palvelin tekee pyynnön itseensä ja ohittaa pääsynvalvonnan
+- **Server-side request forgery (SSRF)**: haavoittuvuus, jossa hyökkääjä pakottaa palvelimen tekemään pyynnön ei-toivottuun sijaintiin, mikä voi paljastaa arkaluontoista tietoa tai suorittaa toimintoja
+    - Hyökkäyksessä hyödynnetään luottamusvälejä, esim. sisäisten järjestelmien pääsyä
+    - Esimerkki: hyökkääjä muuttaa palvelimelle lähetetyn pyynnön osoitteen paikalliseksi (localhost tai 127.0.0.1) -> palvelin tekee pyynnön itseensä ja ohittaa pääsynvalvonnan
 
-- Cross-site scripting (XSS): verkkoturvahaavoittuvuus, jossa hyökkääjä upottaa haitallista JavaScriptiä verkkosivustolle, jolloin hän voi kaapata käyttäjän tietoja
+- **Cross-site scripting (XSS)**: verkkoturvahaavoittuvuus, jossa hyökkääjä upottaa haitallista JavaScriptiä verkkosivustolle, jolloin hän voi kaapata käyttäjän tietoja
 
 
 
