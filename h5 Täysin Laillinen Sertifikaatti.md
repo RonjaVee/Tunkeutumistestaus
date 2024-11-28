@@ -23,7 +23,7 @@ Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarv
 
 ### PortSwigger. Web Security Academy. 
 
-    Kohdat:
+Kohdat:
     - Insecure direct object references (IDOR)
     - Path traversal
     - Server-side template injection
