@@ -21,7 +21,14 @@ Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarv
 - Sovellustasolla validoidaan ja sallitaan vain turvalliset URL-mallit, estetään HTTP-uudelleenohjaukset ja käsitellään tietoturvapalvelut erillisillä järjestelmillä
 - Johtaa esim. arkaluontoisiin tietoihin pääsyyn tai sisäisten palveluiden hyväksikäyttöön, esim. etäkoodin suoritus (RCE) tai palvelunestohyökkäys (DoS)
 
-###
+### PortSwigger. Web Security Academy. 
+
+    Kohdat:
+    - Insecure direct object references (IDOR)
+    - Path traversal
+    - Server-side template injection
+    - Server-side request forgery (SSRF)
+    - Cross-site scripting
 
 - Insecure Direct Object References (IDOR): Haavoittuvuus, jossa sovellus käyttää käyttäjän syöttämää tietoa suoraan resurssien tai toimintojen käyttöön ilman riittävää pääsynhallintaa
 - Esimerkkejä: IDOR voi ilmetä esimerkiksi muuttamalla URL-parametria (esim. asiakasnumero) tai staattisen tiedoston nimeä (esim. chat-lokitiedosto) ja saada luvattoman pääsyn muiden käyttäjien tietoihin
@@ -86,7 +93,7 @@ Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon "olen omena". Käy
 
 - OWASP. A01:2021-Broken Access Control.2021. [https://owasp.org/Top10/A01_2021-Broken_Access_Control/](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 
-- PortSwigger. Web Security Academy. [https://portswigger.net/web-security](https://portswigger.net/web-security) K
+- PortSwigger. Web Security Academy. [https://portswigger.net/web-security](https://portswigger.net/web-security)
     Kohdat:
     - Insecure direct object references (IDOR)
     - Path traversal
