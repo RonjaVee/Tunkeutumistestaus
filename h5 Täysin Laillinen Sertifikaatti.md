@@ -102,6 +102,10 @@ Nämä tehtävät tehty 1.12.2024.
 
 ### c. IDOR
 
+**Insecure direct object references**
+
+Tehtävä: [https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references[(https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references)
+
 Tehtävässä piti kaapata carlos-käyttäjän salasana ja kirjautua tämän tilille. Tehtävänanto vinkkasi tarkastelemaan sivuston chat-toimintoa: chat-logit tallennetaan suoraan palvelimen hakemistoon.
 
 Chatissa pystyi keskustelemaan botin kanssa. View transcript -kohdasta klikkaamalla latautui transcript-tiedosto.
@@ -126,7 +130,9 @@ Kirjauduin carlosin tilille salasanalla ja tehtävä suoritettu.
 ### d. Path traversal
 
 
-**Simple case**: Tehtävässä piti ladata /etc/passwd -tiedosto käyttäen tuotteiden kuvapyynnöistä löytyvää haavoittuvuutta. Avasin siis labran verkkokaupan sivulta tuotteen ja etsin ZAPista .jpg -tiedoston pyynnön.
+**Simple case**: 
+Tehtävä: [https://portswigger.net/web-security/file-path-traversal/lab-simple](https://portswigger.net/web-security/file-path-traversal/lab-simple).
+Tehtävässä piti ladata /etc/passwd -tiedosto käyttäen tuotteiden kuvapyynnöistä löytyvää haavoittuvuutta. Avasin siis labran verkkokaupan sivulta tuotteen ja etsin ZAPista .jpg -tiedoston pyynnön.
 
 ![image](https://github.com/user-attachments/assets/f5920cf4-bbfd-4878-b564-df13033df5c4)
 
@@ -149,6 +155,8 @@ Aivan, ZAPissa voi vaihtaa hakupyynnön tulos tekstiksi. Kesti hetki tutkia ZAPi
 
 **Traversal sequences blocked with absolute path bypass**
 
+Tehtävä: [https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass](https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass)
+
 Myös tässä tehtävässä haavoittuvuus on kuvissa, eli etsin ZAPissa .jpg -pyynnön.
 
 ![image](https://github.com/user-attachments/assets/cf182d80-38b5-477a-a142-fbfea8baeca8)
@@ -163,6 +171,8 @@ Luntattuani taas ratkaisukohdasta: Filename-kohdan tiedostonimen vaihtamalla /et
 
 **Traversal sequences stripped non-recursively**
 
+Tehtävä: [https://portswigger.net/web-security/file-path-traversal/lab-sequences-stripped-non-recursively](https://portswigger.net/web-security/file-path-traversal/lab-sequences-stripped-non-recursively)
+
 Tavoite oli taas sama, päästä käsiksi /etc/passwd, ja haavoittuvuus löytyi samasta kohtaa. Eli etsin ensin oikean hakupyynnön ZAPissa.
 
 ![image](https://github.com/user-attachments/assets/858a8892-ed0a-4d7d-a34e-84569517d5a5)
@@ -174,7 +184,11 @@ Kurkkasin ratkaisuun, ja nyt eroa olikin hakemistorakenteen ".." -sekvensseissä
 ![image](https://github.com/user-attachments/assets/502a41ef-9bd7-4572-ac36-70b44b37a16a)
 
 
-### g. Server-side template injection with information disclosure via user-supplied objects (SSTI)
+### g. Server Side Template Injection (SSTI)
+
+**Server-side template injection with information disclosure via user-supplied objects (SSTI**
+
+Tehtävä: [https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-with-information-disclosure-via-user-supplied-objects](https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-with-information-disclosure-via-user-supplied-objects)
 
 Tehtävässä tuli napata frameworkin salainen avain. Kirjauduin ensin sisään tehtävänannosta löytyvillä tunnuksilla.
 
@@ -197,6 +211,11 @@ Syötin ratkaisun submit solution -kenttään, tehtävä suoritettu.
 ![image](https://github.com/user-attachments/assets/d24b65a4-908d-4bd5-a67a-bef3562dc9e5)
 
 
+### h. Server Side Request Forgery (SSRF)
+
+**Basic SSRF against the local server**
+
+Tehtävä: [https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost)
 
 
 
