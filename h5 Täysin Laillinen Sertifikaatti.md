@@ -25,7 +25,7 @@ Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. 10.5.2024. [https://terokarv
 
 Kohdat: Insecure direct object references (IDOR), Path traversal, Server-side template injection, Server-side request forgery (SSRF), Cross-site scripting
 
-- **Insecure Direct Object References (IDOR)**: Haavoittuvuus, jossa sovellus käyttää käyttäjän syöttämää tietoa suoraan resurssien tai toimintojen käyttöön ilman riittävää pääsynhallintaa
+- **Insecure Direct Object References (IDOR)**: Haavoittuvuus, jossa sovellus käyttää käyttäjän syöttämää tietoa jolloin käyttäjä pääsee käsiksi resursseihin ilman riittävää pääsynhallintaa
     - Esimerkkejä: IDOR voi ilmetä esimerkiksi muuttamalla URL-parametria (esim. asiakasnumero) tai staattisen tiedoston nimeä (esim. chat-lokitiedosto) ja saada luvattoman pääsyn muiden käyttäjien tietoihin
 
 - **Path traversal**: hyökkäyksillä hyökkääjä voi lukea palvelimen tiedostoja, esim. sovelluskoodia, järjestelmätietoja, arkaluonteisia käyttöjärjestelmän tiedostoja
