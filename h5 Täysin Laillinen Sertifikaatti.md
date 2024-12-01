@@ -142,7 +142,7 @@ Muokkailin URLia, kunnes tajusin, että labra näytti solved?
 
 ![image](https://github.com/user-attachments/assets/c80578da-f49c-40aa-bc39-aabf1f4ddde4)
 
-Aivan, ZAPissa voi vaihtaa hakupyynnön tulos tekstiksi. Kesti hetki kaivella ZAPin ominaisuuksia.
+Aivan, ZAPissa voi vaihtaa hakupyynnön tulos tekstiksi. Kesti hetki tutkia ZAPin ominaisuuksia.
 
 ![image](https://github.com/user-attachments/assets/3264de5d-97e2-4f7e-864a-f22ce69c2e47)
 
@@ -153,7 +153,12 @@ Myös tässä tehtävässä haavoittuvuus on kuvissa, eli etsin ZAPissa .jpg -py
 
 ![image](https://github.com/user-attachments/assets/cf182d80-38b5-477a-a142-fbfea8baeca8)
 
-Filename-kohdan vaihtaminen /etc/passwd 
+Filename-kohdan vaihtamalla /etc/passwd pääsi tiedostoon käsiksi. Kuva piti taas vaihtaa tekstiksi body-kohdasta.
+
+![image](https://github.com/user-attachments/assets/c643c8c4-25a9-4833-beee-3ece47a9e85c)
+
+![image](https://github.com/user-attachments/assets/bb035296-ed50-46ba-9f56-8cf31e9594a3)
+
 
 
 
