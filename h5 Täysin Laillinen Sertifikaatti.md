@@ -104,7 +104,7 @@ Nämä tehtävät tehty 1.12.2024.
 
 **Insecure direct object references**
 
-Tehtävä: [https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references[(https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references)
+Tehtävä: [https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references](https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references)
 
 Tehtävässä piti kaapata carlos-käyttäjän salasana ja kirjautua tämän tilille. Tehtävänanto vinkkasi tarkastelemaan sivuston chat-toimintoa: chat-logit tallennetaan suoraan palvelimen hakemistoon.
 
@@ -132,6 +132,7 @@ Kirjauduin carlosin tilille salasanalla ja tehtävä suoritettu.
 
 **Simple case**: 
 Tehtävä: [https://portswigger.net/web-security/file-path-traversal/lab-simple](https://portswigger.net/web-security/file-path-traversal/lab-simple).
+
 Tehtävässä piti ladata /etc/passwd -tiedosto käyttäen tuotteiden kuvapyynnöistä löytyvää haavoittuvuutta. Avasin siis labran verkkokaupan sivulta tuotteen ja etsin ZAPista .jpg -tiedoston pyynnön.
 
 ![image](https://github.com/user-attachments/assets/f5920cf4-bbfd-4878-b564-df13033df5c4)
