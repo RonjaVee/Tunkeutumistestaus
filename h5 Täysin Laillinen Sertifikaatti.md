@@ -153,7 +153,7 @@ Myös tässä tehtävässä haavoittuvuus on kuvissa, eli etsin ZAPissa .jpg -py
 
 ![image](https://github.com/user-attachments/assets/cf182d80-38b5-477a-a142-fbfea8baeca8)
 
-Filename-kohdan vaihtamalla /etc/passwd pääsi tiedostoon käsiksi. Kuva piti taas vaihtaa tekstiksi body-kohdasta.
+Luntattuani taas ratkaisukohdasta: Filename-kohdan tiedostonimen vaihtamalla /etc/passwd pääsi haluttuun tiedostoon käsiksi. Kuva piti taas vaihtaa tekstiksi body-kohdasta ZAPissa.
 
 ![image](https://github.com/user-attachments/assets/c643c8c4-25a9-4833-beee-3ece47a9e85c)
 
@@ -161,7 +161,17 @@ Filename-kohdan vaihtamalla /etc/passwd pääsi tiedostoon käsiksi. Kuva piti t
 
 
 
+**Traversal sequences stripped non-recursively**
 
+Tavoite oli taas sama, päästä käsiksi /etc/passwd, ja haavoittuvuus löytyi samasta kohtaa. Eli etsin ensin oikean hakupyynnön ZAPissa.
+
+![image](https://github.com/user-attachments/assets/858a8892-ed0a-4d7d-a34e-84569517d5a5)
+
+Kurkkasin ratkaisuun, ja nyt eroa olikin hakemistorakenteen ".." -sekvensseissä, eli path traversalin sekvenssit poistetaan toistuvasti (eli kuten tehtävän nimessä lukee, rekursiivisesti), kunnes niitä ei ole enää jäljellä. Tässä tehtävässä siis riitti, että .. toistettiin kahdesti, jotta suojauksen pystyi ohittamaan.
+
+![image](https://github.com/user-attachments/assets/a6ee6922-4f72-4000-ad7c-2c3410e19e42)
+
+### g. Server-side template injection with information disclosure via user-supplied objects (SSTI)
 
 
 
