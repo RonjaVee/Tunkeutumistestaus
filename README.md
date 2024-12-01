@@ -1,2 +1,2 @@
 # Tunkeutumistestaus
-Course homework. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/)
+Kurssin tehtävät. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/)
