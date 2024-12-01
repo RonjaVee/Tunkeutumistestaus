@@ -107,11 +107,9 @@ Esimerkiksi komento ``services -S http`` hakee kaikki palvelut, jotka sisältäv
 
 
 
-## f) Vertaile nmap:n omaa tiedostoon tallennusta ja db_nmap:n tallennusta tietokantoihin. Mitkä ovat eri tiedostomuotojen ja Metasploitin tietokannan hyvät puolet?
+## f) Vertaile nmap:n omaa tiedostoon tallennusta ja db_nmap:n tallennusta tietokantoihin. Mitkä ovat eri tiedostomuotojen ja Metasploitin tietokannan hyvät puolet? (vastausta korjattu 1.12.2024)
 
-Tiedostoon tallentamisen etuna on, että tiedostoja on helppo jakaa eteenpäin. XML-tiedostoa voi myös lukea useissa eri ohjelmissa, kuten tekstieditorit, ja tieto on rakenteista. Grepable-tiedosto on kätevä, kun tekstitiedostoa käsitellään komentorivillä. Tiedostoksi tallentaminen ei vaadi tietokannan luomista.
-
-Tietokantaan tallentaminen mahdollistaa tiedon käsittelyn Metasploitin sisällä, ja tietokannasta voi helposti hakea ja suodattaa tietoa. Tietoja on helppo hyödyntää Metasploitilla erilaisiin hyökkäyksiin. Tietokannan hallinta voi olla raskasta jos dataa on paljon ja vaatii osaamista enemmän, kuin tiedostojen käsittely.
+Nmapin tiedostotallennus: Ihmisluettava muoto (-oN) on helppo tarkistaa, mutta vaikea parsia. Greppable-muoto (-oG) on nopea suodattaa, mutta tiedot ovat rajallisia. XML-muoto (-oX) tukee koneellista käsittelyä ja integrointia, mutta vaatii työkaluja tai ohjelmointia. db_nmap Metasploitissa: Tallentaa tulokset suoraan tietokantaan, mahdollistaen helpon integroinnin, hakutoiminnot, raportoinnin ja historian ylläpidon, joka sopii monenlaisten käyttäjien työskentelyyn ja tehokkaaseen analyysiin, mutta vaatii Metasploit-ympäristön ja enemmän resursseja. Tiedostot ovat yksinkertaisia käyttää, mutta tietokanta on tehokas laajemmassa käytössä ja integroinnissa.
 
 
 ## g) Murtaudu Metasploitablen vsftpd-palveluun
