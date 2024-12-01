@@ -98,6 +98,28 @@ Kokeilin selaimella valita FoxyProxysta ensin Proxy by patterns ja sitten pelkk�
 
 ## PortSwigger Labs. Ratkaise tehtävät. Selitä ratkaisusi: mitä palvelimella tapahtuu, mitä eri osat tekevät, miten hyökkäys löytyi, mistä vika johtuu
 
+### c. IDOR
+
+Tehtävänanto vinkkasi tarkastelemaan sivuston chat-toimintoa: chat-logit tallennetaan suoraan palvelimen hakemistoon.
+
+Chatissa pystyi keskustelemaan botin kanssa. View transcript -kohdasta klikkaamalla latautui transcript-tiedosto.
+
+![image](https://github.com/user-attachments/assets/48631008-e693-43ac-a54f-d8272a62d4c4)
+
+![image](https://github.com/user-attachments/assets/41b02ef0-859f-450a-922b-0175e88eed7b)
+
+Etsin ZAPista pyynnön, jolla tiedosto ladattiin.
+
+![image](https://github.com/user-attachments/assets/8b7fb6db-3d5f-4c4f-87c9-d493cf4be376)
+
+Katsoin Portswiggeristä ratkaisun tehtävään: eli muokkasin requestia siten, että se haki palvelimelta aiemman chat login, 1.txt. Logista löytyi salasana.
+
+![image](https://github.com/user-attachments/assets/a1239775-a340-4d40-a25c-273112a780f3)
+
+Kirjauduin carlosin tilille salasanalla ja tehtävä suoritettu.
+
+### 
+
 
 
 ## k) Asenna pencode ja muunna sillä jokin merkkijono (encode a string)
