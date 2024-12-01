@@ -98,9 +98,11 @@ Kokeilin selaimella valita FoxyProxysta ensin Proxy by patterns ja sitten pelkk�
 
 ## PortSwigger Labs. Ratkaise tehtävät. Selitä ratkaisusi: mitä palvelimella tapahtuu, mitä eri osat tekevät, miten hyökkäys löytyi, mistä vika johtuu
 
+Nämä tehtävät tehty 1.12.2024.
+
 ### c. IDOR
 
-Tehtävänanto vinkkasi tarkastelemaan sivuston chat-toimintoa: chat-logit tallennetaan suoraan palvelimen hakemistoon.
+Tehtävässä piti kaapata carlos-käyttäjän salasana ja kirjautua tämän tilille. Tehtävänanto vinkkasi tarkastelemaan sivuston chat-toimintoa: chat-logit tallennetaan suoraan palvelimen hakemistoon.
 
 Chatissa pystyi keskustelemaan botin kanssa. View transcript -kohdasta klikkaamalla latautui transcript-tiedosto.
 
@@ -112,13 +114,45 @@ Etsin ZAPista pyynnön, jolla tiedosto ladattiin.
 
 ![image](https://github.com/user-attachments/assets/8b7fb6db-3d5f-4c4f-87c9-d493cf4be376)
 
-Katsoin Portswiggeristä ratkaisun tehtävään: eli muokkasin requestia siten, että se haki palvelimelta aiemman chat login, 1.txt. Logista löytyi salasana.
+Katsoin Portswiggeristä ratkaisun tehtävään: eli requestia piti muokata siten, että se haki palvelimelta aiemman chat login, 1.txt. Logista löytyi salasana.
 
 ![image](https://github.com/user-attachments/assets/a1239775-a340-4d40-a25c-273112a780f3)
 
 Kirjauduin carlosin tilille salasanalla ja tehtävä suoritettu.
 
-### 
+![image](https://github.com/user-attachments/assets/ac5e739f-2b6f-47f3-8d66-6ccd7caf7b00)
+
+
+### d. Path traversal
+
+
+**Simple case**: Tehtävässä piti ladata /etc/passwd -tiedosto käyttäen tuotteiden kuvissa löytyvää haavoittuvuutta. Avasin siis labran verkkokaupan sivulta tuotteen ja etsin ZAPista .jpg -tiedoston pyynnön.
+
+![image](https://github.com/user-attachments/assets/f5920cf4-bbfd-4878-b564-df13033df5c4)
+
+Koska tehtävät olivat haastavia, käytin taas kävelykeppinä tehtävän ratkaisuohjetta. Eli hakupyynnön filename-parametrille annetaan arvo ../../../etc/passwd.
+
+Kokeilin muokata pyyntöä ZAPissa, mutten tiedä oliko hakupyyntö oikea, content type image? Kokeilin myös selaimella, mutten löytänyt tiedostoa.
+
+![image](https://github.com/user-attachments/assets/1db9bf97-8c53-4502-9ad6-d5e4a7595bbe)
+
+![image](https://github.com/user-attachments/assets/c32cbf28-6eb6-43df-a4d4-2c282a02f1e6)
+
+Muokkailin URLia, kunnes tajusin, että labra näytti solved?
+
+![image](https://github.com/user-attachments/assets/c80578da-f49c-40aa-bc39-aabf1f4ddde4)
+
+Lisäys myöhemmin: Opin tarkistaessa muiden tehtäviä, tekijän lansiri ratkaisusta [https://github.com/lansiri/Tunkeutumistestaus-ici001as3a-3003/blob/main/h5.md#d-file-path-traversal---simple-case](https://github.com/lansiri/Tunkeutumistestaus-ici001as3a-3003/blob/main/h5.md#d-file-path-traversal---simple-case): ZAPissa piti vaihtaa hakupyynnön tulos tekstiksi.
+
+![image](https://github.com/user-attachments/assets/3264de5d-97e2-4f7e-864a-f22ce69c2e47)
+
+
+**Traversal sequences blocked with absolute path bypass**
+
+
+
+
+
 
 
 
@@ -160,3 +194,5 @@ Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon "olen omena". Käy
 - Hoikkala, Joona. Pencode. GitHub. Luettu 27.11.2024. [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode)
 
 - OpenAI. ChatGPT. 2024.  [https://chat.openai.com](https://chat.openai.com) Kysytty URL:n muotoilu FoxyProxyyn ja muita asetuksia FoxyProxyyn, Firefoxiin ja ZAPiin
+
+- lansiri ratkaisusta [https://github.com/lansiri/Tunkeutumistestaus-ici001as3a-3003/blob/main/h5.md#d-file-path-traversal---simple-case](https://github.com/lansiri/Tunkeutumistestaus-ici001as3a-3003/blob/main/h5.md#d-file-path-traversal---simple-case)
