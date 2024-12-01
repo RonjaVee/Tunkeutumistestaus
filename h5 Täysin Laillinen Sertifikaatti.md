@@ -185,9 +185,9 @@ Kurkkasin ratkaisuun, ja nyt eroa olikin hakemistorakenteen ".." -sekvensseissä
 ![image](https://github.com/user-attachments/assets/502a41ef-9bd7-4572-ac36-70b44b37a16a)
 
 
-### g. Server Side Template Injection (SSTI)
+### Server Side Template Injection (SSTI)
 
-**Server-side template injection with information disclosure via user-supplied objects (SSTI**
+**g. Server-side template injection with information disclosure via user-supplied objects (SSTI**
 
 Tehtävä: [https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-with-information-disclosure-via-user-supplied-objects](https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-with-information-disclosure-via-user-supplied-objects)
 
@@ -212,15 +212,48 @@ Syötin ratkaisun submit solution -kenttään, tehtävä suoritettu.
 ![image](https://github.com/user-attachments/assets/d24b65a4-908d-4bd5-a67a-bef3562dc9e5)
 
 
-### h. Server Side Request Forgery (SSRF)
+### Server Side Request Forgery (SSRF)
 
-**Basic SSRF against the local server**
+**h. Basic SSRF against the local server**
 
 Tehtävä: [https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost)
 
+Tehtävässä piti muuttaa URLia siten, että saa pääsyn admin interfaceen ja sitä kautta poistaa carlosin käyttäjä. Haavoittuvuus löytyi varaston tarkituskohdasta (stock check). Kohta löytyi tuotesivun alalaidasta.
+
+![image](https://github.com/user-attachments/assets/6e8fbfd3-5eb0-4d21-bd4e-3b811c7a11e0)
+
+ZAPissa pyyntö näytti tältä: 
+
+![image](https://github.com/user-attachments/assets/401f5028-f96d-485f-8d27-04cc16732d5c)
+
+Pähkäilin sitten, kuinka muokata pyyntöä. Ratkaisun mukaisesti muokkasin stockApia, mutta tuli virheilmoitus 405. Tutkin ZAPissa lisää, miten tämä kohta erosi aikaisemmista, ja kekkasin! Pyyntö oli siis POST, ei GET, ja sen korjaamalla sainkin tavoitellun tuloksen, eli nyt voidaan muodostaa URL, jolla poistaa carlosin käyttäjä.
+
+![image](https://github.com/user-attachments/assets/697b4b8b-62fd-4e07-8aa6-ac79c2f0cc38)
 
 
+![image](https://github.com/user-attachments/assets/7c4237c4-c9c6-4345-b24b-e7341c18a619)
 
+
+Tässä muokattu pyyntö, joka poisti carlosin käyttäjän:
+
+![image](https://github.com/user-attachments/assets/3fbadf2d-6507-47e5-b873-298ca0ada4bf)
+
+
+![image](https://github.com/user-attachments/assets/5d0b1c95-5235-4572-b5b3-41df9db584d2)
+
+
+### Cross Site Scripting (XSS)
+
+**i. Reflected XSS into HTML context with nothing encoded**
+
+Tehtävä: [https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded](https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded)
+
+Tässä tehtävässä haavoittuvuus löytyi hakutoiminnosta.
+
+
+**j.  Stored XSS into HTML context with nothing encoded**
+
+Tehtävä: [https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded](https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded)
 
 ## k) Asenna pencode ja muunna sillä jokin merkkijono (encode a string)
 
@@ -229,7 +262,7 @@ Luin sivulta [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode) 
 ![image](https://github.com/user-attachments/assets/0ff11f6a-776d-425c-929e-939a0e4ae2c3)
 
 
-Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon "olen omena". Käytin komentoa ``echo 'olen omena'|pencode [muoto]``. Muodot: urlencode b64encode hexencode. Urlencode: Koodaa merkkijonon URL-muotoon, b64encode: Koodaa merkkijonon Base64-muotoon, hexencode: Koodaa merkkijonon heksadesimaalimuotoon.
+Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon "olen omena". Käytin komentoa ``echo 'olen omena'|pencode [muoto]``. Muodot: urlencode b64encode hexencode. Urlencode: Koodaa merkkijonon URL-muotoon, b64encode: Koodaa merkkijonon Base64-muotoon, hexencode: Koodaa merkkijonon heksadesimaalimuotoon. 
 
 
 ![image](https://github.com/user-attachments/assets/c21fe116-370a-4495-ae34-091a17d43896)
