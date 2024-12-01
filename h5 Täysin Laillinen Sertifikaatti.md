@@ -171,7 +171,33 @@ Kurkkasin ratkaisuun, ja nyt eroa olikin hakemistorakenteen ".." -sekvensseissä
 
 ![image](https://github.com/user-attachments/assets/a6ee6922-4f72-4000-ad7c-2c3410e19e42)
 
+![image](https://github.com/user-attachments/assets/502a41ef-9bd7-4572-ac36-70b44b37a16a)
+
+
 ### g. Server-side template injection with information disclosure via user-supplied objects (SSTI)
+
+Tehtävässä tuli napata frameworkin salainen avain. Kirjauduin ensin sisään tehtävänannosta löytyvillä tunnuksilla.
+
+![image](https://github.com/user-attachments/assets/bf2b5ba6-a2dd-46c7-9a54-fa9d0f4b979a)
+
+Ja taas kurkkaamaan ratkaisua. Tehtävänannosta en oikein osannut päätellä, mitä lähteä tarkastelemaan. Eli jonkin tuotteen kuvaustemplaattia piti muokata. Liitin tehtävänannossa vinkatun stringin templaattiin ja tallensin, jolloin esiin tuli virheilmoitus. Virheilmoituksesta pystyi bongaamaan, että käytössä on Django framework. Tässä vaiheessa olisi pitänyt tutustua Djangoon syvemmin, mutta jatkoin nyt tehtävää ihan vain tehtävän ratkaisuohjeella.
+
+![image](https://github.com/user-attachments/assets/89f34576-36a0-4b60-bb8c-c8248dcc1b0b)
+
+Eli vaihdoin tuotetta ja sen kuvaustemplaattiin syötin {% debug %} ja tallensin. Tämä sylkäisi ulos litanian, josta olisi pitänyt bongata, että settings-objektiin pääsee käsiksi. En ihan tätä hiffannut kokonaisuudessaan.
+
+![image](https://github.com/user-attachments/assets/bb734b5b-9b95-4199-8646-a578af6e43a0)
+
+Syötin suoritusohjeen mukaisesti templaattiin {{settings.SECRET_KEY}}.
+
+![image](https://github.com/user-attachments/assets/45a2bc35-1497-40b8-ae3f-4cf4d8b557d4)
+
+Syötin ratkaisun submit solution -kenttään, tehtävä suoritettu.
+
+![image](https://github.com/user-attachments/assets/d24b65a4-908d-4bd5-a67a-bef3562dc9e5)
+
+
+
 
 
 
