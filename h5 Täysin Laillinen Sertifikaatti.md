@@ -96,7 +96,7 @@ Kokeilin selaimella valita FoxyProxysta ensin Proxy by patterns ja sitten pelkk�
 ![image](https://github.com/user-attachments/assets/54cb641c-af8b-4c54-9ef9-036950a60a53)
 
 
-## c) PortSwigger Labs. Ratkaise tehtävät. Selitä ratkaisusi: mitä palvelimella tapahtuu, mitä eri osat tekevät, miten hyökkäys löytyi, mistä vika johtuu
+## PortSwigger Labs. Ratkaise tehtävät. Selitä ratkaisusi: mitä palvelimella tapahtuu, mitä eri osat tekevät, miten hyökkäys löytyi, mistä vika johtuu
 
 
 
