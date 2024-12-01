@@ -39,7 +39,7 @@ Kohdat: Insecure direct object references (IDOR), Path traversal, Server-side te
     - Hyökkäyksessä hyödynnetään luottamusvälejä, esim. sisäisten järjestelmien pääsyä
     - Esimerkki: hyökkääjä muuttaa palvelimelle lähetetyn pyynnön osoitteen paikalliseksi (localhost tai 127.0.0.1) -> palvelin tekee pyynnön itseensä ja ohittaa pääsynvalvonnan
 
-- **Cross-site scripting (XSS)**: verkkoturvahaavoittuvuus, jossa hyökkääjä upottaa haitallista JavaScriptiä verkkosivustolle, jolloin hän voi kaapata käyttäjän tietoja
+- **Cross-site scripting (XSS)**: verkkoturvahaavoittuvuus, jossa hyökkääjä upottaa haitallista JavaScriptiä verkkosivustolle
 
 
 
@@ -248,12 +248,32 @@ Tässä muokattu pyyntö, joka poisti carlosin käyttäjän:
 
 Tehtävä: [https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded](https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded)
 
-Tässä tehtävässä haavoittuvuus löytyi hakutoiminnosta.
+Tässä tehtävässä haavoittuvuus löytyi hakutoiminnosta, ja tarkoitus oli saada aikaan alert-ikkuna. Tein siis hakupyynnön ja tutkin hetken ZAPissa sitä, eikä ollut käryäkään, mitä tehdä. Vilkaisin ratkaisua, ja se olikin hyvin yksinkertainen. Hakukenttään tulikin siis vain syöttää ``<script>alert(1)</script>`` (tuohon 1 kohdalle voi kai laittaa jonkun omankin viestin).
+
+![image](https://github.com/user-attachments/assets/8d36a337-d4c2-4d9d-937e-a745a8472567)
+
+![image](https://github.com/user-attachments/assets/d5761167-8af3-4169-a5aa-3393920d09dd)
+
+Eli sivusto suorittaa hakukenttään syötetyn tekstin osana koodia.
+
 
 
 **j.  Stored XSS into HTML context with nothing encoded**
 
 Tehtävä: [https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded](https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded)
+
+Tässä tehtävässä haavoittuvuus löytyi kommenttiosion tekstikentästä. Tavoitteena oli aiheuttaa alert silloin, kun blogia katsellaan. Avasin blogipostauksen ja etsin kommenttikentän, ja päätin kokeilla samaa koodinpätkää. Sivusto vaati kommentoijan tietojen syöttämiseen oikeaa formaattia, eli oli tärkeää, että nettisivu ja sähköpostiosoite muotoiltiin oikein, jotta kommentin pystyi lähettämään.
+
+![image](https://github.com/user-attachments/assets/a8d54d0d-9f41-4487-96e7-9e94ca7782a4)
+
+Ja sitten etsin sivulta samaisen blogipostauksen. Kyllä, nyt alert ilmestyi. Eli koodinpätkä on nyt upotettu sivulle ja se häiriköi, kunnes joku siivoaa sen pois.
+
+![image](https://github.com/user-attachments/assets/827a87d9-60a1-473d-bcdf-62272233eb12)
+
+
+![image](https://github.com/user-attachments/assets/88d8f85d-e09a-4963-a735-34a038ad0759)
+
+
 
 ## k) Asenna pencode ja muunna sillä jokin merkkijono (encode a string)
 
