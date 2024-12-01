@@ -126,7 +126,7 @@ Kirjauduin carlosin tilille salasanalla ja tehtävä suoritettu.
 ### d. Path traversal
 
 
-**Simple case**: Tehtävässä piti ladata /etc/passwd -tiedosto käyttäen tuotteiden kuvissa löytyvää haavoittuvuutta. Avasin siis labran verkkokaupan sivulta tuotteen ja etsin ZAPista .jpg -tiedoston pyynnön.
+**Simple case**: Tehtävässä piti ladata /etc/passwd -tiedosto käyttäen tuotteiden kuvapyynnöistä löytyvää haavoittuvuutta. Avasin siis labran verkkokaupan sivulta tuotteen ja etsin ZAPista .jpg -tiedoston pyynnön.
 
 ![image](https://github.com/user-attachments/assets/f5920cf4-bbfd-4878-b564-df13033df5c4)
 
@@ -142,13 +142,18 @@ Muokkailin URLia, kunnes tajusin, että labra näytti solved?
 
 ![image](https://github.com/user-attachments/assets/c80578da-f49c-40aa-bc39-aabf1f4ddde4)
 
-Lisäys myöhemmin: Opin tarkistaessa muiden tehtäviä, tekijän lansiri ratkaisusta [https://github.com/lansiri/Tunkeutumistestaus-ici001as3a-3003/blob/main/h5.md#d-file-path-traversal---simple-case](https://github.com/lansiri/Tunkeutumistestaus-ici001as3a-3003/blob/main/h5.md#d-file-path-traversal---simple-case): ZAPissa piti vaihtaa hakupyynnön tulos tekstiksi.
+Aivan, ZAPissa voi vaihtaa hakupyynnön tulos tekstiksi. Kesti hetki kaivella ZAPin ominaisuuksia.
 
 ![image](https://github.com/user-attachments/assets/3264de5d-97e2-4f7e-864a-f22ce69c2e47)
 
 
 **Traversal sequences blocked with absolute path bypass**
 
+Myös tässä tehtävässä haavoittuvuus on kuvissa, eli etsin ZAPissa .jpg -pyynnön.
+
+![image](https://github.com/user-attachments/assets/cf182d80-38b5-477a-a142-fbfea8baeca8)
+
+Filename-kohdan vaihtaminen /etc/passwd 
 
 
 
@@ -194,5 +199,3 @@ Sivulta löytyvän ohjeen mukaan kokeilin muuntaa merkkijonon "olen omena". Käy
 - Hoikkala, Joona. Pencode. GitHub. Luettu 27.11.2024. [https://github.com/ffuf/pencode](https://github.com/ffuf/pencode)
 
 - OpenAI. ChatGPT. 2024.  [https://chat.openai.com](https://chat.openai.com) Kysytty URL:n muotoilu FoxyProxyyn ja muita asetuksia FoxyProxyyn, Firefoxiin ja ZAPiin
-
-- lansiri ratkaisusta [https://github.com/lansiri/Tunkeutumistestaus-ici001as3a-3003/blob/main/h5.md#d-file-path-traversal---simple-case](https://github.com/lansiri/Tunkeutumistestaus-ici001as3a-3003/blob/main/h5.md#d-file-path-traversal---simple-case)
