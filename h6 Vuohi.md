@@ -127,11 +127,10 @@ Kohta 2. Ensin tuli löytää juusto sivulta. Tomin sijaan etsittiin Jerryn kuva
 
 ![image](https://github.com/user-attachments/assets/22d975d7-ab29-42c7-84b9-509fb6dcb7de)
 
-Etsin siis ohjevideon. [PseudoTime. WebGoat 8 Server Side Request Forgery 2. Youtube, 12.6.2021.] (https://www.youtube.com/watch?v=ccCP4STs968) Tässä hyödynnettiin Firefoxin omaa dev toolsia: klikkaamalla oikealla hiiren painikkeella Steal the cheese -kohtaa ja avaamalla Inspect pystyi muokata kohtaa value=images/tom.jpg. Muokkaamisen jälkeen enter -> kun Steal the cheese -kohdasta klikkasi nyt, saatiin juusto napattua ja Jerry näkyviin.
+Etsin siis ohjevideon. [PseudoTime. WebGoat 8 Server Side Request Forgery 2. Youtube, 12.6.2021.](https://www.youtube.com/watch?v=ccCP4STs968) Tässä hyödynnettiin Firefoxin omaa dev toolsia: klikkaamalla oikealla hiiren painikkeella Steal the cheese -kohtaa ja avaamalla Inspect pystyi muokata kohtaa value=images/tom.jpg (tästä unohtui screenshot, seuraavassa tehtävässä samannäköinen kohta jota muokataan). Muokkaamisen jälkeen enter -> kun Steal the cheese -kohdasta klikkasi nyt, saatiin juusto napattua ja Jerry näkyviin.
 
 ![image](https://github.com/user-attachments/assets/28bc6293-9a79-43b9-832e-b2d3250b5fad)
 
-![image](https://github.com/user-attachments/assets/2ebb9015-91a5-4641-84cd-79454a98c11d)
 
 Kohta 3. Seuraavaksi piti muuttaa pyyntöä niin, että palvelin saa informaatiota http://ifconfig.prosta. (tämä olikin näköjään ylimääräinen tehtävä)
 
