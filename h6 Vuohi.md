@@ -23,7 +23,7 @@ Asensin WebGoatin x. -kohdan komennoilla.
 
 ![image](https://github.com/user-attachments/assets/14831161-2027-49f1-93f1-fa48a8e94bfd)
 
-Tein käyttäjän ja kävin tehtävien kimppuun.
+Tarkistin palomuurin statuksen `sudo ufw status`, sitten tein käyttäjän ja kävin tehtävien kimppuun.
 
 ## Ratkaise WebGoat 2023.4
 
