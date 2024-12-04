@@ -171,14 +171,27 @@ En tiennyt, mitä tehdä, sillä mitään vinkkejä ei ollut. Niinpä etsin taas
 
 ## f) Editmenu. Lisää uusi oma komento micro:n palettero-lisäkkeellä käytettäväksi
 
-[https://github.com/terokarvinen/palettero](https://github.com/terokarvinen/palettero) Palettero oli jo asennettuna.
+[https://github.com/terokarvinen/palettero](https://github.com/terokarvinen/palettero) Palettero oli jo asennettuna. `micro plugin-install palettero`. Tein tiedoston `micro testi` ja tallensin tiedostoon tekstiä.
 
-Tein tiedoston `micro testi` ja tallensin tiedostoon tekstiä.
+![image](https://github.com/user-attachments/assets/bd50b72a-550b-4af8-940e-7db8b6e57170)
 
 
-![image](https://github.com/user-attachments/assets/3da79e03-3ac1-4208-a493-d35418320ec9)
+CTRL + välilyönti aukesi valikko, sieltä editmenu.
 
-![image](https://github.com/user-attachments/assets/f5879d18-7946-471e-b274-c9407a94e39c)
+![image](https://github.com/user-attachments/assets/7ab5b872-78b2-42a3-a80c-e83264247487)
+
+Keksin satunnaisen greppauksen ja kokeilin sitä, mutten saanut sitä tallentumaan tai toimimaan? Kokeilin valmiita komentoja, ja ainakin osa niistä toimi, esim. colorschemet. En enää muista, mitä tunnilla tehtiin :(
+
+![image](https://github.com/user-attachments/assets/46b429e5-ff42-4a2c-84c8-ab894f355057)
+
+![image](https://github.com/user-attachments/assets/c47f87d9-43c3-4f8c-b9ad-f8963fa52bd0)
+
+![image](https://github.com/user-attachments/assets/07789eea-37e1-4537-93b8-87f46fbb008f)
+
+
+
+
+
 
 
 
