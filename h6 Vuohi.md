@@ -19,11 +19,10 @@ Karvinen, Tero. Try Web Hacking on New Webgoat 2023.4. 13.11.2023. [https://tero
 
 ## a) Asenna Webgoat 2023.4
 
-Asensin WebGoatin x. -kohdan komennoilla.
+Asensin WebGoatin x. -kohdan komennoilla. Tarkistin palomuurin statuksen `sudo ufw status`, sitten tein käyttäjän ja kirjauduin sisään.
 
 ![image](https://github.com/user-attachments/assets/14831161-2027-49f1-93f1-fa48a8e94bfd)
 
-Tarkistin palomuurin statuksen `sudo ufw status`, sitten tein käyttäjän ja kirjauduin sisään.
 
 Vielä piti saada ZAPissa näkymään WebGoat. Käynnistin ZAPin, tein FoxyProxyyn uudet asetukset, mutten tiedä oliko se tarpeen. Jostain syystä sivu antoi 404, joten käynnistin WebGoatin uudestaan. Sitten sivu toimi ja näkyi ZAPissa.
 
