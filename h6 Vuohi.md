@@ -54,6 +54,22 @@ Seuraavassa osiossa piti miettiä, mikä URL on suora polku käyttäjälle tom. 
 
 ![image](https://github.com/user-attachments/assets/c2d1cff8-6902-40a1-be6a-b57d348ec5cf)
 
+Seuraavan tehtävän kohdalla tutkin taas vinkkejä. View profile antoi 502 erroria. Eli piti etsiä muita profiileita, ja vinkkinä oli käyttää fuzzeria. Niinpä askartelin ZAPin fuzzerilla hetken aikaa, kunnes sain sen toimimaan. Tarkoituksena oli kokeilla userId-kohtaan eri numeroita. 
+
+
+![image](https://github.com/user-attachments/assets/72607ca2-c465-430d-89f9-4a2e0c4857e6)
+
+
+![image](https://github.com/user-attachments/assets/bf50ea31-98ac-4534-8e4f-cf1b363c2345)
+
+
+![image](https://github.com/user-attachments/assets/5054fd5e-f5c7-4524-8b02-e6b2c410e8c2)
+
+Kokeiltavia lukuja oli kyllä ihan liikaa, joten rajasin scopea. Koneeni puhkui ja puhisi.
+
+![image](https://github.com/user-attachments/assets/7b3fb828-1aad-4c80-96b0-cb5829ba761a)
+
+
 
 
 
