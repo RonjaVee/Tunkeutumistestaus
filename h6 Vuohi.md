@@ -42,7 +42,7 @@ Karvinen, Tero. Try Web Hacking on New Webgoat 2023.4. 13.11.2023. [https://tero
 **Bypass front-end restrictions (2)**
 
 
-f) Editmenu. Lisää uusi oma komento micro:n palettero-lisäkkeellä käytettäväksi
+## f) Editmenu. Lisää uusi oma komento micro:n palettero-lisäkkeellä käytettäväksi
 
 [https://github.com/terokarvinen/palettero](https://github.com/terokarvinen/palettero)
 
