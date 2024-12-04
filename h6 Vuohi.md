@@ -182,18 +182,17 @@ CTRL + välilyönti aukesi valikko, sieltä editmenu.
 
 Keksin satunnaisen greppauksen ja kokeilin sitä, mutten saanut sitä tallentumaan tai toimimaan? Kokeilin valmiita komentoja, ja ainakin osa niistä toimi, esim. colorschemet. En enää muista, mitä tunnilla tehtiin :(
 
-![image](https://github.com/user-attachments/assets/46b429e5-ff42-4a2c-84c8-ab894f355057)
-
-![image](https://github.com/user-attachments/assets/c47f87d9-43c3-4f8c-b9ad-f8963fa52bd0)
-
 ![image](https://github.com/user-attachments/assets/07789eea-37e1-4537-93b8-87f46fbb008f)
 
+Kokeilin sitten muokata tuota palettero.cfg -tiedostoa.
 
+![image](https://github.com/user-attachments/assets/e2a613d9-3b71-4736-9df8-2e588f7779d2)
 
+Nyt toimi, tein ihan hölmön komennon ihan vain testiksi. Eli ainakin tätä kautta onnistuu.
 
+![image](https://github.com/user-attachments/assets/aa44ed8b-29a2-4f61-a610-88f559f82b7e)
 
-
-
+![image](https://github.com/user-attachments/assets/2a280be9-b93b-4aff-b9c4-37aef7f04f13)
 
 
 
