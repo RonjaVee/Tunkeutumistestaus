@@ -42,6 +42,8 @@ Vielä piti saada ZAPissa näkymään WebGoat. Käynnistin ZAPin, tein FoxyProxy
 
 **Hijack a session (1)**
 
+Tämä oli liian vaikea :(
+
 **Insecure Direct Object References (4)**
 
 Ensimmäisessä osiossa tuli kirjautua sisään tunnuksilla tom, cat. Seuraavalla sivulla piti etsiä, mitä lisätietoja profiilista löytyi raw responsesta sivulla näkyvän lisäksi. Löytyi role ja userId.
@@ -50,7 +52,7 @@ Ensimmäisessä osiossa tuli kirjautua sisään tunnuksilla tom, cat. Seuraavall
 
 ![image](https://github.com/user-attachments/assets/a76aca43-d7de-4e28-85d9-46769eb13d2d)
 
-Seuraavassa osiossa piti miettiä, mikä URL on suora polku käyttäjälle tom. Vastaus oli /WebGoat/IDOR/profile/2342384. Mallina tuli käyttää aiemman tehtävän requestia, ja vinkkinä oli, että muutos olisi vain pieni lisäys. Kokeilemalla löytyi ratkaisu.
+**KOHTA 4** Seuraavassa osiossa piti miettiä, mikä URL on suora polku käyttäjälle tom. Vastaus oli /WebGoat/IDOR/profile/2342384. Mallina tuli käyttää aiemman tehtävän requestia, ja vinkkinä oli, että muutos olisi vain pieni lisäys. Kokeilemalla löytyi ratkaisu.
 
 ![image](https://github.com/user-attachments/assets/c2d1cff8-6902-40a1-be6a-b57d348ec5cf)
 
@@ -76,6 +78,8 @@ Osumia tuli useampia.
 Ei hajuakaan, kuinka tässä edetä. Etsin ohjeita, mutta niistäkään ei ollut apua nyt. 
 
 ![image](https://github.com/user-attachments/assets/40ee6cf1-89e6-40ef-918f-4aeba0b89dcc)
+
+Mutta tämähän oli ylimääräistä työtä, tehtävänannossa oli vain kohta 4!
 
 
 
@@ -126,18 +130,39 @@ Etsin siis ohjevideon. [PseudoTime. WebGoat 8 Server Side Request Forgery 2. You
 
 ![image](https://github.com/user-attachments/assets/2ebb9015-91a5-4641-84cd-79454a98c11d)
 
-Seuraavaksi piti muuttaa pyyntöä niin, että palvelin saa informaatiota http://ifconfig.prosta.
+Seuraavaksi piti muuttaa pyyntöä niin, että palvelin saa informaatiota http://ifconfig.prosta. (tämä olikin näköjään ylimääräinen tehtävä)
 
 ![image](https://github.com/user-attachments/assets/ee264bbb-0cf5-4582-bfe5-50b4e7d2d095)
 
 
 ![image](https://github.com/user-attachments/assets/3922b409-3495-414d-85d6-d429881207c2)
 
+Kokeilin samaa metodia kuin aiemmin, ja se toimi!
+
+![image](https://github.com/user-attachments/assets/75bf9813-a90f-402d-a2f5-7afb86ec6e7f)
+
+![image](https://github.com/user-attachments/assets/c33e98b1-81fb-45d9-b2c2-266b6e2bd5a3)
+
 
 
 ### e) Client side
 
-**Bypass front-end restrictions (2)**
+**Bypass front-end restrictions (2)** 
+
+Tehtävänä oli ohittaa kenttien rajoitukset. Painoin submit ja etsin pyynnön ZAPista ja siirsin sen Requesteriin.
+
+![image](https://github.com/user-attachments/assets/a5c2649e-5ca7-428c-b778-77bea47584ae)
+
+![image](https://github.com/user-attachments/assets/bffa7ad0-3e2c-4d03-b8fb-bf4bdec1a03e)
+
+En tiennyt, mitä tehdä, sillä mitään vinkkejä ei ollut. Niinpä etsin taas opasvideon: [PseudoTime. WebGoat 8 Bypass front end restrictions Field Restrictions. Youtube, 13.6.2021.](https://www.youtube.com/watch?v=731dsnlKoFk) Eli muokkasin 
+
+![image](https://github.com/user-attachments/assets/29b63ed7-8943-4c94-b940-12d6e43a594b)
+
+
+
+
+
 
 
 ## f) Editmenu. Lisää uusi oma komento micro:n palettero-lisäkkeellä käytettäväksi
@@ -155,3 +180,6 @@ Karvinen, Tero. Try Web Hacking on New Webgoat 2023.4. 13.11.2023. [https://tero
 Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube, 1.11.2021.[https://www.youtube.com/watch?v=DErUuNMHgJo](https://www.youtube.com/watch?v=DErUuNMHgJo)
 
 PseudoTime. WebGoat 8 Server Side Request Forgery 2. Youtube, 12.6.2021. [https://www.youtube.com/watch?v=ccCP4STs968](https://www.youtube.com/watch?v=ccCP4STs968)
+
+PseudoTime. WebGoat 8 Bypass front end restrictions Field Restrictions. Youtube, 13.6.2021.[https://www.youtube.com/watch?v=731dsnlKoFk](https://www.youtube.com/watch?v=731dsnlKoFk)
+
