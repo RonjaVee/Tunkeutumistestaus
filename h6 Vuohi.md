@@ -55,6 +55,8 @@ Teht채v채ss채 piti ohittaa 2FA ja asettaa uusi salasana k채ytt채j채lle. Vinkkin�
 
 K채ytin tukena ohjevideota [Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube. 1.11.2021.](https://www.youtube.com/watch?v=DErUuNMHgJo)
 
+Muokkasin secQuestion0 ja secQuestion1 -parametreja.
+
 ![image](https://github.com/user-attachments/assets/3b49c167-1dce-4a96-9365-3765a46b8f2c)
 
 ![image](https://github.com/user-attachments/assets/a770d99b-3743-4ec4-8e02-697b0c0f6df2)
