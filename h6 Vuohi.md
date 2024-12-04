@@ -7,10 +7,12 @@ Tehtävänanto: Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10
 Karvinen, Tero. Try Web Hacking on New Webgoat 2023.4. 13.11.2023. [https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/](https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/)
 
 - Asenna Java ja palomuuri ja pistä muuri pystyyn
-  `sudo apt-get update
+  ```
+  sudo apt-get update
   sudo apt-get install openjdk-17-jre
   sudo apt-get install ufw
-  sudo ufw enable`
+  sudo ufw enable
+  ```
 - Lataa WebGoat.jar `wget https://github.com/WebGoat/WebGoat/releases/download/v2023.4/webgoat-2023.4.jar`
 - Aja WebGoat `java -Dfile.encoding=UTF-8 -Dwebgoat.port=8888 -Dwebwolf.port=9090 -jar webgoat-2023.4.jar`
 
