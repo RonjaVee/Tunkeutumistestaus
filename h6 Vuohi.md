@@ -23,7 +23,17 @@ Asensin WebGoatin x. -kohdan komennoilla.
 
 ![image](https://github.com/user-attachments/assets/14831161-2027-49f1-93f1-fa48a8e94bfd)
 
-Tarkistin palomuurin statuksen `sudo ufw status`, sitten tein käyttäjän ja kävin tehtävien kimppuun.
+Tarkistin palomuurin statuksen `sudo ufw status`, sitten tein käyttäjän ja kirjauduin sisään.
+
+Vielä piti saada ZAPissa näkymään WebGoat. Käynnistin ZAPin, tein FoxyProxyyn uudet asetukset, mutten tiedä oliko se tarpeen. Jostain syystä sivu antoi 404, joten käynnistin WebGoatin uudestaan. Sitten sivu toimi ja näkyi ZAPissa.
+
+![image](https://github.com/user-attachments/assets/8dc6011c-deb0-4ba1-87f3-41cb5d6e3d2f)
+
+![image](https://github.com/user-attachments/assets/6fe0219a-f07c-4524-9f68-331e2355f429)
+
+![image](https://github.com/user-attachments/assets/17234f02-b22e-4f03-9d6d-22f86193d527)
+
+
 
 ## Ratkaise WebGoat 2023.4
 
@@ -40,6 +50,22 @@ Tarkistin palomuurin statuksen `sudo ufw status`, sitten tein käyttäjän ja k�
 ### c) (A7) Identity & Auth Failure
 
 **Authentication Bypasses (1)**
+
+Tehtävässä piti ohittaa 2FA ja asettaa uusi salasana käyttäjälle. Vinkkinä oli muokata secQuestion-parametrejä.
+
+Käytin tukena ohjevideota [Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube. 1.11.2021.](https://www.youtube.com/watch?v=DErUuNMHgJo)
+
+![image](https://github.com/user-attachments/assets/3b49c167-1dce-4a96-9365-3765a46b8f2c)
+
+![image](https://github.com/user-attachments/assets/a770d99b-3743-4ec4-8e02-697b0c0f6df2)
+
+Tehtävä muuttui vihreäksi, mutten päässyt sivulla laittamaan uutta salasanaa?
+
+![image](https://github.com/user-attachments/assets/52cb1178-103c-4bfc-82ac-8ae073df6643)
+
+
+
+
 
 **Insecure Login (1)**
 
@@ -61,7 +87,11 @@ Tarkistin palomuurin statuksen `sudo ufw status`, sitten tein käyttäjän ja k�
 
 ## Lähteet
 
+
 Tehtävänanto: Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024.[https://terokarvinen.com/tunkeutumistestaus/#h6-vuohi](https://terokarvinen.com/tunkeutumistestaus/#h6-vuohi)
 
 Karvinen, Tero. Try Web Hacking on New Webgoat 2023.4. 13.11.2023. [https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/](https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/)
 
+Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube. 1.11.2021.[https://www.youtube.com/watch?v=DErUuNMHgJo](https://www.youtube.com/watch?v=DErUuNMHgJo)
+
+[Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube. 1.11.2021.](https://www.youtube.com/watch?v=DErUuNMHgJo)
