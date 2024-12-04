@@ -56,6 +56,8 @@ Ensimmäisessä osiossa tuli kirjautua sisään tunnuksilla tom, cat. Seuraavall
 
 ![image](https://github.com/user-attachments/assets/c2d1cff8-6902-40a1-be6a-b57d348ec5cf)
 
+**KOHTA 4 LOPPU**
+
 Seuraavan tehtävän kohdalla tutkin taas vinkkejä. View profile antoi 500 erroria. Eli piti etsiä muita profiileita, ja vinkkinä oli käyttää fuzzeria. Niinpä askartelin ZAPin fuzzerilla hetken aikaa, kunnes sain sen toimimaan. Tarkoituksena oli kokeilla userId-kohtaan eri numeroita. 
 
 
