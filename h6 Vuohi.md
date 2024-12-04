@@ -44,6 +44,19 @@ Vielä piti saada ZAPissa näkymään WebGoat. Käynnistin ZAPin, tein FoxyProxy
 
 **Insecure Direct Object References (4)**
 
+Ensimmäisessä osiossa tuli kirjautua sisään tunnuksilla tom, cat. Seuraavalla sivulla piti etsiä, mitä lisätietoja profiilista löytyi raw responsesta sivulla näkyvän lisäksi. Löytyi role ja userId.
+
+![image](https://github.com/user-attachments/assets/d50e10c9-3da7-499c-bd2d-6290059d93fa)
+
+![image](https://github.com/user-attachments/assets/a76aca43-d7de-4e28-85d9-46769eb13d2d)
+
+Seuraavassa osiossa piti miettiä, mikä URL on suora polku käyttäjälle tom. Vastaus oli /WebGoat/IDOR/profile/2342384. Mallina tuli käyttää aiemman tehtävän requestia, ja vinkkinä oli, että muutos olisi vain pieni lisäys. Kokeilemalla löytyi ratkaisu.
+
+![image](https://github.com/user-attachments/assets/c2d1cff8-6902-40a1-be6a-b57d348ec5cf)
+
+
+
+
 **Missing Function Level Access Control (2)**
 
 
