@@ -170,7 +170,17 @@ En tiennyt, mitä tehdä, sillä mitään vinkkejä ei ollut. Niinpä etsin taas
 
 ## f) Editmenu. Lisää uusi oma komento micro:n palettero-lisäkkeellä käytettäväksi
 
-[https://github.com/terokarvinen/palettero](https://github.com/terokarvinen/palettero)
+[https://github.com/terokarvinen/palettero](https://github.com/terokarvinen/palettero) Palettero oli jo asennettuna.
+
+Tein tiedoston `micro testi` ja tallensin tiedostoon tekstiä.
+
+
+![image](https://github.com/user-attachments/assets/3da79e03-3ac1-4208-a493-d35418320ec9)
+
+![image](https://github.com/user-attachments/assets/f5879d18-7946-471e-b274-c9407a94e39c)
+
+
+
 
 
 ## Lähteet
