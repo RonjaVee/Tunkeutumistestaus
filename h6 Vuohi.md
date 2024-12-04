@@ -53,9 +53,13 @@ Kohta 3. Seuraavalla sivulla piti etsiä, mitä lisätietoja profiilista löytyi
 
 ![image](https://github.com/user-attachments/assets/c2d1cff8-6902-40a1-be6a-b57d348ec5cf)
 
+
+
+![image](https://github.com/user-attachments/assets/72607ca2-c465-430d-89f9-4a2e0c4857e6)
+
 **KOHTA 4 LOPPU**
 
-Kohta 5. Seuraavan tehtävän kohdalla tutkin taas vinkkejä. View profile antoi 500 erroria. Eli piti etsiä muita profiileita, ja vinkkinä oli käyttää fuzzeria. Niinpä askartelin ZAPin fuzzerilla hetken aikaa, kunnes sain sen toimimaan. Tarkoituksena oli kokeilla userId-kohtaan eri numeroita. 
+Kohta 5. (En saanut tehtyä loppuun) Seuraavan tehtävän kohdalla tutkin taas vinkkejä. View profile antoi 500 erroria. Eli piti etsiä muita profiileita, ja vinkkinä oli käyttää fuzzeria. Niinpä askartelin ZAPin fuzzerilla hetken aikaa, kunnes sain sen toimimaan. Tarkoituksena oli kokeilla userId-kohtaan eri numeroita. 
 
 
 ![image](https://github.com/user-attachments/assets/72607ca2-c465-430d-89f9-4a2e0c4857e6)
