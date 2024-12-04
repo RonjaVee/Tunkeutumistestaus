@@ -109,6 +109,12 @@ Esimerkiksi komento ``services -S http`` hakee kaikki palvelut, jotka sisältäv
 
 ## f) Vertaile nmap:n omaa tiedostoon tallennusta ja db_nmap:n tallennusta tietokantoihin. Mitkä ovat eri tiedostomuotojen ja Metasploitin tietokannan hyvät puolet? (vastausta korjattu 1.12.2024)
 
+Tiedosto.info, XML tiedostopääte – mitä XML-tiedostot ovat ja miten niitä käytetään? [https://tiedosto.info/extension/xml.html](https://tiedosto.info/extension/xml.html)
+
+Nmap. Output Options. [https://nmap.org/book/man-output.html](https://nmap.org/book/man-output.html)
+
+Nmap. Grepable output. [https://nmap.org/book/output-formats-grepable-output.html](https://nmap.org/book/output-formats-grepable-output.html)
+
 Nmapin tiedostotallennus: Ihmisluettava muoto (-oN) on helppo tarkistaa, mutta vaikea parsia. Greppable-muoto (-oG) on nopea suodattaa, mutta tiedot ovat rajallisia. XML-muoto (-oX) tukee koneellista käsittelyä ja integrointia, mutta vaatii työkaluja tai ohjelmointia. db_nmap Metasploitissa: Tallentaa tulokset suoraan tietokantaan, mahdollistaen helpon integroinnin, hakutoiminnot, raportoinnin ja historian ylläpidon, joka sopii monenlaisten käyttäjien työskentelyyn ja tehokkaaseen analyysiin, mutta vaatii Metasploit-ympäristön ja enemmän resursseja. Tiedostot ovat yksinkertaisia käyttää, mutta tietokanta on tehokas laajemmassa käytössä ja integroinnissa.
 
 
@@ -237,9 +243,10 @@ Tutorialspoint, Nmap Cheat Sheet. [https://www.tutorialspoint.com/nmap-cheat-she
 
 Tiedosto.info, XML tiedostopääte – mitä XML-tiedostot ovat ja miten niitä käytetään? [https://tiedosto.info/extension/xml.html](https://tiedosto.info/extension/xml.html)
 
-Lyon, G. F., Grepable output, Nmap. [https://nmap.org/book/output-formats-grepable-output.html](https://nmap.org/book/output-formats-grepable-output.html)
+Grepable output, Nmap. [https://nmap.org/book/output-formats-grepable-output.html](https://nmap.org/book/output-formats-grepable-output.html)
+
+Nmap. Output Options. [https://nmap.org/book/man-output.html](https://nmap.org/book/man-output.html)
 
 Jacobs, J. J., Exploiting vsftpd in Metasploitable 2, Medium. Julkaistu 10.11.2019. [https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173](https://medium.com/@jasonjayjacobs/exploiting-vsftpd-in-metasploitable-2-cf975ead1173)
-
 
 Cybertech Maven. Penetration Testing Series: Hacking Metasploitable 2 By Exploiting VNC Port 5900. 19.7.2023.[https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8](https://medium.com/@jbtechmaven/penetration-testing-series-hacking-metasploitable-2-by-exploiting-vnc-port-5900-188f7cc44b8) Lähde luettu 8.11.2024.
