@@ -4,6 +4,11 @@ Tehtävänanto: Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10
 
 ## x) Lue/katso ja tiivistä
 
+Karvinen, Tero. Try Web Hacking on New Webgoat 2023.4. 13.11.2023. [https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/](https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/)
+
+-
+-
+-
 
 ## a) Asenna Webgoat 2023.4
 
