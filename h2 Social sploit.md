@@ -243,7 +243,7 @@ Tutorialspoint, Nmap Cheat Sheet. [https://www.tutorialspoint.com/nmap-cheat-she
 
 Tiedosto.info, XML tiedostopääte – mitä XML-tiedostot ovat ja miten niitä käytetään? [https://tiedosto.info/extension/xml.html](https://tiedosto.info/extension/xml.html)
 
-Grepable output, Nmap. [https://nmap.org/book/output-formats-grepable-output.html](https://nmap.org/book/output-formats-grepable-output.html)
+Nmap. Grepable output. [https://nmap.org/book/output-formats-grepable-output.html](https://nmap.org/book/output-formats-grepable-output.html)
 
 Nmap. Output Options. [https://nmap.org/book/man-output.html](https://nmap.org/book/man-output.html)
 
