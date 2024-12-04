@@ -65,11 +65,17 @@ Seuraavan tehtävän kohdalla tutkin taas vinkkejä. View profile antoi 500 erro
 
 ![image](https://github.com/user-attachments/assets/5054fd5e-f5c7-4524-8b02-e6b2c410e8c2)
 
-Kokeiltavia lukuja oli kyllä ihan liikaa, joten rajasin scopea. Koneeni puhkui ja puhisi.
+Kokeiltavia lukuja oli kyllä ihan liikaa, joten rajasin scopea. Koneeni puhkui ja puhisi, jos lukuja piti tykittää liikaa.
 
-![image](https://github.com/user-attachments/assets/7b3fb828-1aad-4c80-96b0-cb5829ba761a)
+![image](https://github.com/user-attachments/assets/00ca6a62-45b1-4b6a-a12a-acf0933f227c)
 
+Osumia tuli useampia.
 
+![image](https://github.com/user-attachments/assets/85cd26e2-79df-4468-9c2b-0602cf9b39b8)
+
+Ei hajuakaan, kuinka tässä edetä. Etsin ohjeita, mutta niistäkään ei ollut apua nyt. 
+
+![image](https://github.com/user-attachments/assets/40ee6cf1-89e6-40ef-918f-4aeba0b89dcc)
 
 
 
@@ -96,9 +102,14 @@ Tehtävä muuttui vihreäksi, mutten päässyt sivulla laittamaan uutta salasana
 
 
 
-
-
 **Insecure Login (1)**
+
+Tässä tehtävässä piti ZAPilla napata toisen henkilön tunnus ja salasana. Käyttäjätunnus ja salasana näkyivät selkokielisenä pyynnössä.
+
+![image](https://github.com/user-attachments/assets/33743e5c-45b3-43ed-bd64-c1107ab84ea1)
+
+![image](https://github.com/user-attachments/assets/6c9821fd-f5b3-432a-9d6a-1dcc35b8580b)
+
 
 
 ### d) (A10) Server-side Request Forgery
