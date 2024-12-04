@@ -78,11 +78,7 @@ Osumia tuli useampia.
 
 ![image](https://github.com/user-attachments/assets/85cd26e2-79df-4468-9c2b-0602cf9b39b8)
 
-Ei hajuakaan, kuinka tässä edetä. Etsin ohjeita, mutta niistäkään ei ollut apua nyt. 
-
-![image](https://github.com/user-attachments/assets/40ee6cf1-89e6-40ef-918f-4aeba0b89dcc)
-
-Mutta tämähän oli ylimääräistä työtä, tehtävänannossa oli vain kohta 4!
+Ei hajuakaan, kuinka tässä edetä. Etsin ohjeita, mutta niistäkään ei ollut apua nyt. Mutta tämähän oli ylimääräistä työtä, tehtävänannossa oli vain kohta 4!
 
 
 
