@@ -14,10 +14,16 @@ Karvinen, Tero. Try Web Hacking on New Webgoat 2023.4. 13.11.2023. [https://tero
   sudo ufw enable
   ```
 - Lataa WebGoat.jar `wget https://github.com/WebGoat/WebGoat/releases/download/v2023.4/webgoat-2023.4.jar`
-- Aja WebGoat `java -Dfile.encoding=UTF-8 -Dwebgoat.port=8888 -Dwebwolf.port=9090 -jar webgoat-2023.4.jar`
+- Aja WebGoat `java -Dfile.encoding=UTF-8 -Dwebgoat.port=8888 -Dwebwolf.port=9090 -jar webgoat-2023.4.jar`; valitaan muu kuin ZAPin oletusportti 8080, koska se on käytössä
+- WebGoat löytyy osoitteesta `http://127.0.0.1:8888/WebGoat`
 
 ## a) Asenna Webgoat 2023.4
 
+Asensin WebGoatin x. -kohdan komennoilla.
+
+![image](https://github.com/user-attachments/assets/14831161-2027-49f1-93f1-fa48a8e94bfd)
+
+Tein käyttäjän ja kävin tehtävien kimppuun.
 
 ## Ratkaise WebGoat 2023.4
 
