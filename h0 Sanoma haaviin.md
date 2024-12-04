@@ -21,5 +21,3 @@ Aukeavalla Headers-välilehdellä on esim. tietoa pyynnöstä sekä vastauksesta
 Karvinen, Tero. Tunkeutumistestaus-kurssi. Kurssisivu: [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/) Luettu 25.10.2024.
 
 Firefox Source Docs. Network monitor. [https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/) Luettu 25.10.2024.
-
-Lähteet lisätty arviointien jälkeen, unohtui kiireessä merkata.
