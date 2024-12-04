@@ -46,19 +46,20 @@ Tämä oli liian vaikea :(
 
 **Insecure Direct Object References (4)**
 
-Ensimmäisessä osiossa tuli kirjautua sisään tunnuksilla tom, cat. Seuraavalla sivulla piti etsiä, mitä lisätietoja profiilista löytyi raw responsesta sivulla näkyvän lisäksi. Löytyi role ja userId.
+Kohta 2. Ensimmäisessä osiossa tuli kirjautua sisään tunnuksilla tom, cat. 
+Kohta 3. Seuraavalla sivulla piti etsiä, mitä lisätietoja profiilista löytyi raw responsesta sivulla näkyvän lisäksi. Löytyi role ja userId.
 
 ![image](https://github.com/user-attachments/assets/d50e10c9-3da7-499c-bd2d-6290059d93fa)
 
 ![image](https://github.com/user-attachments/assets/a76aca43-d7de-4e28-85d9-46769eb13d2d)
 
-**KOHTA 4** Seuraavassa osiossa piti miettiä, mikä URL on suora polku käyttäjälle tom. Vastaus oli /WebGoat/IDOR/profile/2342384. Mallina tuli käyttää aiemman tehtävän requestia, ja vinkkinä oli, että muutos olisi vain pieni lisäys. Kokeilemalla löytyi ratkaisu.
+**KOHTA 4.** Seuraavassa osiossa piti miettiä, mikä URL on suora polku käyttäjälle tom. Vastaus oli /WebGoat/IDOR/profile/2342384. Mallina tuli käyttää aiemman tehtävän requestia, ja vinkkinä oli, että muutos olisi vain pieni lisäys. Kokeilemalla löytyi ratkaisu.
 
 ![image](https://github.com/user-attachments/assets/c2d1cff8-6902-40a1-be6a-b57d348ec5cf)
 
 **KOHTA 4 LOPPU**
 
-Seuraavan tehtävän kohdalla tutkin taas vinkkejä. View profile antoi 500 erroria. Eli piti etsiä muita profiileita, ja vinkkinä oli käyttää fuzzeria. Niinpä askartelin ZAPin fuzzerilla hetken aikaa, kunnes sain sen toimimaan. Tarkoituksena oli kokeilla userId-kohtaan eri numeroita. 
+Kohta 5. Seuraavan tehtävän kohdalla tutkin taas vinkkejä. View profile antoi 500 erroria. Eli piti etsiä muita profiileita, ja vinkkinä oli käyttää fuzzeria. Niinpä askartelin ZAPin fuzzerilla hetken aikaa, kunnes sain sen toimimaan. Tarkoituksena oli kokeilla userId-kohtaan eri numeroita. 
 
 
 ![image](https://github.com/user-attachments/assets/72607ca2-c465-430d-89f9-4a2e0c4857e6)
@@ -92,7 +93,7 @@ Mutta tämähän oli ylimääräistä työtä, tehtävänannossa oli vain kohta 
 
 **Authentication Bypasses (1)**
 
-Tehtävässä piti ohittaa 2FA ja asettaa uusi salasana käyttäjälle. Vinkkinä oli muokata secQuestion-parametrejä.
+Kohta 2. Tehtävässä piti ohittaa 2FA ja asettaa uusi salasana käyttäjälle. Vinkkinä oli muokata secQuestion-parametrejä.
 
 Käytin tukena ohjevideota [Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube. 1.11.2021.](https://www.youtube.com/watch?v=DErUuNMHgJo)
 
@@ -110,7 +111,9 @@ Tehtävä muuttui vihreäksi, mutten päässyt sivulla laittamaan uutta salasana
 
 **Insecure Login (1)**
 
-Tässä tehtävässä piti ZAPilla napata toisen henkilön tunnus ja salasana. Käyttäjätunnus ja salasana näkyivät selkokielisenä pyynnössä.
+Kohta 1. oli vain ohjeita.
+
+Kohta 2. Tässä tehtävässä piti ZAPilla napata toisen henkilön tunnus ja salasana. Käyttäjätunnus ja salasana näkyivät selkokielisenä pyynnössä.
 
 ![image](https://github.com/user-attachments/assets/33743e5c-45b3-43ed-bd64-c1107ab84ea1)
 
@@ -122,7 +125,9 @@ Tässä tehtävässä piti ZAPilla napata toisen henkilön tunnus ja salasana. K
 
 **Server-Side Request Forgery (2)**
 
-Ensin tuli löytää juusto sivulta. Tomin sijaan etsittiin Jerryn kuvaa, jerry.jpg. kuva löytyi, mutta miten sen sai sivulle näkyviin? Kokeilin ZAPilla monenlaista, mutten onnistunut.
+Kohta 1. oli vain ohjeita.
+
+Kohta 2. Ensin tuli löytää juusto sivulta. Tomin sijaan etsittiin Jerryn kuvaa, jerry.jpg. kuva löytyi, mutta miten sen sai sivulle näkyviin? Kokeilin ZAPilla monenlaista, mutten onnistunut.
 
 ![image](https://github.com/user-attachments/assets/22d975d7-ab29-42c7-84b9-509fb6dcb7de)
 
@@ -132,7 +137,7 @@ Etsin siis ohjevideon. [PseudoTime. WebGoat 8 Server Side Request Forgery 2. You
 
 ![image](https://github.com/user-attachments/assets/2ebb9015-91a5-4641-84cd-79454a98c11d)
 
-Seuraavaksi piti muuttaa pyyntöä niin, että palvelin saa informaatiota http://ifconfig.prosta. (tämä olikin näköjään ylimääräinen tehtävä)
+Kohta 3. Seuraavaksi piti muuttaa pyyntöä niin, että palvelin saa informaatiota http://ifconfig.prosta. (tämä olikin näköjään ylimääräinen tehtävä)
 
 ![image](https://github.com/user-attachments/assets/ee264bbb-0cf5-4582-bfe5-50b4e7d2d095)
 
@@ -151,7 +156,7 @@ Kokeilin samaa metodia kuin aiemmin, ja se toimi!
 
 **Bypass front-end restrictions (2)** 
 
-Tehtävänä oli ohittaa kenttien rajoitukset. Painoin submit ja etsin pyynnön ZAPista ja siirsin sen Requesteriin.
+Kohta 2. Tehtävänä oli ohittaa kenttien rajoitukset. Painoin submit ja etsin pyynnön ZAPista ja siirsin sen Requesteriin.
 
 ![image](https://github.com/user-attachments/assets/a5c2649e-5ca7-428c-b778-77bea47584ae)
 
