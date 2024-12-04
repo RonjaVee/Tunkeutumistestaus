@@ -184,7 +184,7 @@ Keksin satunnaisen greppauksen ja kokeilin sitä, mutten saanut sitä tallentuma
 
 ![image](https://github.com/user-attachments/assets/07789eea-37e1-4537-93b8-87f46fbb008f)
 
-Kokeilin sitten muokata tuota palettero.cfg -tiedostoa.
+Kokeilin sitten muokata tuota palettero.cfg -tiedostoa, kun se tuossa näkyy.
 
 ![image](https://github.com/user-attachments/assets/e2a613d9-3b71-4736-9df8-2e588f7779d2)
 
