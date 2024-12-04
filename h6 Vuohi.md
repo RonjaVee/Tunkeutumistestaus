@@ -26,9 +26,6 @@ Asensin WebGoatin x. -kohdan komennoilla. Tarkistin palomuurin statuksen `sudo u
 
 Vielä piti saada ZAPissa näkymään WebGoat. Käynnistin ZAPin. Jostain syystä sivu antoi 404, joten käynnistin WebGoatin uudestaan. Sitten sivu toimi ja näkyi ZAPissa.
 
-![image](https://github.com/user-attachments/assets/8dc6011c-deb0-4ba1-87f3-41cb5d6e3d2f)
-
-![image](https://github.com/user-attachments/assets/6fe0219a-f07c-4524-9f68-331e2355f429)
 
 ![image](https://github.com/user-attachments/assets/17234f02-b22e-4f03-9d6d-22f86193d527)
 
