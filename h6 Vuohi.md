@@ -116,6 +116,24 @@ Tässä tehtävässä piti ZAPilla napata toisen henkilön tunnus ja salasana. K
 
 **Server-Side Request Forgery (2)**
 
+Ensin tuli löytää juusto sivulta. Tomin sijaan etsittiin Jerryn kuvaa, jerry.jpg. kuva löytyi, mutta miten sen sai sivulle näkyviin? Kokeilin ZAPilla monenlaista, mutten onnistunut.
+
+![image](https://github.com/user-attachments/assets/22d975d7-ab29-42c7-84b9-509fb6dcb7de)
+
+Etsin siis ohjevideon. [PseudoTime. WebGoat 8 Server Side Request Forgery 2. Youtube, 12.6.2021.] (https://www.youtube.com/watch?v=ccCP4STs968) Tässä hyödynnettiin Firefoxin omaa dev toolsia: klikkaamalla oikealla hiiren painikkeella Steal the cheese -kohtaa ja avaamalla Inspect pystyi muokata kohtaa value=images/tom.jpg. Muokkaamisen jälkeen enter -> kun Steal the cheese -kohdasta klikkasi nyt, saatiin juusto napattua ja Jerry näkyviin.
+
+![image](https://github.com/user-attachments/assets/28bc6293-9a79-43b9-832e-b2d3250b5fad)
+
+![image](https://github.com/user-attachments/assets/2ebb9015-91a5-4641-84cd-79454a98c11d)
+
+Seuraavaksi piti muuttaa pyyntöä niin, että palvelin saa informaatiota http://ifconfig.prosta.
+
+![image](https://github.com/user-attachments/assets/ee264bbb-0cf5-4582-bfe5-50b4e7d2d095)
+
+
+![image](https://github.com/user-attachments/assets/3922b409-3495-414d-85d6-d429881207c2)
+
+
 
 ### e) Client side
 
@@ -134,6 +152,6 @@ Tehtävänanto: Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10
 
 Karvinen, Tero. Try Web Hacking on New Webgoat 2023.4. 13.11.2023. [https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/](https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/)
 
-Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube. 1.11.2021.[https://www.youtube.com/watch?v=DErUuNMHgJo](https://www.youtube.com/watch?v=DErUuNMHgJo)
+Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube, 1.11.2021.[https://www.youtube.com/watch?v=DErUuNMHgJo](https://www.youtube.com/watch?v=DErUuNMHgJo)
 
-[Non-Functional Club. Assignment 1 | Authentication Bypass | WebGoat | OWASP TOP 10 | Broken Authentication. Youtube. 1.11.2021.](https://www.youtube.com/watch?v=DErUuNMHgJo)
+PseudoTime. WebGoat 8 Server Side Request Forgery 2. Youtube, 12.6.2021. [https://www.youtube.com/watch?v=ccCP4STs968](https://www.youtube.com/watch?v=ccCP4STs968)
