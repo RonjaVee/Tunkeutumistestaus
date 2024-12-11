@@ -1,6 +1,6 @@
 # h7 Hakkeroimaan oppii hakkeroimalla
 
-Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024)
+Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https://terokarvinen.com/tunkeutumistestaus/](https://terokarvinen.com/tunkeutumistestaus/#h4-marraskuu2024) Etsi vapaavalintainen review eli katsausartikkeli, joka liittyy kurssin aiheisiin
 
 ## x) Lue/katso ja tiivistä
 
