@@ -5,4 +5,4 @@ Tehtävänanto: Karvinen, Tero. Tunkeutumistestaus. Julkaistu 10.5.2024. [https:
 ## x) Lue/katso ja tiivistä
 
 Bergman, J., & Popov, O. B. (2023). Exploring dark web crawlers: a systematic literature review of dark web crawlers and their implementation. IEEE Access, 11, 35914-35933. [https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10064292](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10064292)
-JUFO-tasoluokka 1.
+Julkaisun JUFO ID 78297, tasoluokka 1.
