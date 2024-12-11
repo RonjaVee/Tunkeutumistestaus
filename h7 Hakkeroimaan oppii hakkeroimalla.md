@@ -18,7 +18,7 @@ Systemaattisessa kirjallisuuskatsauksessa todettiin, että akateemisessa tutkimu
 
 Kokeet osoittivat, että työkalu pystyi tehokkaasti ryömimään sekä tavallisen että pimeän verkon verkkosivustoilla. Verkkosivujen sisältövertailussa huomattiin, että työkalun lataamat sivut olivat lähes identtisiä molemmissa verkoissa. Lisäksi työkalun kehitykselle asetetut vaatimukset täyttyivät. Se pystyi käsittelemään tavallisen ja pimeän verkon sivustoja odotetusti. Seleniumin avulla voitiin simuloida ihmiskäyttäjän toimintaa, mikä teki työkalusta monipuolisen. Työkalu oli avoimen lähdekoodin ohjelma, tuki rinnakkaisprosessointia ja toimi omavaraisesti. Suorituskykyä rajoitti kuitenkin Tor-verkon hitaus ja Seleniumin yksisäikeinen arkkitehtuuri. 
 
-Tutkimuksen perusteella ryömijä oli käyttökelpoinen työkalu kyberrikollisuuden torjuntaan. Se teki datankeruusta tehokasta ja tarkkaa, mikä säästi tutkijoiden aikaa. Jatkossa työkalua voisi parantaa esimerkiksi suorituskyvyn optimoinnilla, kuten monisäikeistämisellä ja estomekanismien kiertämisellä, mikä auttaisi erityisesti pimeän verkon ryöminnässä.
+Tutkimuksen perusteella ryömijä oli käyttökelpoinen työkalu kyberrikollisuuden torjuntaan. Se teki datankeruusta tehokasta ja tarkkaa, mikä säästi tutkijoiden aikaa. Jatkossa työkalua voisi parantaa esimerkiksi suorituskyvyn optimoinnilla, kuten monisäikeistämisellä ja estomekanismien kiertämisellä (pimeän verkon sivustojen ylläpitäjät pyrkivät estämään crawlereiden toimintaa), mikä auttaisi erityisesti pimeän verkon ryöminnässä. 
 
 ## TLDR
 
